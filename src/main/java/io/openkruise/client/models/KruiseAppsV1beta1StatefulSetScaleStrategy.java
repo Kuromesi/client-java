@@ -14,27 +14,22 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.kubernetes.client.custom.IntOrString;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * scaleStrategy indicates the StatefulSetScaleStrategy that will be employed to scale Pods in the StatefulSet.
  */
 @ApiModel(description = "scaleStrategy indicates the StatefulSetScaleStrategy that will be employed to scale Pods in the StatefulSet.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecScaleStrategy {
+public class KruiseAppsV1beta1StatefulSetScaleStrategy {
   @SerializedName("maxUnavailable")
   private IntOrString maxUnavailable = null;
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecScaleStrategy maxUnavailable(IntOrString maxUnavailable) {
+  public KruiseAppsV1beta1StatefulSetScaleStrategy maxUnavailable(IntOrString maxUnavailable) {
     this.maxUnavailable = maxUnavailable;
     return this;
   }
@@ -61,7 +56,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTe
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecScaleStrategy ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecScaleStrategy = (KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecScaleStrategy) o;
+    KruiseAppsV1beta1StatefulSetScaleStrategy ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecScaleStrategy = (KruiseAppsV1beta1StatefulSetScaleStrategy) o;
     return Objects.equals(this.maxUnavailable, ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecScaleStrategy.maxUnavailable);
   }
 

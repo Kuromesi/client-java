@@ -14,20 +14,16 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.kubernetes.client.custom.IntOrString;
+import io.kubernetes.client.openapi.models.V1NodeSelectorTerm;
+import io.kubernetes.client.openapi.models.V1PreferredSchedulingTerm;
+import io.kubernetes.client.openapi.models.V1Toleration;
 import io.kubernetes.client.proto.Runtime;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentSpecTopologyTolerations;
-import io.openkruise.client.models.KruiseAppsV1alpha1WorkloadSpreadSpecPreferredNodeSelectorTerms;
-import io.openkruise.client.models.KruiseAppsV1alpha1WorkloadSpreadSpecRequiredNodeSelectorTerm;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,13 +43,13 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpecSubsets {
   private Runtime.RawExtension patch = null;
 
   @SerializedName("preferredNodeSelectorTerms")
-  private List<KruiseAppsV1alpha1WorkloadSpreadSpecPreferredNodeSelectorTerms> preferredNodeSelectorTerms = null;
+  private List<V1PreferredSchedulingTerm> preferredNodeSelectorTerms = null;
 
   @SerializedName("requiredNodeSelectorTerm")
-  private KruiseAppsV1alpha1WorkloadSpreadSpecRequiredNodeSelectorTerm requiredNodeSelectorTerm = null;
+  private V1NodeSelectorTerm requiredNodeSelectorTerm = null;
 
   @SerializedName("tolerations")
-  private List<KruiseAppsV1alpha1UnitedDeploymentSpecTopologyTolerations> tolerations = null;
+  private List<V1Toleration> tolerations = null;
 
   public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets maxReplicas(IntOrString maxReplicas) {
     this.maxReplicas = maxReplicas;
@@ -109,14 +105,14 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpecSubsets {
     this.patch = patch;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets preferredNodeSelectorTerms(List<KruiseAppsV1alpha1WorkloadSpreadSpecPreferredNodeSelectorTerms> preferredNodeSelectorTerms) {
+  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets preferredNodeSelectorTerms(List<V1PreferredSchedulingTerm> preferredNodeSelectorTerms) {
     this.preferredNodeSelectorTerms = preferredNodeSelectorTerms;
     return this;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets addPreferredNodeSelectorTermsItem(KruiseAppsV1alpha1WorkloadSpreadSpecPreferredNodeSelectorTerms preferredNodeSelectorTermsItem) {
+  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets addPreferredNodeSelectorTermsItem(V1PreferredSchedulingTerm preferredNodeSelectorTermsItem) {
     if (this.preferredNodeSelectorTerms == null) {
-      this.preferredNodeSelectorTerms = new ArrayList<KruiseAppsV1alpha1WorkloadSpreadSpecPreferredNodeSelectorTerms>();
+      this.preferredNodeSelectorTerms = new ArrayList<V1PreferredSchedulingTerm>();
     }
     this.preferredNodeSelectorTerms.add(preferredNodeSelectorTermsItem);
     return this;
@@ -127,15 +123,15 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpecSubsets {
    * @return preferredNodeSelectorTerms
   **/
   @ApiModelProperty(value = "Indicates the node preferred selector to form the subset.")
-  public List<KruiseAppsV1alpha1WorkloadSpreadSpecPreferredNodeSelectorTerms> getPreferredNodeSelectorTerms() {
+  public List<V1PreferredSchedulingTerm> getPreferredNodeSelectorTerms() {
     return preferredNodeSelectorTerms;
   }
 
-  public void setPreferredNodeSelectorTerms(List<KruiseAppsV1alpha1WorkloadSpreadSpecPreferredNodeSelectorTerms> preferredNodeSelectorTerms) {
+  public void setPreferredNodeSelectorTerms(List<V1PreferredSchedulingTerm> preferredNodeSelectorTerms) {
     this.preferredNodeSelectorTerms = preferredNodeSelectorTerms;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets requiredNodeSelectorTerm(KruiseAppsV1alpha1WorkloadSpreadSpecRequiredNodeSelectorTerm requiredNodeSelectorTerm) {
+  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets requiredNodeSelectorTerm(V1NodeSelectorTerm requiredNodeSelectorTerm) {
     this.requiredNodeSelectorTerm = requiredNodeSelectorTerm;
     return this;
   }
@@ -145,22 +141,22 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpecSubsets {
    * @return requiredNodeSelectorTerm
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1WorkloadSpreadSpecRequiredNodeSelectorTerm getRequiredNodeSelectorTerm() {
+  public V1NodeSelectorTerm getRequiredNodeSelectorTerm() {
     return requiredNodeSelectorTerm;
   }
 
-  public void setRequiredNodeSelectorTerm(KruiseAppsV1alpha1WorkloadSpreadSpecRequiredNodeSelectorTerm requiredNodeSelectorTerm) {
+  public void setRequiredNodeSelectorTerm(V1NodeSelectorTerm requiredNodeSelectorTerm) {
     this.requiredNodeSelectorTerm = requiredNodeSelectorTerm;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets tolerations(List<KruiseAppsV1alpha1UnitedDeploymentSpecTopologyTolerations> tolerations) {
+  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets tolerations(List<V1Toleration> tolerations) {
     this.tolerations = tolerations;
     return this;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets addTolerationsItem(KruiseAppsV1alpha1UnitedDeploymentSpecTopologyTolerations tolerationsItem) {
+  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets addTolerationsItem(V1Toleration tolerationsItem) {
     if (this.tolerations == null) {
-      this.tolerations = new ArrayList<KruiseAppsV1alpha1UnitedDeploymentSpecTopologyTolerations>();
+      this.tolerations = new ArrayList<V1Toleration>();
     }
     this.tolerations.add(tolerationsItem);
     return this;
@@ -171,11 +167,11 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpecSubsets {
    * @return tolerations
   **/
   @ApiModelProperty(value = "Indicates the tolerations the pods under this subset have.")
-  public List<KruiseAppsV1alpha1UnitedDeploymentSpecTopologyTolerations> getTolerations() {
+  public List<V1Toleration> getTolerations() {
     return tolerations;
   }
 
-  public void setTolerations(List<KruiseAppsV1alpha1UnitedDeploymentSpecTopologyTolerations> tolerations) {
+  public void setTolerations(List<V1Toleration> tolerations) {
     this.tolerations = tolerations;
   }
 

@@ -14,22 +14,13 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.kubernetes.client.openapi.models.V1Volume;
-import io.openkruise.client.models.KruiseAppsV1alpha1SidecarSetSpecImagePullSecrets;
-import io.openkruise.client.models.KruiseAppsV1alpha1SidecarSetSpecInjectionStrategy;
-import io.openkruise.client.models.KruiseAppsV1alpha1SidecarSetSpecNamespaceSelector;
-import io.openkruise.client.models.KruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata;
-import io.openkruise.client.models.KruiseAppsV1alpha1SidecarSetSpecSelector;
-import io.openkruise.client.models.KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,7 +46,7 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
   private String namespace = null;
 
   @SerializedName("namespaceSelector")
-  private KruiseAppsV1alpha1SidecarSetSpecNamespaceSelector namespaceSelector = null;
+  private V1LabelSelector namespaceSelector = null;
 
   @SerializedName("patchPodMetadata")
   private List<KruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata> patchPodMetadata = null;
@@ -64,7 +55,7 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
   private Integer revisionHistoryLimit = null;
 
   @SerializedName("selector")
-  private KruiseAppsV1alpha1SidecarSetSpecSelector selector = null;
+  private V1LabelSelector selector = null;
 
   @SerializedName("updateStrategy")
   private KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy updateStrategy = null;
@@ -186,7 +177,7 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
     this.namespace = namespace;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpec namespaceSelector(KruiseAppsV1alpha1SidecarSetSpecNamespaceSelector namespaceSelector) {
+  public KruiseAppsV1alpha1SidecarSetSpec namespaceSelector(V1LabelSelector namespaceSelector) {
     this.namespaceSelector = namespaceSelector;
     return this;
   }
@@ -196,11 +187,11 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
    * @return namespaceSelector
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1SidecarSetSpecNamespaceSelector getNamespaceSelector() {
+  public V1LabelSelector getNamespaceSelector() {
     return namespaceSelector;
   }
 
-  public void setNamespaceSelector(KruiseAppsV1alpha1SidecarSetSpecNamespaceSelector namespaceSelector) {
+  public void setNamespaceSelector(V1LabelSelector namespaceSelector) {
     this.namespaceSelector = namespaceSelector;
   }
 
@@ -248,7 +239,7 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
     this.revisionHistoryLimit = revisionHistoryLimit;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpec selector(KruiseAppsV1alpha1SidecarSetSpecSelector selector) {
+  public KruiseAppsV1alpha1SidecarSetSpec selector(V1LabelSelector selector) {
     this.selector = selector;
     return this;
   }
@@ -258,11 +249,11 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
    * @return selector
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1SidecarSetSpecSelector getSelector() {
+  public V1LabelSelector getSelector() {
     return selector;
   }
 
-  public void setSelector(KruiseAppsV1alpha1SidecarSetSpecSelector selector) {
+  public void setSelector(V1LabelSelector selector) {
     this.selector = selector;
   }
 

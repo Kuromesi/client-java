@@ -14,19 +14,15 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1AdvancedCronJobStatusActive;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 import org.joda.time.DateTime;
+import io.kubernetes.client.openapi.models.V1ObjectReference;
 
 /**
  * AdvancedCronJobStatus defines the observed state of AdvancedCronJob
@@ -35,7 +31,7 @@ import org.joda.time.DateTime;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1AdvancedCronJobStatus {
   @SerializedName("active")
-  private List<KruiseAppsV1alpha1AdvancedCronJobStatusActive> active = null;
+  private List<V1ObjectReference> active = null;
 
   @SerializedName("lastScheduleTime")
   private DateTime lastScheduleTime = null;
@@ -43,14 +39,14 @@ public class KruiseAppsV1alpha1AdvancedCronJobStatus {
   @SerializedName("type")
   private String type = null;
 
-  public KruiseAppsV1alpha1AdvancedCronJobStatus active(List<KruiseAppsV1alpha1AdvancedCronJobStatusActive> active) {
+  public KruiseAppsV1alpha1AdvancedCronJobStatus active(List<V1ObjectReference> active) {
     this.active = active;
     return this;
   }
 
-  public KruiseAppsV1alpha1AdvancedCronJobStatus addActiveItem(KruiseAppsV1alpha1AdvancedCronJobStatusActive activeItem) {
+  public KruiseAppsV1alpha1AdvancedCronJobStatus addActiveItem(V1ObjectReference activeItem) {
     if (this.active == null) {
-      this.active = new ArrayList<KruiseAppsV1alpha1AdvancedCronJobStatusActive>();
+      this.active = new ArrayList<V1ObjectReference>();
     }
     this.active.add(activeItem);
     return this;
@@ -61,11 +57,11 @@ public class KruiseAppsV1alpha1AdvancedCronJobStatus {
    * @return active
   **/
   @ApiModelProperty(value = "A list of pointers to currently running jobs.")
-  public List<KruiseAppsV1alpha1AdvancedCronJobStatusActive> getActive() {
+  public List<V1ObjectReference> getActive() {
     return active;
   }
 
-  public void setActive(List<KruiseAppsV1alpha1AdvancedCronJobStatusActive> active) {
+  public void setActive(List<V1ObjectReference> active) {
     this.active = active;
   }
 

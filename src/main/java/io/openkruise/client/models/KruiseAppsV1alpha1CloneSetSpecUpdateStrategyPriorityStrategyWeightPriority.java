@@ -14,16 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyMatchSelector;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import io.kubernetes.client.openapi.models.V1LabelSelector;
 
 /**
  * UpdatePriorityWeightTerm defines weight priority.
@@ -32,12 +27,12 @@ import java.io.IOException;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority {
   @SerializedName("matchSelector")
-  private KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyMatchSelector matchSelector = null;
+  private V1LabelSelector matchSelector = null;
 
   @SerializedName("weight")
   private Integer weight = null;
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority matchSelector(KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyMatchSelector matchSelector) {
+  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority matchSelector(V1LabelSelector matchSelector) {
     this.matchSelector = matchSelector;
     return this;
   }
@@ -47,11 +42,11 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightP
    * @return matchSelector
   **/
   @ApiModelProperty(required = true, value = "")
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyMatchSelector getMatchSelector() {
+  public V1LabelSelector getMatchSelector() {
     return matchSelector;
   }
 
-  public void setMatchSelector(KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyMatchSelector matchSelector) {
+  public void setMatchSelector(V1LabelSelector matchSelector) {
     this.matchSelector = matchSelector;
   }
 

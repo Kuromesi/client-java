@@ -15,18 +15,13 @@ package io.openkruise.client.models;
 
 import java.util.List;
 import java.util.Objects;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.kubernetes.client.openapi.models.V1PersistentVolumeClaim;
 import io.kubernetes.client.openapi.models.V1PodTemplateSpec;
-import io.openkruise.client.models.KruiseAppsV1alpha1StatefulSetSpecSelector;
-import io.openkruise.client.models.KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * StatefulSetSpec defines the desired state of StatefulSet
@@ -44,7 +39,7 @@ public class KruiseAppsV1alpha1StatefulSetSpec {
   private Integer revisionHistoryLimit = null;
 
   @SerializedName("selector")
-  private KruiseAppsV1alpha1StatefulSetSpecSelector selector = null;
+  private V1LabelSelector selector = null;
 
   @SerializedName("serviceName")
   private String serviceName = null;
@@ -112,7 +107,7 @@ public class KruiseAppsV1alpha1StatefulSetSpec {
     this.revisionHistoryLimit = revisionHistoryLimit;
   }
 
-  public KruiseAppsV1alpha1StatefulSetSpec selector(KruiseAppsV1alpha1StatefulSetSpecSelector selector) {
+  public KruiseAppsV1alpha1StatefulSetSpec selector(V1LabelSelector selector) {
     this.selector = selector;
     return this;
   }
@@ -122,11 +117,11 @@ public class KruiseAppsV1alpha1StatefulSetSpec {
    * @return selector
   **/
   @ApiModelProperty(required = true, value = "")
-  public KruiseAppsV1alpha1StatefulSetSpecSelector getSelector() {
+  public V1LabelSelector getSelector() {
     return selector;
   }
 
-  public void setSelector(KruiseAppsV1alpha1StatefulSetSpecSelector selector) {
+  public void setSelector(V1LabelSelector selector) {
     this.selector = selector;
   }
 

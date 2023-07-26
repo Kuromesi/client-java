@@ -17,6 +17,7 @@ import java.util.Objects;
 
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.custom.IntOrString;
+import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -33,7 +34,7 @@ public class KruisePolicyV1alpha1PodUnavailableBudgetSpec {
   private IntOrString minAvailable = null;
 
   @SerializedName("selector")
-  private KruisePolicyV1alpha1PodUnavailableBudgetSpecSelector selector = null;
+  private V1LabelSelector selector = null;
 
   @SerializedName("targetRef")
   private KruisePolicyV1alpha1PodUnavailableBudgetSpecTargetRef targetRef = null;
@@ -74,7 +75,7 @@ public class KruisePolicyV1alpha1PodUnavailableBudgetSpec {
     this.minAvailable = minAvailable;
   }
 
-  public KruisePolicyV1alpha1PodUnavailableBudgetSpec selector(KruisePolicyV1alpha1PodUnavailableBudgetSpecSelector selector) {
+  public KruisePolicyV1alpha1PodUnavailableBudgetSpec selector(V1LabelSelector selector) {
     this.selector = selector;
     return this;
   }
@@ -84,11 +85,11 @@ public class KruisePolicyV1alpha1PodUnavailableBudgetSpec {
    * @return selector
   **/
   @ApiModelProperty(value = "")
-  public KruisePolicyV1alpha1PodUnavailableBudgetSpecSelector getSelector() {
+  public V1LabelSelector getSelector() {
     return selector;
   }
 
-  public void setSelector(KruisePolicyV1alpha1PodUnavailableBudgetSpecSelector selector) {
+  public void setSelector(V1LabelSelector selector) {
     this.selector = selector;
   }
 

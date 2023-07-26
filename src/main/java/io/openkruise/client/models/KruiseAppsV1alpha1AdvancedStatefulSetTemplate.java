@@ -25,14 +25,14 @@ import io.swagger.annotations.ApiModelProperty;
  */
 @ApiModel(description = "AdvancedStatefulSet template")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate {
+public class KruiseAppsV1alpha1AdvancedStatefulSetTemplate {
   @SerializedName("metadata")
   private V1ObjectMeta metadata = null;
 
   @SerializedName("spec")
   private KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec spec = null;
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate metadata(V1ObjectMeta metadata) {
+  public KruiseAppsV1alpha1AdvancedStatefulSetTemplate metadata(V1ObjectMeta metadata) {
     this.metadata = metadata;
     return this;
   }
@@ -50,7 +50,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTe
     this.metadata = metadata;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate spec(KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec spec) {
+  public KruiseAppsV1alpha1AdvancedStatefulSetTemplate spec(KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec spec) {
     this.spec = spec;
     return this;
   }
@@ -77,7 +77,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTe
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate = (KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate) o;
+    KruiseAppsV1alpha1AdvancedStatefulSetTemplate ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate = (KruiseAppsV1alpha1AdvancedStatefulSetTemplate) o;
     return Objects.equals(this.metadata, ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate.metadata) &&
         Objects.equals(this.spec, ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate.spec);
   }

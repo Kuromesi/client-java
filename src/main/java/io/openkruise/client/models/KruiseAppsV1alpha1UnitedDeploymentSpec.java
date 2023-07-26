@@ -14,19 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentSpecSelector;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentSpecTemplate;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentSpecTopology;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategy;
+import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * UnitedDeploymentSpec defines the desired state of UnitedDeployment.
@@ -41,7 +33,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpec {
   private Integer revisionHistoryLimit = null;
 
   @SerializedName("selector")
-  private KruiseAppsV1alpha1UnitedDeploymentSpecSelector selector = null;
+  private V1LabelSelector selector = null;
 
   @SerializedName("template")
   private KruiseAppsV1alpha1UnitedDeploymentSpecTemplate template = null;
@@ -88,7 +80,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpec {
     this.revisionHistoryLimit = revisionHistoryLimit;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpec selector(KruiseAppsV1alpha1UnitedDeploymentSpecSelector selector) {
+  public KruiseAppsV1alpha1UnitedDeploymentSpec selector(V1LabelSelector selector) {
     this.selector = selector;
     return this;
   }
@@ -98,11 +90,11 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpec {
    * @return selector
   **/
   @ApiModelProperty(required = true, value = "")
-  public KruiseAppsV1alpha1UnitedDeploymentSpecSelector getSelector() {
+  public V1LabelSelector getSelector() {
     return selector;
   }
 
-  public void setSelector(KruiseAppsV1alpha1UnitedDeploymentSpecSelector selector) {
+  public void setSelector(V1LabelSelector selector) {
     this.selector = selector;
   }
 

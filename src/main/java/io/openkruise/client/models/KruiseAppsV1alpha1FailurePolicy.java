@@ -14,29 +14,24 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * FailurePolicy indicates the behavior of the job, when failed pod is found.
  */
 @ApiModel(description = "FailurePolicy indicates the behavior of the job, when failed pod is found.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecFailurePolicy {
+public class KruiseAppsV1alpha1FailurePolicy {
   @SerializedName("restartLimit")
   private Integer restartLimit = null;
 
   @SerializedName("type")
   private String type = null;
 
-  public KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecFailurePolicy restartLimit(Integer restartLimit) {
+  public KruiseAppsV1alpha1FailurePolicy restartLimit(Integer restartLimit) {
     this.restartLimit = restartLimit;
     return this;
   }
@@ -54,7 +49,7 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSp
     this.restartLimit = restartLimit;
   }
 
-  public KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecFailurePolicy type(String type) {
+  public KruiseAppsV1alpha1FailurePolicy type(String type) {
     this.type = type;
     return this;
   }
@@ -81,9 +76,9 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSp
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecFailurePolicy ioKruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecFailurePolicy = (KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecFailurePolicy) o;
-    return Objects.equals(this.restartLimit, ioKruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecFailurePolicy.restartLimit) &&
-        Objects.equals(this.type, ioKruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecFailurePolicy.type);
+    KruiseAppsV1alpha1FailurePolicy ioKruiseAppsV1Alpha1FailurePolicy = (KruiseAppsV1alpha1FailurePolicy) o;
+    return Objects.equals(this.restartLimit, ioKruiseAppsV1Alpha1FailurePolicy.restartLimit) &&
+        Objects.equals(this.type, ioKruiseAppsV1Alpha1FailurePolicy.type);
   }
 
   @Override

@@ -14,17 +14,12 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.kubernetes.client.custom.IntOrString;
-import io.openkruise.client.models.KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdateSelector;
+import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Rolling update config params. Present only if type &#x3D; \&quot;RollingUpdate\&quot;.
@@ -48,7 +43,7 @@ public class KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate {
   private String rollingUpdateType = null;
 
   @SerializedName("selector")
-  private KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdateSelector selector = null;
+  private V1LabelSelector selector = null;
 
   public KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate maxSurge(IntOrString maxSurge) {
     this.maxSurge = maxSurge;
@@ -140,7 +135,7 @@ public class KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate {
     this.rollingUpdateType = rollingUpdateType;
   }
 
-  public KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate selector(KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdateSelector selector) {
+  public KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate selector(V1LabelSelector selector) {
     this.selector = selector;
     return this;
   }
@@ -150,11 +145,11 @@ public class KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate {
    * @return selector
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdateSelector getSelector() {
+  public V1LabelSelector getSelector() {
     return selector;
   }
 
-  public void setSelector(KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdateSelector selector) {
+  public void setSelector(V1LabelSelector selector) {
     this.selector = selector;
   }
 

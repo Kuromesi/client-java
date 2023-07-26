@@ -14,17 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.kubernetes.client.openapi.models.V1beta1JobTemplateSpec;
-import io.openkruise.client.models.KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Specifies the job that will be created when executing a CronJob.
@@ -33,12 +27,12 @@ import java.io.IOException;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplate {
   @SerializedName("broadcastJobTemplate")
-  private KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate broadcastJobTemplate = null;
+  private KruiseAppsV1alpha1BroadcastJobSpec broadcastJobTemplate = null;
 
   @SerializedName("jobTemplate")
   private V1beta1JobTemplateSpec jobTemplate = null;
 
-  public KruiseAppsV1alpha1AdvancedCronJobSpecTemplate broadcastJobTemplate(KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate broadcastJobTemplate) {
+  public KruiseAppsV1alpha1AdvancedCronJobSpecTemplate broadcastJobTemplate(KruiseAppsV1alpha1BroadcastJobSpec broadcastJobTemplate) {
     this.broadcastJobTemplate = broadcastJobTemplate;
     return this;
   }
@@ -48,11 +42,11 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplate {
    * @return broadcastJobTemplate
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate getBroadcastJobTemplate() {
+  public KruiseAppsV1alpha1BroadcastJobSpec getBroadcastJobTemplate() {
     return broadcastJobTemplate;
   }
 
-  public void setBroadcastJobTemplate(KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate broadcastJobTemplate) {
+  public void setBroadcastJobTemplate(KruiseAppsV1alpha1BroadcastJobSpec broadcastJobTemplate) {
     this.broadcastJobTemplate = broadcastJobTemplate;
   }
 

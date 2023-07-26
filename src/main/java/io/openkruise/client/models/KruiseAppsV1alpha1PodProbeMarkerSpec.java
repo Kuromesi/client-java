@@ -14,17 +14,12 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1PodProbeMarkerSpecProbes;
-import io.openkruise.client.models.KruiseAppsV1alpha1PodProbeMarkerSpecSelector;
+import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +33,7 @@ public class KruiseAppsV1alpha1PodProbeMarkerSpec {
   private List<KruiseAppsV1alpha1PodProbeMarkerSpecProbes> probes = new ArrayList<KruiseAppsV1alpha1PodProbeMarkerSpecProbes>();
 
   @SerializedName("selector")
-  private KruiseAppsV1alpha1PodProbeMarkerSpecSelector selector = null;
+  private V1LabelSelector selector = null;
 
   public KruiseAppsV1alpha1PodProbeMarkerSpec probes(List<KruiseAppsV1alpha1PodProbeMarkerSpecProbes> probes) {
     this.probes = probes;
@@ -63,7 +58,7 @@ public class KruiseAppsV1alpha1PodProbeMarkerSpec {
     this.probes = probes;
   }
 
-  public KruiseAppsV1alpha1PodProbeMarkerSpec selector(KruiseAppsV1alpha1PodProbeMarkerSpecSelector selector) {
+  public KruiseAppsV1alpha1PodProbeMarkerSpec selector(V1LabelSelector selector) {
     this.selector = selector;
     return this;
   }
@@ -73,11 +68,11 @@ public class KruiseAppsV1alpha1PodProbeMarkerSpec {
    * @return selector
   **/
   @ApiModelProperty(required = true, value = "")
-  public KruiseAppsV1alpha1PodProbeMarkerSpecSelector getSelector() {
+  public V1LabelSelector getSelector() {
     return selector;
   }
 
-  public void setSelector(KruiseAppsV1alpha1PodProbeMarkerSpecSelector selector) {
+  public void setSelector(V1LabelSelector selector) {
     this.selector = selector;
   }
 

@@ -14,22 +14,17 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * CompletionPolicy indicates the completion policy of the job. Default is Always CompletionPolicyType.
  */
 @ApiModel(description = "CompletionPolicy indicates the completion policy of the job. Default is Always CompletionPolicyType.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecCompletionPolicy {
+public class KruiseAppsV1alpha1CompletionPolicy {
   @SerializedName("activeDeadlineSeconds")
   private Long activeDeadlineSeconds = null;
 
@@ -39,7 +34,7 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSp
   @SerializedName("type")
   private String type = null;
 
-  public KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecCompletionPolicy activeDeadlineSeconds(Long activeDeadlineSeconds) {
+  public KruiseAppsV1alpha1CompletionPolicy activeDeadlineSeconds(Long activeDeadlineSeconds) {
     this.activeDeadlineSeconds = activeDeadlineSeconds;
     return this;
   }
@@ -57,7 +52,7 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSp
     this.activeDeadlineSeconds = activeDeadlineSeconds;
   }
 
-  public KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecCompletionPolicy ttlSecondsAfterFinished(Integer ttlSecondsAfterFinished) {
+  public KruiseAppsV1alpha1CompletionPolicy ttlSecondsAfterFinished(Integer ttlSecondsAfterFinished) {
     this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
     return this;
   }
@@ -75,7 +70,7 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSp
     this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
   }
 
-  public KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecCompletionPolicy type(String type) {
+  public KruiseAppsV1alpha1CompletionPolicy type(String type) {
     this.type = type;
     return this;
   }
@@ -102,10 +97,10 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSp
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecCompletionPolicy ioKruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecCompletionPolicy = (KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecCompletionPolicy) o;
-    return Objects.equals(this.activeDeadlineSeconds, ioKruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecCompletionPolicy.activeDeadlineSeconds) &&
-        Objects.equals(this.ttlSecondsAfterFinished, ioKruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecCompletionPolicy.ttlSecondsAfterFinished) &&
-        Objects.equals(this.type, ioKruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecCompletionPolicy.type);
+    KruiseAppsV1alpha1CompletionPolicy ioKruiseAppsV1Alpha1CompletionPolicy = (KruiseAppsV1alpha1CompletionPolicy) o;
+    return Objects.equals(this.activeDeadlineSeconds, ioKruiseAppsV1Alpha1CompletionPolicy.activeDeadlineSeconds) &&
+        Objects.equals(this.ttlSecondsAfterFinished, ioKruiseAppsV1Alpha1CompletionPolicy.ttlSecondsAfterFinished) &&
+        Objects.equals(this.type, ioKruiseAppsV1Alpha1CompletionPolicy.type);
   }
 
   @Override

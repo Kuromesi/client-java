@@ -14,19 +14,13 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.kubernetes.client.custom.IntOrString;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy;
-import io.openkruise.client.models.KruiseAppsV1alpha1SidecarSetSpecUpdateStrategySelector;
+import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,7 +46,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy {
   private List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy> scatterStrategy = null;
 
   @SerializedName("selector")
-  private KruiseAppsV1alpha1SidecarSetSpecUpdateStrategySelector selector = null;
+  private V1LabelSelector selector = null;
 
   @SerializedName("type")
   private String type = null;
@@ -155,7 +149,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy {
     this.scatterStrategy = scatterStrategy;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy selector(KruiseAppsV1alpha1SidecarSetSpecUpdateStrategySelector selector) {
+  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy selector(V1LabelSelector selector) {
     this.selector = selector;
     return this;
   }
@@ -165,11 +159,11 @@ public class KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy {
    * @return selector
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategySelector getSelector() {
+  public V1LabelSelector getSelector() {
     return selector;
   }
 
-  public void setSelector(KruiseAppsV1alpha1SidecarSetSpecUpdateStrategySelector selector) {
+  public void setSelector(V1LabelSelector selector) {
     this.selector = selector;
   }
 

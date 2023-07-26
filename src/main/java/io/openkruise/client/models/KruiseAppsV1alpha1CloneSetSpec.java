@@ -15,21 +15,13 @@ package io.openkruise.client.models;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.kubernetes.client.openapi.models.V1PersistentVolumeClaim;
 import io.kubernetes.client.openapi.models.V1PodTemplateSpec;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecLifecycle;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecScaleStrategy;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecSelector;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecUpdateStrategy;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * CloneSetSpec defines the desired state of CloneSet
@@ -38,7 +30,7 @@ import java.io.IOException;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1CloneSetSpec {
   @SerializedName("lifecycle")
-  private KruiseAppsV1alpha1CloneSetSpecLifecycle lifecycle = null;
+  private KruiseAppsPubLifecycle lifecycle = null;
 
   @SerializedName("minReadySeconds")
   private Integer minReadySeconds = null;
@@ -53,7 +45,7 @@ public class KruiseAppsV1alpha1CloneSetSpec {
   private KruiseAppsV1alpha1CloneSetSpecScaleStrategy scaleStrategy = null;
 
   @SerializedName("selector")
-  private KruiseAppsV1alpha1CloneSetSpecSelector selector = null;
+  private V1LabelSelector selector = null;
 
   @SerializedName("template")
   private V1PodTemplateSpec template = null;
@@ -64,7 +56,7 @@ public class KruiseAppsV1alpha1CloneSetSpec {
   @SerializedName("volumeClaimTemplates")
   private List<V1PersistentVolumeClaim> volumeClaimTemplates = null;
 
-  public KruiseAppsV1alpha1CloneSetSpec lifecycle(KruiseAppsV1alpha1CloneSetSpecLifecycle lifecycle) {
+  public KruiseAppsV1alpha1CloneSetSpec lifecycle(KruiseAppsPubLifecycle lifecycle) {
     this.lifecycle = lifecycle;
     return this;
   }
@@ -74,11 +66,11 @@ public class KruiseAppsV1alpha1CloneSetSpec {
    * @return lifecycle
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1CloneSetSpecLifecycle getLifecycle() {
+  public KruiseAppsPubLifecycle getLifecycle() {
     return lifecycle;
   }
 
-  public void setLifecycle(KruiseAppsV1alpha1CloneSetSpecLifecycle lifecycle) {
+  public void setLifecycle(KruiseAppsPubLifecycle lifecycle) {
     this.lifecycle = lifecycle;
   }
 
@@ -154,7 +146,7 @@ public class KruiseAppsV1alpha1CloneSetSpec {
     this.scaleStrategy = scaleStrategy;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpec selector(KruiseAppsV1alpha1CloneSetSpecSelector selector) {
+  public KruiseAppsV1alpha1CloneSetSpec selector(V1LabelSelector selector) {
     this.selector = selector;
     return this;
   }
@@ -164,11 +156,11 @@ public class KruiseAppsV1alpha1CloneSetSpec {
    * @return selector
   **/
   @ApiModelProperty(required = true, value = "")
-  public KruiseAppsV1alpha1CloneSetSpecSelector getSelector() {
+  public V1LabelSelector getSelector() {
     return selector;
   }
 
-  public void setSelector(KruiseAppsV1alpha1CloneSetSpecSelector selector) {
+  public void setSelector(V1LabelSelector selector) {
     this.selector = selector;
   }
 

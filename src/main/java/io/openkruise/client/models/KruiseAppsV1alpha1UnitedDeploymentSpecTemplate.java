@@ -14,19 +14,10 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentSpecTemplateCloneSetTemplate;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentSpecTemplateDeploymentTemplate;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentSpecTemplateStatefulSetTemplate;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Template describes the subset that will be created.
@@ -35,7 +26,7 @@ import java.io.IOException;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplate {
   @SerializedName("advancedStatefulSetTemplate")
-  private KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate advancedStatefulSetTemplate = null;
+  private KruiseAppsV1alpha1AdvancedStatefulSetTemplate advancedStatefulSetTemplate = null;
 
   @SerializedName("cloneSetTemplate")
   private KruiseAppsV1alpha1UnitedDeploymentSpecTemplateCloneSetTemplate cloneSetTemplate = null;
@@ -46,7 +37,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplate {
   @SerializedName("statefulSetTemplate")
   private KruiseAppsV1alpha1UnitedDeploymentSpecTemplateStatefulSetTemplate statefulSetTemplate = null;
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplate advancedStatefulSetTemplate(KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate advancedStatefulSetTemplate) {
+  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplate advancedStatefulSetTemplate(KruiseAppsV1alpha1AdvancedStatefulSetTemplate advancedStatefulSetTemplate) {
     this.advancedStatefulSetTemplate = advancedStatefulSetTemplate;
     return this;
   }
@@ -56,11 +47,11 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplate {
    * @return advancedStatefulSetTemplate
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate getAdvancedStatefulSetTemplate() {
+  public KruiseAppsV1alpha1AdvancedStatefulSetTemplate getAdvancedStatefulSetTemplate() {
     return advancedStatefulSetTemplate;
   }
 
-  public void setAdvancedStatefulSetTemplate(KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate advancedStatefulSetTemplate) {
+  public void setAdvancedStatefulSetTemplate(KruiseAppsV1alpha1AdvancedStatefulSetTemplate advancedStatefulSetTemplate) {
     this.advancedStatefulSetTemplate = advancedStatefulSetTemplate;
   }
 

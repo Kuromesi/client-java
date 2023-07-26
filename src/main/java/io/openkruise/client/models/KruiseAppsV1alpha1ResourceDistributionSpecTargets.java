@@ -14,18 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespaces;
-import io.openkruise.client.models.KruiseAppsV1alpha1ResourceDistributionSpecTargetsIncludedNamespaces;
-import io.openkruise.client.models.KruiseAppsV1alpha1ResourceDistributionSpecTargetsNamespaceLabelSelector;
+import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Targets defines the namespaces that users want to distribute to.
@@ -43,7 +36,7 @@ public class KruiseAppsV1alpha1ResourceDistributionSpecTargets {
   private KruiseAppsV1alpha1ResourceDistributionSpecTargetsIncludedNamespaces includedNamespaces = null;
 
   @SerializedName("namespaceLabelSelector")
-  private KruiseAppsV1alpha1ResourceDistributionSpecTargetsNamespaceLabelSelector namespaceLabelSelector = null;
+  private V1LabelSelector namespaceLabelSelector = null;
 
   public KruiseAppsV1alpha1ResourceDistributionSpecTargets allNamespaces(Boolean allNamespaces) {
     this.allNamespaces = allNamespaces;
@@ -99,7 +92,7 @@ public class KruiseAppsV1alpha1ResourceDistributionSpecTargets {
     this.includedNamespaces = includedNamespaces;
   }
 
-  public KruiseAppsV1alpha1ResourceDistributionSpecTargets namespaceLabelSelector(KruiseAppsV1alpha1ResourceDistributionSpecTargetsNamespaceLabelSelector namespaceLabelSelector) {
+  public KruiseAppsV1alpha1ResourceDistributionSpecTargets namespaceLabelSelector(V1LabelSelector namespaceLabelSelector) {
     this.namespaceLabelSelector = namespaceLabelSelector;
     return this;
   }
@@ -109,11 +102,11 @@ public class KruiseAppsV1alpha1ResourceDistributionSpecTargets {
    * @return namespaceLabelSelector
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1ResourceDistributionSpecTargetsNamespaceLabelSelector getNamespaceLabelSelector() {
+  public V1LabelSelector getNamespaceLabelSelector() {
     return namespaceLabelSelector;
   }
 
-  public void setNamespaceLabelSelector(KruiseAppsV1alpha1ResourceDistributionSpecTargetsNamespaceLabelSelector namespaceLabelSelector) {
+  public void setNamespaceLabelSelector(V1LabelSelector namespaceLabelSelector) {
     this.namespaceLabelSelector = namespaceLabelSelector;
   }
 

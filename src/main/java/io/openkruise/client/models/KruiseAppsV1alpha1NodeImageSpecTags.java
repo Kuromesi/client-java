@@ -14,20 +14,15 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1AdvancedCronJobStatusActive;
-import io.openkruise.client.models.KruiseAppsV1alpha1NodeImageSpecPullPolicy;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 import org.joda.time.DateTime;
+import io.kubernetes.client.openapi.models.V1ObjectReference;
 
 /**
  * ImageTagSpec defines the pulling spec of an image tag
@@ -39,7 +34,7 @@ public class KruiseAppsV1alpha1NodeImageSpecTags {
   private DateTime createdAt = null;
 
   @SerializedName("ownerReferences")
-  private List<KruiseAppsV1alpha1AdvancedCronJobStatusActive> ownerReferences = null;
+  private List<V1ObjectReference> ownerReferences = null;
 
   @SerializedName("pullPolicy")
   private KruiseAppsV1alpha1NodeImageSpecPullPolicy pullPolicy = null;
@@ -68,14 +63,14 @@ public class KruiseAppsV1alpha1NodeImageSpecTags {
     this.createdAt = createdAt;
   }
 
-  public KruiseAppsV1alpha1NodeImageSpecTags ownerReferences(List<KruiseAppsV1alpha1AdvancedCronJobStatusActive> ownerReferences) {
+  public KruiseAppsV1alpha1NodeImageSpecTags ownerReferences(List<V1ObjectReference> ownerReferences) {
     this.ownerReferences = ownerReferences;
     return this;
   }
 
-  public KruiseAppsV1alpha1NodeImageSpecTags addOwnerReferencesItem(KruiseAppsV1alpha1AdvancedCronJobStatusActive ownerReferencesItem) {
+  public KruiseAppsV1alpha1NodeImageSpecTags addOwnerReferencesItem(V1ObjectReference ownerReferencesItem) {
     if (this.ownerReferences == null) {
-      this.ownerReferences = new ArrayList<KruiseAppsV1alpha1AdvancedCronJobStatusActive>();
+      this.ownerReferences = new ArrayList<V1ObjectReference>();
     }
     this.ownerReferences.add(ownerReferencesItem);
     return this;
@@ -86,11 +81,11 @@ public class KruiseAppsV1alpha1NodeImageSpecTags {
    * @return ownerReferences
   **/
   @ApiModelProperty(value = "List of objects depended by this object. If this image is managed by a controller, then an entry in this list will point to this controller.")
-  public List<KruiseAppsV1alpha1AdvancedCronJobStatusActive> getOwnerReferences() {
+  public List<V1ObjectReference> getOwnerReferences() {
     return ownerReferences;
   }
 
-  public void setOwnerReferences(List<KruiseAppsV1alpha1AdvancedCronJobStatusActive> ownerReferences) {
+  public void setOwnerReferences(List<V1ObjectReference> ownerReferences) {
     this.ownerReferences = ownerReferences;
   }
 

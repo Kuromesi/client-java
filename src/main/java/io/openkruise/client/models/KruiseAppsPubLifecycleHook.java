@@ -14,15 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -33,7 +29,7 @@ import java.util.Map;
  */
 @ApiModel(description = "InPlaceUpdate is the hook before Pod to update and after Pod has been updated.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate {
+public class KruiseAppsPubLifecycleHook {
   @SerializedName("finalizersHandler")
   private List<String> finalizersHandler = null;
 
@@ -43,12 +39,12 @@ public class KruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate {
   @SerializedName("markPodNotReady")
   private Boolean markPodNotReady = null;
 
-  public KruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate finalizersHandler(List<String> finalizersHandler) {
+  public KruiseAppsPubLifecycleHook finalizersHandler(List<String> finalizersHandler) {
     this.finalizersHandler = finalizersHandler;
     return this;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate addFinalizersHandlerItem(String finalizersHandlerItem) {
+  public KruiseAppsPubLifecycleHook addFinalizersHandlerItem(String finalizersHandlerItem) {
     if (this.finalizersHandler == null) {
       this.finalizersHandler = new ArrayList<String>();
     }
@@ -69,12 +65,12 @@ public class KruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate {
     this.finalizersHandler = finalizersHandler;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate labelsHandler(Map<String, String> labelsHandler) {
+  public KruiseAppsPubLifecycleHook labelsHandler(Map<String, String> labelsHandler) {
     this.labelsHandler = labelsHandler;
     return this;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate putLabelsHandlerItem(String key, String labelsHandlerItem) {
+  public KruiseAppsPubLifecycleHook putLabelsHandlerItem(String key, String labelsHandlerItem) {
     if (this.labelsHandler == null) {
       this.labelsHandler = new HashMap<String, String>();
     }
@@ -95,7 +91,7 @@ public class KruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate {
     this.labelsHandler = labelsHandler;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate markPodNotReady(Boolean markPodNotReady) {
+  public KruiseAppsPubLifecycleHook markPodNotReady(Boolean markPodNotReady) {
     this.markPodNotReady = markPodNotReady;
     return this;
   }
@@ -122,7 +118,7 @@ public class KruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate ioKruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate = (KruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate) o;
+    KruiseAppsPubLifecycleHook ioKruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate = (KruiseAppsPubLifecycleHook) o;
     return Objects.equals(this.finalizersHandler, ioKruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate.finalizersHandler) &&
         Objects.equals(this.labelsHandler, ioKruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate.labelsHandler) &&
         Objects.equals(this.markPodNotReady, ioKruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate.markPodNotReady);

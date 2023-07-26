@@ -14,16 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,16 +29,16 @@ import java.util.List;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1UnitedDeploymentSpecTopology {
   @SerializedName("subsets")
-  private List<KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets> subsets = null;
+  private List<KruiseAppsV1alpha1Subset> subsets = null;
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTopology subsets(List<KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets> subsets) {
+  public KruiseAppsV1alpha1UnitedDeploymentSpecTopology subsets(List<KruiseAppsV1alpha1Subset> subsets) {
     this.subsets = subsets;
     return this;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTopology addSubsetsItem(KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets subsetsItem) {
+  public KruiseAppsV1alpha1UnitedDeploymentSpecTopology addSubsetsItem(KruiseAppsV1alpha1Subset subsetsItem) {
     if (this.subsets == null) {
-      this.subsets = new ArrayList<KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets>();
+      this.subsets = new ArrayList<KruiseAppsV1alpha1Subset>();
     }
     this.subsets.add(subsetsItem);
     return this;
@@ -54,11 +49,11 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTopology {
    * @return subsets
   **/
   @ApiModelProperty(value = "Contains the details of each subset. Each element in this array represents one subset which will be provisioned and managed by UnitedDeployment.")
-  public List<KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets> getSubsets() {
+  public List<KruiseAppsV1alpha1Subset> getSubsets() {
     return subsets;
   }
 
-  public void setSubsets(List<KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets> subsets) {
+  public void setSubsets(List<KruiseAppsV1alpha1Subset> subsets) {
     this.subsets = subsets;
   }
 

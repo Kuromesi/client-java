@@ -14,17 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1EphemeralJobSpecSelector;
-import io.openkruise.client.models.KruiseAppsV1alpha1EphemeralJobSpecTemplate;
+import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * EphemeralJobSpec defines the desired state of EphemeralJob
@@ -45,7 +39,7 @@ public class KruiseAppsV1alpha1EphemeralJobSpec {
   private Integer replicas = null;
 
   @SerializedName("selector")
-  private KruiseAppsV1alpha1EphemeralJobSpecSelector selector = null;
+  private V1LabelSelector selector = null;
 
   @SerializedName("template")
   private KruiseAppsV1alpha1EphemeralJobSpecTemplate template = null;
@@ -125,7 +119,7 @@ public class KruiseAppsV1alpha1EphemeralJobSpec {
     this.replicas = replicas;
   }
 
-  public KruiseAppsV1alpha1EphemeralJobSpec selector(KruiseAppsV1alpha1EphemeralJobSpecSelector selector) {
+  public KruiseAppsV1alpha1EphemeralJobSpec selector(V1LabelSelector selector) {
     this.selector = selector;
     return this;
   }
@@ -135,11 +129,11 @@ public class KruiseAppsV1alpha1EphemeralJobSpec {
    * @return selector
   **/
   @ApiModelProperty(required = true, value = "")
-  public KruiseAppsV1alpha1EphemeralJobSpecSelector getSelector() {
+  public V1LabelSelector getSelector() {
     return selector;
   }
 
-  public void setSelector(KruiseAppsV1alpha1EphemeralJobSpecSelector selector) {
+  public void setSelector(V1LabelSelector selector) {
     this.selector = selector;
   }
 

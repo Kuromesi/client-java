@@ -14,21 +14,12 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.kubernetes.client.custom.IntOrString;
-import io.openkruise.client.models.KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecCompletionPolicy;
-import io.openkruise.client.models.KruiseAppsV1alpha1ImageListPullJobSpecPodSelector;
-import io.openkruise.client.models.KruiseAppsV1alpha1ImageListPullJobSpecPullPolicy;
-import io.openkruise.client.models.KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig;
-import io.openkruise.client.models.KruiseAppsV1alpha1ImageListPullJobSpecSelector;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,7 +30,7 @@ import java.util.List;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1ImagePullJobSpec {
   @SerializedName("completionPolicy")
-  private KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecCompletionPolicy completionPolicy = null;
+  private KruiseAppsV1alpha1CompletionPolicy completionPolicy = null;
 
   @SerializedName("image")
   private String image = null;
@@ -62,7 +53,7 @@ public class KruiseAppsV1alpha1ImagePullJobSpec {
   @SerializedName("selector")
   private KruiseAppsV1alpha1ImageListPullJobSpecSelector selector = null;
 
-  public KruiseAppsV1alpha1ImagePullJobSpec completionPolicy(KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecCompletionPolicy completionPolicy) {
+  public KruiseAppsV1alpha1ImagePullJobSpec completionPolicy(KruiseAppsV1alpha1CompletionPolicy completionPolicy) {
     this.completionPolicy = completionPolicy;
     return this;
   }
@@ -72,11 +63,11 @@ public class KruiseAppsV1alpha1ImagePullJobSpec {
    * @return completionPolicy
   **/
   @ApiModelProperty(required = true, value = "")
-  public KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecCompletionPolicy getCompletionPolicy() {
+  public KruiseAppsV1alpha1CompletionPolicy getCompletionPolicy() {
     return completionPolicy;
   }
 
-  public void setCompletionPolicy(KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpecCompletionPolicy completionPolicy) {
+  public void setCompletionPolicy(KruiseAppsV1alpha1CompletionPolicy completionPolicy) {
     this.completionPolicy = completionPolicy;
   }
 

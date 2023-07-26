@@ -14,18 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.kubernetes.client.openapi.models.V1ObjectMeta;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpec;
-import io.openkruise.client.models.KruiseAppsV1beta1StatefulSetStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * StatefulSet is the Schema for the statefulsets API
@@ -43,7 +36,7 @@ public class KruiseAppsV1beta1StatefulSet {
   private V1ObjectMeta metadata = null;
 
   @SerializedName("spec")
-  private KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpec spec = null;
+  private KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec spec = null;
 
   @SerializedName("status")
   private KruiseAppsV1beta1StatefulSetStatus status = null;
@@ -102,7 +95,7 @@ public class KruiseAppsV1beta1StatefulSet {
     this.metadata = metadata;
   }
 
-  public KruiseAppsV1beta1StatefulSet spec(KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpec spec) {
+  public KruiseAppsV1beta1StatefulSet spec(KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec spec) {
     this.spec = spec;
     return this;
   }
@@ -112,11 +105,11 @@ public class KruiseAppsV1beta1StatefulSet {
    * @return spec
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpec getSpec() {
+  public KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec getSpec() {
     return spec;
   }
 
-  public void setSpec(KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpec spec) {
+  public void setSpec(KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec spec) {
     this.spec = spec;
   }
 

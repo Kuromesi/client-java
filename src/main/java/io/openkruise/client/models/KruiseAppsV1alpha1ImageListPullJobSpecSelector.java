@@ -14,16 +14,12 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecSelectorMatchExpressions;
+import io.kubernetes.client.openapi.models.V1LabelSelectorRequirement;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -36,7 +32,7 @@ import java.util.Map;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1ImageListPullJobSpecSelector {
   @SerializedName("matchExpressions")
-  private List<KruiseAppsV1alpha1CloneSetSpecSelectorMatchExpressions> matchExpressions = null;
+  private List<V1LabelSelectorRequirement> matchExpressions = null;
 
   @SerializedName("matchLabels")
   private Map<String, String> matchLabels = null;
@@ -44,14 +40,14 @@ public class KruiseAppsV1alpha1ImageListPullJobSpecSelector {
   @SerializedName("names")
   private List<String> names = null;
 
-  public KruiseAppsV1alpha1ImageListPullJobSpecSelector matchExpressions(List<KruiseAppsV1alpha1CloneSetSpecSelectorMatchExpressions> matchExpressions) {
+  public KruiseAppsV1alpha1ImageListPullJobSpecSelector matchExpressions(List<V1LabelSelectorRequirement> matchExpressions) {
     this.matchExpressions = matchExpressions;
     return this;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobSpecSelector addMatchExpressionsItem(KruiseAppsV1alpha1CloneSetSpecSelectorMatchExpressions matchExpressionsItem) {
+  public KruiseAppsV1alpha1ImageListPullJobSpecSelector addMatchExpressionsItem(V1LabelSelectorRequirement matchExpressionsItem) {
     if (this.matchExpressions == null) {
-      this.matchExpressions = new ArrayList<KruiseAppsV1alpha1CloneSetSpecSelectorMatchExpressions>();
+      this.matchExpressions = new ArrayList<V1LabelSelectorRequirement>();
     }
     this.matchExpressions.add(matchExpressionsItem);
     return this;
@@ -62,11 +58,11 @@ public class KruiseAppsV1alpha1ImageListPullJobSpecSelector {
    * @return matchExpressions
   **/
   @ApiModelProperty(value = "matchExpressions is a list of label selector requirements. The requirements are ANDed.")
-  public List<KruiseAppsV1alpha1CloneSetSpecSelectorMatchExpressions> getMatchExpressions() {
+  public List<V1LabelSelectorRequirement> getMatchExpressions() {
     return matchExpressions;
   }
 
-  public void setMatchExpressions(List<KruiseAppsV1alpha1CloneSetSpecSelectorMatchExpressions> matchExpressions) {
+  public void setMatchExpressions(List<V1LabelSelectorRequirement> matchExpressions) {
     this.matchExpressions = matchExpressions;
   }
 

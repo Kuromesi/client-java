@@ -14,33 +14,29 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.kubernetes.client.custom.IntOrString;
 import io.kubernetes.client.proto.Runtime;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentSpecTopologyNodeSelectorTerm;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentSpecTopologyTolerations;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
+import io.kubernetes.client.openapi.models.V1NodeSelectorTerm;
+import io.kubernetes.client.openapi.models.V1Toleration;
 
 /**
  * Subset defines the detail of a subset.
  */
 @ApiModel(description = "Subset defines the detail of a subset.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets {
+public class KruiseAppsV1alpha1Subset {
   @SerializedName("name")
   private String name = null;
 
   @SerializedName("nodeSelectorTerm")
-  private KruiseAppsV1alpha1UnitedDeploymentSpecTopologyNodeSelectorTerm nodeSelectorTerm = null;
+  private V1NodeSelectorTerm nodeSelectorTerm = null;
 
   @SerializedName("patch")
   private Runtime.RawExtension patch = null;
@@ -49,9 +45,9 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets {
   private IntOrString replicas = null;
 
   @SerializedName("tolerations")
-  private List<KruiseAppsV1alpha1UnitedDeploymentSpecTopologyTolerations> tolerations = null;
+  private List<V1Toleration> tolerations = null;
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets name(String name) {
+  public KruiseAppsV1alpha1Subset name(String name) {
     this.name = name;
     return this;
   }
@@ -69,7 +65,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets {
     this.name = name;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets nodeSelectorTerm(KruiseAppsV1alpha1UnitedDeploymentSpecTopologyNodeSelectorTerm nodeSelectorTerm) {
+  public KruiseAppsV1alpha1Subset nodeSelectorTerm(V1NodeSelectorTerm nodeSelectorTerm) {
     this.nodeSelectorTerm = nodeSelectorTerm;
     return this;
   }
@@ -79,15 +75,15 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets {
    * @return nodeSelectorTerm
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTopologyNodeSelectorTerm getNodeSelectorTerm() {
+  public V1NodeSelectorTerm getNodeSelectorTerm() {
     return nodeSelectorTerm;
   }
 
-  public void setNodeSelectorTerm(KruiseAppsV1alpha1UnitedDeploymentSpecTopologyNodeSelectorTerm nodeSelectorTerm) {
+  public void setNodeSelectorTerm(V1NodeSelectorTerm nodeSelectorTerm) {
     this.nodeSelectorTerm = nodeSelectorTerm;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets patch(Runtime.RawExtension patch) {
+  public KruiseAppsV1alpha1Subset patch(Runtime.RawExtension patch) {
     this.patch = patch;
     return this;
   }
@@ -105,7 +101,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets {
     this.patch = patch;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets replicas(IntOrString replicas) {
+  public KruiseAppsV1alpha1Subset replicas(IntOrString replicas) {
     this.replicas = replicas;
     return this;
   }
@@ -123,14 +119,14 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets {
     this.replicas = replicas;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets tolerations(List<KruiseAppsV1alpha1UnitedDeploymentSpecTopologyTolerations> tolerations) {
+  public KruiseAppsV1alpha1Subset tolerations(List<V1Toleration> tolerations) {
     this.tolerations = tolerations;
     return this;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets addTolerationsItem(KruiseAppsV1alpha1UnitedDeploymentSpecTopologyTolerations tolerationsItem) {
+  public KruiseAppsV1alpha1Subset addTolerationsItem(V1Toleration tolerationsItem) {
     if (this.tolerations == null) {
-      this.tolerations = new ArrayList<KruiseAppsV1alpha1UnitedDeploymentSpecTopologyTolerations>();
+      this.tolerations = new ArrayList<V1Toleration>();
     }
     this.tolerations.add(tolerationsItem);
     return this;
@@ -141,11 +137,11 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets {
    * @return tolerations
   **/
   @ApiModelProperty(value = "Indicates the tolerations the pods under this subset have. A subset's tolerations is not allowed to be updated.")
-  public List<KruiseAppsV1alpha1UnitedDeploymentSpecTopologyTolerations> getTolerations() {
+  public List<V1Toleration> getTolerations() {
     return tolerations;
   }
 
-  public void setTolerations(List<KruiseAppsV1alpha1UnitedDeploymentSpecTopologyTolerations> tolerations) {
+  public void setTolerations(List<V1Toleration> tolerations) {
     this.tolerations = tolerations;
   }
 
@@ -158,7 +154,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets ioKruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets = (KruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets) o;
+    KruiseAppsV1alpha1Subset ioKruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets = (KruiseAppsV1alpha1Subset) o;
     return Objects.equals(this.name, ioKruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets.name) &&
         Objects.equals(this.nodeSelectorTerm, ioKruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets.nodeSelectorTerm) &&
         Objects.equals(this.patch, ioKruiseAppsV1alpha1UnitedDeploymentSpecTopologySubsets.patch) &&

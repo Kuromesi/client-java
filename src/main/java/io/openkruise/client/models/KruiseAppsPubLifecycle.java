@@ -14,27 +14,19 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecLifecyclePreDelete;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecLifecyclePreNormal;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Lifecycle defines the lifecycle hooks for Pods pre-available(pre-normal), pre-delete, in-place update.
  */
 @ApiModel(description = "Lifecycle defines the lifecycle hooks for Pods pre-available(pre-normal), pre-delete, in-place update.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1CloneSetSpecLifecycle {
+public class KruiseAppsPubLifecycle {
   @SerializedName("inPlaceUpdate")
-  private KruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate inPlaceUpdate = null;
+  private KruiseAppsPubLifecycleHook inPlaceUpdate = null;
 
   @SerializedName("preDelete")
   private KruiseAppsV1alpha1CloneSetSpecLifecyclePreDelete preDelete = null;
@@ -42,7 +34,7 @@ public class KruiseAppsV1alpha1CloneSetSpecLifecycle {
   @SerializedName("preNormal")
   private KruiseAppsV1alpha1CloneSetSpecLifecyclePreNormal preNormal = null;
 
-  public KruiseAppsV1alpha1CloneSetSpecLifecycle inPlaceUpdate(KruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate inPlaceUpdate) {
+  public KruiseAppsPubLifecycle inPlaceUpdate(KruiseAppsPubLifecycleHook inPlaceUpdate) {
     this.inPlaceUpdate = inPlaceUpdate;
     return this;
   }
@@ -52,15 +44,15 @@ public class KruiseAppsV1alpha1CloneSetSpecLifecycle {
    * @return inPlaceUpdate
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate getInPlaceUpdate() {
+  public KruiseAppsPubLifecycleHook getInPlaceUpdate() {
     return inPlaceUpdate;
   }
 
-  public void setInPlaceUpdate(KruiseAppsV1alpha1CloneSetSpecLifecycleInPlaceUpdate inPlaceUpdate) {
+  public void setInPlaceUpdate(KruiseAppsPubLifecycleHook inPlaceUpdate) {
     this.inPlaceUpdate = inPlaceUpdate;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecLifecycle preDelete(KruiseAppsV1alpha1CloneSetSpecLifecyclePreDelete preDelete) {
+  public KruiseAppsPubLifecycle preDelete(KruiseAppsV1alpha1CloneSetSpecLifecyclePreDelete preDelete) {
     this.preDelete = preDelete;
     return this;
   }
@@ -78,7 +70,7 @@ public class KruiseAppsV1alpha1CloneSetSpecLifecycle {
     this.preDelete = preDelete;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecLifecycle preNormal(KruiseAppsV1alpha1CloneSetSpecLifecyclePreNormal preNormal) {
+  public KruiseAppsPubLifecycle preNormal(KruiseAppsV1alpha1CloneSetSpecLifecyclePreNormal preNormal) {
     this.preNormal = preNormal;
     return this;
   }
@@ -105,7 +97,7 @@ public class KruiseAppsV1alpha1CloneSetSpecLifecycle {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1CloneSetSpecLifecycle ioKruiseAppsV1alpha1CloneSetSpecLifecycle = (KruiseAppsV1alpha1CloneSetSpecLifecycle) o;
+    KruiseAppsPubLifecycle ioKruiseAppsV1alpha1CloneSetSpecLifecycle = (KruiseAppsPubLifecycle) o;
     return Objects.equals(this.inPlaceUpdate, ioKruiseAppsV1alpha1CloneSetSpecLifecycle.inPlaceUpdate) &&
         Objects.equals(this.preDelete, ioKruiseAppsV1alpha1CloneSetSpecLifecycle.preDelete) &&
         Objects.equals(this.preNormal, ioKruiseAppsV1alpha1CloneSetSpecLifecycle.preNormal);
