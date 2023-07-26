@@ -14,40 +14,34 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.kubernetes.client.openapi.models.V1ObjectMeta;
-import io.openkruise.client.models.KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpec;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
- * Specifies the broadcastjob that will be created when executing a BroadcastCronJob.
+ * AdvancedStatefulSet template
  */
-@ApiModel(description = "Specifies the broadcastjob that will be created when executing a BroadcastCronJob.")
+@ApiModel(description = "AdvancedStatefulSet template")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate {
+public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate {
   @SerializedName("metadata")
   private V1ObjectMeta metadata = null;
 
   @SerializedName("spec")
-  private KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpec spec = null;
+  private KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec spec = null;
 
-  public KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate metadata(V1ObjectMeta metadata) {
+  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate metadata(V1ObjectMeta metadata) {
     this.metadata = metadata;
     return this;
   }
 
    /**
-   * Standard object&#39;s metadata of the jobs created from this template.
+   * Get metadata
    * @return metadata
   **/
-  @ApiModelProperty(value = "Standard object's metadata of the jobs created from this template.")
+  @ApiModelProperty(value = "")
   public V1ObjectMeta getMetadata() {
     return metadata;
   }
@@ -56,7 +50,7 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate {
     this.metadata = metadata;
   }
 
-  public KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate spec(KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpec spec) {
+  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate spec(KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec spec) {
     this.spec = spec;
     return this;
   }
@@ -65,12 +59,12 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate {
    * Get spec
    * @return spec
   **/
-  @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpec getSpec() {
+  @ApiModelProperty(required = true, value = "")
+  public KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec getSpec() {
     return spec;
   }
 
-  public void setSpec(KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplateSpec spec) {
+  public void setSpec(KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec spec) {
     this.spec = spec;
   }
 
@@ -83,9 +77,9 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate ioKruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate = (KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate) o;
-    return Objects.equals(this.metadata, ioKruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate.metadata) &&
-        Objects.equals(this.spec, ioKruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate.spec);
+    KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate = (KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate) o;
+    return Objects.equals(this.metadata, ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate.metadata) &&
+        Objects.equals(this.spec, ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate.spec);
   }
 
   @Override
@@ -97,7 +91,7 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class KruiseAppsV1alpha1AdvancedCronJobSpecTemplateBroadcastJobTemplate {\n");
+    sb.append("class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate {\n");
     
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("    spec: ").append(toIndentedString(spec)).append("\n");

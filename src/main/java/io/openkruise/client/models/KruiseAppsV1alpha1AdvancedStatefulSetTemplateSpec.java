@@ -14,23 +14,13 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.kubernetes.client.openapi.models.V1PersistentVolumeClaim;
-import io.kubernetes.client.openapi.models.V1PodTemplate;
 import io.kubernetes.client.openapi.models.V1PodTemplateSpec;
-import io.openkruise.client.models.KruiseAppsV1alpha1StatefulSetSpecSelector;
-import io.openkruise.client.models.KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecLifecycle;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecPersistentVolumeClaimRetentionPolicy;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecScaleStrategy;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,7 +31,7 @@ import java.util.List;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpec {
   @SerializedName("lifecycle")
-  private KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecLifecycle lifecycle = null;
+  private KruiseAppsPubLifecycle lifecycle = null;
 
   @SerializedName("persistentVolumeClaimRetentionPolicy")
   private KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecPersistentVolumeClaimRetentionPolicy persistentVolumeClaimRetentionPolicy = null;
@@ -76,7 +66,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTe
   @SerializedName("volumeClaimTemplates")
   private List<V1PersistentVolumeClaim> volumeClaimTemplates = null;
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpec lifecycle(KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecLifecycle lifecycle) {
+  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpec lifecycle(KruiseAppsPubLifecycle lifecycle) {
     this.lifecycle = lifecycle;
     return this;
   }
@@ -86,11 +76,11 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTe
    * @return lifecycle
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecLifecycle getLifecycle() {
+  public KruiseAppsPubLifecycle getLifecycle() {
     return lifecycle;
   }
 
-  public void setLifecycle(KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecLifecycle lifecycle) {
+  public void setLifecycle(KruiseAppsPubLifecycle lifecycle) {
     this.lifecycle = lifecycle;
   }
 
