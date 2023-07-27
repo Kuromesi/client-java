@@ -14,19 +14,12 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.kubernetes.client.custom.IntOrString;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +30,7 @@ import java.util.List;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategy {
   @SerializedName("inPlaceUpdateStrategy")
-  private KruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy inPlaceUpdateStrategy = null;
+  private KruiseAppsPubInPlaceUpdateStrategy inPlaceUpdateStrategy = null;
 
   @SerializedName("maxSurge")
   private IntOrString maxSurge = null;
@@ -52,7 +45,7 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategy {
   private Boolean paused = null;
 
   @SerializedName("priorityStrategy")
-  private KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy priorityStrategy = null;
+  private KruiseAppsPubUpdatePriorityStrategy priorityStrategy = null;
 
   @SerializedName("scatterStrategy")
   private List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy> scatterStrategy = null;
@@ -60,7 +53,7 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategy {
   @SerializedName("type")
   private String type = null;
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategy inPlaceUpdateStrategy(KruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy inPlaceUpdateStrategy) {
+  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategy inPlaceUpdateStrategy(KruiseAppsPubInPlaceUpdateStrategy inPlaceUpdateStrategy) {
     this.inPlaceUpdateStrategy = inPlaceUpdateStrategy;
     return this;
   }
@@ -70,11 +63,11 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategy {
    * @return inPlaceUpdateStrategy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy getInPlaceUpdateStrategy() {
+  public KruiseAppsPubInPlaceUpdateStrategy getInPlaceUpdateStrategy() {
     return inPlaceUpdateStrategy;
   }
 
-  public void setInPlaceUpdateStrategy(KruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy inPlaceUpdateStrategy) {
+  public void setInPlaceUpdateStrategy(KruiseAppsPubInPlaceUpdateStrategy inPlaceUpdateStrategy) {
     this.inPlaceUpdateStrategy = inPlaceUpdateStrategy;
   }
 
@@ -150,7 +143,7 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategy {
     this.paused = paused;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategy priorityStrategy(KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy priorityStrategy) {
+  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategy priorityStrategy(KruiseAppsPubUpdatePriorityStrategy priorityStrategy) {
     this.priorityStrategy = priorityStrategy;
     return this;
   }
@@ -160,11 +153,11 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategy {
    * @return priorityStrategy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy getPriorityStrategy() {
+  public KruiseAppsPubUpdatePriorityStrategy getPriorityStrategy() {
     return priorityStrategy;
   }
 
-  public void setPriorityStrategy(KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy priorityStrategy) {
+  public void setPriorityStrategy(KruiseAppsPubUpdatePriorityStrategy priorityStrategy) {
     this.priorityStrategy = priorityStrategy;
   }
 

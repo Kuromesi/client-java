@@ -14,17 +14,10 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1NodePodProbeSpecProbe;
-import io.openkruise.client.models.KruiseAppsV1alpha1PodProbeMarkerSpecMarkerPolicy;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +30,7 @@ public class KruiseAppsV1alpha1PodProbeMarkerSpecProbes {
   private String containerName = null;
 
   @SerializedName("markerPolicy")
-  private List<KruiseAppsV1alpha1PodProbeMarkerSpecMarkerPolicy> markerPolicy = null;
+  private List<KruiseAppsV1alpha1ProbeMarkerPolicy> markerPolicy = null;
 
   @SerializedName("name")
   private String name = null;
@@ -46,7 +39,7 @@ public class KruiseAppsV1alpha1PodProbeMarkerSpecProbes {
   private String podConditionType = null;
 
   @SerializedName("probe")
-  private KruiseAppsV1alpha1NodePodProbeSpecProbe probe = null;
+  private KruiseAppsV1alpha1ContainerProbeSpec probe = null;
 
   public KruiseAppsV1alpha1PodProbeMarkerSpecProbes containerName(String containerName) {
     this.containerName = containerName;
@@ -66,14 +59,14 @@ public class KruiseAppsV1alpha1PodProbeMarkerSpecProbes {
     this.containerName = containerName;
   }
 
-  public KruiseAppsV1alpha1PodProbeMarkerSpecProbes markerPolicy(List<KruiseAppsV1alpha1PodProbeMarkerSpecMarkerPolicy> markerPolicy) {
+  public KruiseAppsV1alpha1PodProbeMarkerSpecProbes markerPolicy(List<KruiseAppsV1alpha1ProbeMarkerPolicy> markerPolicy) {
     this.markerPolicy = markerPolicy;
     return this;
   }
 
-  public KruiseAppsV1alpha1PodProbeMarkerSpecProbes addMarkerPolicyItem(KruiseAppsV1alpha1PodProbeMarkerSpecMarkerPolicy markerPolicyItem) {
+  public KruiseAppsV1alpha1PodProbeMarkerSpecProbes addMarkerPolicyItem(KruiseAppsV1alpha1ProbeMarkerPolicy markerPolicyItem) {
     if (this.markerPolicy == null) {
-      this.markerPolicy = new ArrayList<KruiseAppsV1alpha1PodProbeMarkerSpecMarkerPolicy>();
+      this.markerPolicy = new ArrayList<KruiseAppsV1alpha1ProbeMarkerPolicy>();
     }
     this.markerPolicy.add(markerPolicyItem);
     return this;
@@ -84,11 +77,11 @@ public class KruiseAppsV1alpha1PodProbeMarkerSpecProbes {
    * @return markerPolicy
   **/
   @ApiModelProperty(value = "According to the execution result of ContainerProbe, perform specific actions, such as: patch Pod labels, annotations, ReadinessGate Condition It cannot be null at the same time as PodConditionType.")
-  public List<KruiseAppsV1alpha1PodProbeMarkerSpecMarkerPolicy> getMarkerPolicy() {
+  public List<KruiseAppsV1alpha1ProbeMarkerPolicy> getMarkerPolicy() {
     return markerPolicy;
   }
 
-  public void setMarkerPolicy(List<KruiseAppsV1alpha1PodProbeMarkerSpecMarkerPolicy> markerPolicy) {
+  public void setMarkerPolicy(List<KruiseAppsV1alpha1ProbeMarkerPolicy> markerPolicy) {
     this.markerPolicy = markerPolicy;
   }
 
@@ -128,7 +121,7 @@ public class KruiseAppsV1alpha1PodProbeMarkerSpecProbes {
     this.podConditionType = podConditionType;
   }
 
-  public KruiseAppsV1alpha1PodProbeMarkerSpecProbes probe(KruiseAppsV1alpha1NodePodProbeSpecProbe probe) {
+  public KruiseAppsV1alpha1PodProbeMarkerSpecProbes probe(KruiseAppsV1alpha1ContainerProbeSpec probe) {
     this.probe = probe;
     return this;
   }
@@ -138,11 +131,11 @@ public class KruiseAppsV1alpha1PodProbeMarkerSpecProbes {
    * @return probe
   **/
   @ApiModelProperty(required = true, value = "")
-  public KruiseAppsV1alpha1NodePodProbeSpecProbe getProbe() {
+  public KruiseAppsV1alpha1ContainerProbeSpec getProbe() {
     return probe;
   }
 
-  public void setProbe(KruiseAppsV1alpha1NodePodProbeSpecProbe probe) {
+  public void setProbe(KruiseAppsV1alpha1ContainerProbeSpec probe) {
     this.probe = probe;
   }
 

@@ -14,16 +14,10 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1NodePodProbeSpecProbes;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +25,7 @@ import java.util.List;
  * KruiseAppsV1alpha1NodePodProbeSpecPodProbes
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1NodePodProbeSpecPodProbes {
+public class KruiseAppsV1alpha1PodProbes {
   @SerializedName("name")
   private String name = null;
 
@@ -39,12 +33,12 @@ public class KruiseAppsV1alpha1NodePodProbeSpecPodProbes {
   private String namespace = null;
 
   @SerializedName("probes")
-  private List<KruiseAppsV1alpha1NodePodProbeSpecProbes> probes = null;
+  private List<KruiseAppsV1alpha1ContainerProbe> probes = null;
 
   @SerializedName("uid")
   private String uid = null;
 
-  public KruiseAppsV1alpha1NodePodProbeSpecPodProbes name(String name) {
+  public KruiseAppsV1alpha1PodProbes name(String name) {
     this.name = name;
     return this;
   }
@@ -62,7 +56,7 @@ public class KruiseAppsV1alpha1NodePodProbeSpecPodProbes {
     this.name = name;
   }
 
-  public KruiseAppsV1alpha1NodePodProbeSpecPodProbes namespace(String namespace) {
+  public KruiseAppsV1alpha1PodProbes namespace(String namespace) {
     this.namespace = namespace;
     return this;
   }
@@ -80,14 +74,14 @@ public class KruiseAppsV1alpha1NodePodProbeSpecPodProbes {
     this.namespace = namespace;
   }
 
-  public KruiseAppsV1alpha1NodePodProbeSpecPodProbes probes(List<KruiseAppsV1alpha1NodePodProbeSpecProbes> probes) {
+  public KruiseAppsV1alpha1PodProbes probes(List<KruiseAppsV1alpha1ContainerProbe> probes) {
     this.probes = probes;
     return this;
   }
 
-  public KruiseAppsV1alpha1NodePodProbeSpecPodProbes addProbesItem(KruiseAppsV1alpha1NodePodProbeSpecProbes probesItem) {
+  public KruiseAppsV1alpha1PodProbes addProbesItem(KruiseAppsV1alpha1ContainerProbe probesItem) {
     if (this.probes == null) {
-      this.probes = new ArrayList<KruiseAppsV1alpha1NodePodProbeSpecProbes>();
+      this.probes = new ArrayList<KruiseAppsV1alpha1ContainerProbe>();
     }
     this.probes.add(probesItem);
     return this;
@@ -98,15 +92,15 @@ public class KruiseAppsV1alpha1NodePodProbeSpecPodProbes {
    * @return probes
   **/
   @ApiModelProperty(value = "Custom container probe, supports Exec, Tcp, and returns the result to Pod yaml")
-  public List<KruiseAppsV1alpha1NodePodProbeSpecProbes> getProbes() {
+  public List<KruiseAppsV1alpha1ContainerProbe> getProbes() {
     return probes;
   }
 
-  public void setProbes(List<KruiseAppsV1alpha1NodePodProbeSpecProbes> probes) {
+  public void setProbes(List<KruiseAppsV1alpha1ContainerProbe> probes) {
     this.probes = probes;
   }
 
-  public KruiseAppsV1alpha1NodePodProbeSpecPodProbes uid(String uid) {
+  public KruiseAppsV1alpha1PodProbes uid(String uid) {
     this.uid = uid;
     return this;
   }
@@ -133,7 +127,7 @@ public class KruiseAppsV1alpha1NodePodProbeSpecPodProbes {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1NodePodProbeSpecPodProbes ioKruiseAppsV1alpha1NodePodProbeSpecPodProbes = (KruiseAppsV1alpha1NodePodProbeSpecPodProbes) o;
+    KruiseAppsV1alpha1PodProbes ioKruiseAppsV1alpha1NodePodProbeSpecPodProbes = (KruiseAppsV1alpha1PodProbes) o;
     return Objects.equals(this.name, ioKruiseAppsV1alpha1NodePodProbeSpecPodProbes.name) &&
         Objects.equals(this.namespace, ioKruiseAppsV1alpha1NodePodProbeSpecPodProbes.namespace) &&
         Objects.equals(this.probes, ioKruiseAppsV1alpha1NodePodProbeSpecPodProbes.probes) &&

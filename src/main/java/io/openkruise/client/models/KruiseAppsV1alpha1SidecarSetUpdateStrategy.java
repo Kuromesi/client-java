@@ -40,10 +40,10 @@ public class KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy {
   private Boolean paused = null;
 
   @SerializedName("priorityStrategy")
-  private KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy priorityStrategy = null;
+  private KruiseAppsPubUpdatePriorityStrategy priorityStrategy = null;
 
   @SerializedName("scatterStrategy")
-  private List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy> scatterStrategy = null;
+  private List<KruiseAppsV1alpha1UpdateScatterTerm> scatterStrategy = null;
 
   @SerializedName("selector")
   private V1LabelSelector selector = null;
@@ -105,7 +105,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy {
     this.paused = paused;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy priorityStrategy(KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy priorityStrategy) {
+  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy priorityStrategy(KruiseAppsPubUpdatePriorityStrategy priorityStrategy) {
     this.priorityStrategy = priorityStrategy;
     return this;
   }
@@ -115,22 +115,22 @@ public class KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy {
    * @return priorityStrategy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy getPriorityStrategy() {
+  public KruiseAppsPubUpdatePriorityStrategy getPriorityStrategy() {
     return priorityStrategy;
   }
 
-  public void setPriorityStrategy(KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy priorityStrategy) {
+  public void setPriorityStrategy(KruiseAppsPubUpdatePriorityStrategy priorityStrategy) {
     this.priorityStrategy = priorityStrategy;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy scatterStrategy(List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy> scatterStrategy) {
+  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy scatterStrategy(List<KruiseAppsV1alpha1UpdateScatterTerm> scatterStrategy) {
     this.scatterStrategy = scatterStrategy;
     return this;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy addScatterStrategyItem(KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy scatterStrategyItem) {
+  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy addScatterStrategyItem(KruiseAppsV1alpha1UpdateScatterTerm scatterStrategyItem) {
     if (this.scatterStrategy == null) {
-      this.scatterStrategy = new ArrayList<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy>();
+      this.scatterStrategy = new ArrayList<KruiseAppsV1alpha1UpdateScatterTerm>();
     }
     this.scatterStrategy.add(scatterStrategyItem);
     return this;
@@ -141,11 +141,11 @@ public class KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy {
    * @return scatterStrategy
   **/
   @ApiModelProperty(value = "ScatterStrategy defines the scatter rules to make pods been scattered when update. This will avoid pods with the same key-value to be updated in one batch. - Note that pods will be scattered after priority sort. So, although priority strategy and scatter strategy can be applied together, we suggest to use either one of them. - If scatterStrategy is used, we suggest to just use one term. Otherwise, the update order can be hard to understand.")
-  public List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy> getScatterStrategy() {
+  public List<KruiseAppsV1alpha1UpdateScatterTerm> getScatterStrategy() {
     return scatterStrategy;
   }
 
-  public void setScatterStrategy(List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy> scatterStrategy) {
+  public void setScatterStrategy(List<KruiseAppsV1alpha1UpdateScatterTerm> scatterStrategy) {
     this.scatterStrategy = scatterStrategy;
   }
 

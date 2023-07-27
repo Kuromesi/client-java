@@ -14,27 +14,22 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1ContainerRecreateRequestSpecPorts;
-import io.openkruise.client.models.KruiseAppsV1alpha1ContainerRecreateRequestSpecPreStop;
-import io.openkruise.client.models.KruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
+import io.kubernetes.client.openapi.models.V1ContainerPort;
+import io.kubernetes.client.openapi.models.V1Handler;
 
 /**
  * ContainerRecreateRequestContainer defines the container that need to recreate.
  */
 @ApiModel(description = "ContainerRecreateRequestContainer defines the container that need to recreate.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers {
+public class KruiseAppsV1alpha1ContainerRecreateRequestContainers {
   @SerializedName("name")
   private String name = null;
 
@@ -47,7 +42,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers {
   @SerializedName("statusContext")
   private KruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext statusContext = null;
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers name(String name) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestContainers name(String name) {
     this.name = name;
     return this;
   }
@@ -65,12 +60,12 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers {
     this.name = name;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers ports(List<KruiseAppsV1alpha1ContainerRecreateRequestSpecPorts> ports) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestContainers ports(List<KruiseAppsV1alpha1ContainerRecreateRequestSpecPorts> ports) {
     this.ports = ports;
     return this;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers addPortsItem(KruiseAppsV1alpha1ContainerRecreateRequestSpecPorts portsItem) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestContainers addPortsItem(KruiseAppsV1alpha1ContainerRecreateRequestSpecPorts portsItem) {
     if (this.ports == null) {
       this.ports = new ArrayList<KruiseAppsV1alpha1ContainerRecreateRequestSpecPorts>();
     }
@@ -91,7 +86,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers {
     this.ports = ports;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers preStop(KruiseAppsV1alpha1ContainerRecreateRequestSpecPreStop preStop) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestContainers preStop(KruiseAppsV1alpha1ContainerRecreateRequestSpecPreStop preStop) {
     this.preStop = preStop;
     return this;
   }
@@ -109,7 +104,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers {
     this.preStop = preStop;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers statusContext(KruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext statusContext) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestContainers statusContext(KruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext statusContext) {
     this.statusContext = statusContext;
     return this;
   }
@@ -136,7 +131,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers ioKruiseAppsV1alpha1ContainerRecreateRequestSpecContainers = (KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers) o;
+    KruiseAppsV1alpha1ContainerRecreateRequestContainers ioKruiseAppsV1alpha1ContainerRecreateRequestSpecContainers = (KruiseAppsV1alpha1ContainerRecreateRequestContainers) o;
     return Objects.equals(this.name, ioKruiseAppsV1alpha1ContainerRecreateRequestSpecContainers.name) &&
         Objects.equals(this.ports, ioKruiseAppsV1alpha1ContainerRecreateRequestSpecContainers.ports) &&
         Objects.equals(this.preStop, ioKruiseAppsV1alpha1ContainerRecreateRequestSpecContainers.preStop) &&

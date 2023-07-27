@@ -14,16 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1WorkloadSpreadStatusConditions;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -37,7 +32,7 @@ import org.joda.time.DateTime;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses {
   @SerializedName("conditions")
-  private List<KruiseAppsV1alpha1WorkloadSpreadStatusConditions> conditions = null;
+  private List<KruiseAppsV1alpha1WorkloadSpreadCondition> conditions = null;
 
   @SerializedName("creatingPods")
   private Map<String, DateTime> creatingPods = null;
@@ -54,14 +49,14 @@ public class KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses {
   @SerializedName("replicas")
   private Integer replicas = null;
 
-  public KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses conditions(List<KruiseAppsV1alpha1WorkloadSpreadStatusConditions> conditions) {
+  public KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses conditions(List<KruiseAppsV1alpha1WorkloadSpreadCondition> conditions) {
     this.conditions = conditions;
     return this;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses addConditionsItem(KruiseAppsV1alpha1WorkloadSpreadStatusConditions conditionsItem) {
+  public KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses addConditionsItem(KruiseAppsV1alpha1WorkloadSpreadCondition conditionsItem) {
     if (this.conditions == null) {
-      this.conditions = new ArrayList<KruiseAppsV1alpha1WorkloadSpreadStatusConditions>();
+      this.conditions = new ArrayList<KruiseAppsV1alpha1WorkloadSpreadCondition>();
     }
     this.conditions.add(conditionsItem);
     return this;
@@ -72,11 +67,11 @@ public class KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses {
    * @return conditions
   **/
   @ApiModelProperty(value = "Conditions is an array of current observed subset conditions.")
-  public List<KruiseAppsV1alpha1WorkloadSpreadStatusConditions> getConditions() {
+  public List<KruiseAppsV1alpha1WorkloadSpreadCondition> getConditions() {
     return conditions;
   }
 
-  public void setConditions(List<KruiseAppsV1alpha1WorkloadSpreadStatusConditions> conditions) {
+  public void setConditions(List<KruiseAppsV1alpha1WorkloadSpreadCondition> conditions) {
     this.conditions = conditions;
   }
 

@@ -14,18 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.kubernetes.client.custom.IntOrString;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy;
-import io.openkruise.client.models.KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorderedUpdate;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
@@ -34,7 +27,7 @@ import java.io.IOException;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate {
   @SerializedName("inPlaceUpdateStrategy")
-  private KruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy inPlaceUpdateStrategy = null;
+  private KruiseAppsPubInPlaceUpdateStrategy inPlaceUpdateStrategy = null;
 
   @SerializedName("maxUnavailable")
   private IntOrString maxUnavailable = null;
@@ -54,7 +47,7 @@ public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate {
   @SerializedName("unorderedUpdate")
   private KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorderedUpdate unorderedUpdate = null;
 
-  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate inPlaceUpdateStrategy(KruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy inPlaceUpdateStrategy) {
+  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate inPlaceUpdateStrategy(KruiseAppsPubInPlaceUpdateStrategy inPlaceUpdateStrategy) {
     this.inPlaceUpdateStrategy = inPlaceUpdateStrategy;
     return this;
   }
@@ -64,11 +57,11 @@ public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate {
    * @return inPlaceUpdateStrategy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy getInPlaceUpdateStrategy() {
+  public KruiseAppsPubInPlaceUpdateStrategy getInPlaceUpdateStrategy() {
     return inPlaceUpdateStrategy;
   }
 
-  public void setInPlaceUpdateStrategy(KruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy inPlaceUpdateStrategy) {
+  public void setInPlaceUpdateStrategy(KruiseAppsPubInPlaceUpdateStrategy inPlaceUpdateStrategy) {
     this.inPlaceUpdateStrategy = inPlaceUpdateStrategy;
   }
 

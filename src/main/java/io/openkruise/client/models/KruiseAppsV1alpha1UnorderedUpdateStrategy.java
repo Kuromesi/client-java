@@ -14,16 +14,10 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * UnorderedUpdate contains strategies for non-ordered update. If it is not nil, pods will be updated with non-ordered sequence. Noted that UnorderedUpdate can only be allowed to work with Parallel podManagementPolicy
@@ -32,9 +26,9 @@ import java.io.IOException;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorderedUpdate {
   @SerializedName("priorityStrategy")
-  private KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy priorityStrategy = null;
+  private KruiseAppsPubUpdatePriorityStrategy priorityStrategy = null;
 
-  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorderedUpdate priorityStrategy(KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy priorityStrategy) {
+  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorderedUpdate priorityStrategy(KruiseAppsPubUpdatePriorityStrategy priorityStrategy) {
     this.priorityStrategy = priorityStrategy;
     return this;
   }
@@ -44,11 +38,11 @@ public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorder
    * @return priorityStrategy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy getPriorityStrategy() {
+  public KruiseAppsPubUpdatePriorityStrategy getPriorityStrategy() {
     return priorityStrategy;
   }
 
-  public void setPriorityStrategy(KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy priorityStrategy) {
+  public void setPriorityStrategy(KruiseAppsPubUpdatePriorityStrategy priorityStrategy) {
     this.priorityStrategy = priorityStrategy;
   }
 

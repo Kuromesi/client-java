@@ -14,18 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig;
-import io.openkruise.client.models.KruiseAppsV1alpha1NodeImageSpecPullSecrets;
-import io.openkruise.client.models.KruiseAppsV1alpha1NodeImageSpecTags;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,7 +32,7 @@ public class KruiseAppsV1alpha1NodeImageSpecImages {
   private List<KruiseAppsV1alpha1NodeImageSpecPullSecrets> pullSecrets = null;
 
   @SerializedName("sandboxConfig")
-  private KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig sandboxConfig = null;
+  private KruiseAppsV1alpha1SandboxConfig sandboxConfig = null;
 
   @SerializedName("tags")
   private List<KruiseAppsV1alpha1NodeImageSpecTags> tags = new ArrayList<KruiseAppsV1alpha1NodeImageSpecTags>();
@@ -70,7 +63,7 @@ public class KruiseAppsV1alpha1NodeImageSpecImages {
     this.pullSecrets = pullSecrets;
   }
 
-  public KruiseAppsV1alpha1NodeImageSpecImages sandboxConfig(KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig sandboxConfig) {
+  public KruiseAppsV1alpha1NodeImageSpecImages sandboxConfig(KruiseAppsV1alpha1SandboxConfig sandboxConfig) {
     this.sandboxConfig = sandboxConfig;
     return this;
   }
@@ -80,11 +73,11 @@ public class KruiseAppsV1alpha1NodeImageSpecImages {
    * @return sandboxConfig
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig getSandboxConfig() {
+  public KruiseAppsV1alpha1SandboxConfig getSandboxConfig() {
     return sandboxConfig;
   }
 
-  public void setSandboxConfig(KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig sandboxConfig) {
+  public void setSandboxConfig(KruiseAppsV1alpha1SandboxConfig sandboxConfig) {
     this.sandboxConfig = sandboxConfig;
   }
 

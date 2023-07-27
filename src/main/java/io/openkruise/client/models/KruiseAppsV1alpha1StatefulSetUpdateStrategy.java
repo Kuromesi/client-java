@@ -14,16 +14,10 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * updateStrategy indicates the StatefulSetUpdateStrategy that will be employed to update Pods in the StatefulSet when a revision is made to Template.
@@ -32,12 +26,12 @@ import java.io.IOException;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy {
   @SerializedName("rollingUpdate")
-  private KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate rollingUpdate = null;
+  private KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy rollingUpdate = null;
 
   @SerializedName("type")
   private String type = null;
 
-  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy rollingUpdate(KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate rollingUpdate) {
+  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy rollingUpdate(KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy rollingUpdate) {
     this.rollingUpdate = rollingUpdate;
     return this;
   }
@@ -47,11 +41,11 @@ public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy {
    * @return rollingUpdate
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate getRollingUpdate() {
+  public KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy getRollingUpdate() {
     return rollingUpdate;
   }
 
-  public void setRollingUpdate(KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate rollingUpdate) {
+  public void setRollingUpdate(KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy rollingUpdate) {
     this.rollingUpdate = rollingUpdate;
   }
 
