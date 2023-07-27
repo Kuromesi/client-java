@@ -13,8 +13,6 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -26,13 +24,16 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * AdvancedCronJobList is a list of AdvancedCronJob
  */
 @ApiModel(description = "AdvancedCronJobList is a list of AdvancedCronJob")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1AdvancedCronJobList {
   @SerializedName("apiVersion")
   private String apiVersion = null;
@@ -129,7 +130,7 @@ public class KruiseAppsV1alpha1AdvancedCronJobList {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1AdvancedCronJobList)) {
       return false;
     }
     KruiseAppsV1alpha1AdvancedCronJobList ioKruiseAppsV1alpha1AdvancedCronJobList = (KruiseAppsV1alpha1AdvancedCronJobList) o;

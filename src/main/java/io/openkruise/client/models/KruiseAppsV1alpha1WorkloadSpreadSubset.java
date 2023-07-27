@@ -13,8 +13,6 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.custom.IntOrString;
 import io.kubernetes.client.openapi.models.V1NodeSelectorTerm;
@@ -23,15 +21,16 @@ import io.kubernetes.client.openapi.models.V1Toleration;
 import io.kubernetes.client.proto.Runtime;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * WorkloadSpreadSubset defines the details of a subset.
  */
 @ApiModel(description = "WorkloadSpreadSubset defines the details of a subset.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1WorkloadSpreadSubset {
   @SerializedName("maxReplicas")
   private IntOrString maxReplicas = null;
@@ -181,7 +180,7 @@ public class KruiseAppsV1alpha1WorkloadSpreadSubset {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1WorkloadSpreadSubset)) {
       return false;
     }
     KruiseAppsV1alpha1WorkloadSpreadSubset ioKruiseAppsV1alpha1WorkloadSpreadSpecSubsets = (KruiseAppsV1alpha1WorkloadSpreadSubset) o;

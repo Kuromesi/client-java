@@ -13,18 +13,18 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
+import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.kubernetes.client.openapi.models.V1LabelSelector;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * UpdatePriorityWeightTerm defines weight priority.
  */
 @ApiModel(description = "UpdatePriorityWeightTerm defines weight priority.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsPubUpdatePriorityWeightTerm {
   @SerializedName("matchSelector")
   private V1LabelSelector matchSelector = null;
@@ -74,7 +74,7 @@ public class KruiseAppsPubUpdatePriorityWeightTerm {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsPubUpdatePriorityWeightTerm)) {
       return false;
     }
     KruiseAppsPubUpdatePriorityWeightTerm ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority = (KruiseAppsPubUpdatePriorityWeightTerm) o;

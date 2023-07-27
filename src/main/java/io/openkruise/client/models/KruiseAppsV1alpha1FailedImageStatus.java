@@ -13,17 +13,17 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * FailedImageStatus the state of ImagePullJob which has the failed nodes(status.Failed&gt;0)
  */
 @ApiModel(description = "FailedImageStatus the state of ImagePullJob which has the failed nodes(status.Failed>0)")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1FailedImageStatus {
   @SerializedName("imagePullJob")
   private String imagePullJob = null;
@@ -94,7 +94,7 @@ public class KruiseAppsV1alpha1FailedImageStatus {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1FailedImageStatus)) {
       return false;
     }
     KruiseAppsV1alpha1FailedImageStatus ioKruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses = (KruiseAppsV1alpha1FailedImageStatus) o;

@@ -13,19 +13,19 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.custom.IntOrString;
 import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * PodUnavailableBudgetSpec defines the desired state of PodUnavailableBudget
  */
 @ApiModel(description = "PodUnavailableBudgetSpec defines the desired state of PodUnavailableBudget")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruisePolicyV1alpha1PodUnavailableBudgetSpec {
   @SerializedName("maxUnavailable")
   private IntOrString maxUnavailable = null;
@@ -117,7 +117,7 @@ public class KruisePolicyV1alpha1PodUnavailableBudgetSpec {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruisePolicyV1alpha1PodUnavailableBudgetSpec)) {
       return false;
     }
     KruisePolicyV1alpha1PodUnavailableBudgetSpec ioKruisePolicyV1alpha1PodUnavailableBudgetSpec = (KruisePolicyV1alpha1PodUnavailableBudgetSpec) o;

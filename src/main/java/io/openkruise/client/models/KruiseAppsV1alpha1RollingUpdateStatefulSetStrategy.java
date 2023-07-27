@@ -13,18 +13,18 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.custom.IntOrString;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
  */
 @ApiModel(description = "RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy {
   @SerializedName("inPlaceUpdateStrategy")
   private KruiseAppsPubInPlaceUpdateStrategy inPlaceUpdateStrategy = null;
@@ -179,7 +179,7 @@ public class KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy)) {
       return false;
     }
     KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy ioKruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate = (KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy) o;

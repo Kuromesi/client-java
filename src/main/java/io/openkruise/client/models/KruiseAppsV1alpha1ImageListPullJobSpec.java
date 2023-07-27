@@ -13,21 +13,20 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.custom.IntOrString;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * ImageListPullJobSpec defines the desired state of ImageListPullJob
  */
 @ApiModel(description = "ImageListPullJobSpec defines the desired state of ImageListPullJob")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1ImageListPullJobSpec {
   @SerializedName("completionPolicy")
   private KruiseAppsV1alpha1CompletionPolicy completionPolicy = null;
@@ -216,7 +215,7 @@ public class KruiseAppsV1alpha1ImageListPullJobSpec {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1ImageListPullJobSpec)) {
       return false;
     }
     KruiseAppsV1alpha1ImageListPullJobSpec ioKruiseAppsV1alpha1ImageListPullJobSpec = (KruiseAppsV1alpha1ImageListPullJobSpec) o;

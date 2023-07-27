@@ -13,22 +13,21 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.kubernetes.client.openapi.models.V1Volume;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * SidecarSetSpec defines the desired state of SidecarSet
  */
 @ApiModel(description = "SidecarSetSpec defines the desired state of SidecarSet")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1SidecarSetSpec {
   @SerializedName("containers")
   private List<Object> containers = null;
@@ -299,7 +298,7 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1SidecarSetSpec)) {
       return false;
     }
     KruiseAppsV1alpha1SidecarSetSpec ioKruiseAppsV1alpha1SidecarSetSpec = (KruiseAppsV1alpha1SidecarSetSpec) o;

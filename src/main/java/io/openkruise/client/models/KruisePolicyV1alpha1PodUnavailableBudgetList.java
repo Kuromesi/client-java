@@ -13,21 +13,20 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.openapi.models.V1ListMeta;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * PodUnavailableBudgetList is a list of PodUnavailableBudget
  */
 @ApiModel(description = "PodUnavailableBudgetList is a list of PodUnavailableBudget")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruisePolicyV1alpha1PodUnavailableBudgetList {
   @SerializedName("apiVersion")
   private String apiVersion = null;
@@ -124,7 +123,7 @@ public class KruisePolicyV1alpha1PodUnavailableBudgetList {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruisePolicyV1alpha1PodUnavailableBudgetList)) {
       return false;
     }
     KruisePolicyV1alpha1PodUnavailableBudgetList ioKruisePolicyV1alpha1PodUnavailableBudgetList = (KruisePolicyV1alpha1PodUnavailableBudgetList) o;

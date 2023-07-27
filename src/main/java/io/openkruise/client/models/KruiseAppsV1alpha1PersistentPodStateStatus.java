@@ -13,18 +13,17 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * KruiseAppsV1alpha1PersistentPodStateStatus
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1PersistentPodStateStatus {
   @SerializedName("observedGeneration")
   private Long observedGeneration = null;
@@ -82,7 +81,7 @@ public class KruiseAppsV1alpha1PersistentPodStateStatus {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1PersistentPodStateStatus)) {
       return false;
     }
     KruiseAppsV1alpha1PersistentPodStateStatus ioKruiseAppsV1alpha1PersistentPodStateStatus = (KruiseAppsV1alpha1PersistentPodStateStatus) o;

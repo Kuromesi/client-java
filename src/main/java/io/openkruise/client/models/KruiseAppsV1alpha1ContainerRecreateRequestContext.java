@@ -13,17 +13,17 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * StatusContext is synced from the real Pod status during this ContainerRecreateRequest creating. Populated by the system. Read-only.
  */
 @ApiModel(description = "StatusContext is synced from the real Pod status during this ContainerRecreateRequest creating. Populated by the system. Read-only.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1ContainerRecreateRequestContext {
   @SerializedName("containerID")
   private String containerID = null;
@@ -73,7 +73,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestContext {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1ContainerRecreateRequestContext)) {
       return false;
     }
     KruiseAppsV1alpha1ContainerRecreateRequestContext ioKruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext = (KruiseAppsV1alpha1ContainerRecreateRequestContext) o;

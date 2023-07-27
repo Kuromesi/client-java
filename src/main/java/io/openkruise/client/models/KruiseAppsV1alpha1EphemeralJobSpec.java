@@ -13,18 +13,18 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * EphemeralJobSpec defines the desired state of EphemeralJob
  */
 @ApiModel(description = "EphemeralJobSpec defines the desired state of EphemeralJob")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1EphemeralJobSpec {
   @SerializedName("activeDeadlineSeconds")
   private Long activeDeadlineSeconds = null;
@@ -179,7 +179,7 @@ public class KruiseAppsV1alpha1EphemeralJobSpec {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1EphemeralJobSpec)) {
       return false;
     }
     KruiseAppsV1alpha1EphemeralJobSpec ioKruiseAppsV1alpha1EphemeralJobSpec = (KruiseAppsV1alpha1EphemeralJobSpec) o;

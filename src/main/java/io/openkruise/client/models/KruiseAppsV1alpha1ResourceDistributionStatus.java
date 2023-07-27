@@ -13,20 +13,19 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * ResourceDistributionStatus defines the observed state of ResourceDistribution. ResourceDistributionStatus is recorded by kruise, users&#39; modification is invalid and meaningless.
  */
 @ApiModel(description = "ResourceDistributionStatus defines the observed state of ResourceDistribution. ResourceDistributionStatus is recorded by kruise, users' modification is invalid and meaningless.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1ResourceDistributionStatus {
   @SerializedName("conditions")
   private List<KruiseAppsV1alpha1ResourceDistributionCondition> conditions = null;
@@ -147,7 +146,7 @@ public class KruiseAppsV1alpha1ResourceDistributionStatus {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1ResourceDistributionStatus)) {
       return false;
     }
     KruiseAppsV1alpha1ResourceDistributionStatus ioKruiseAppsV1alpha1ResourceDistributionStatus = (KruiseAppsV1alpha1ResourceDistributionStatus) o;

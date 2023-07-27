@@ -13,17 +13,17 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * InPlaceUpdateStrategy contains strategies for in-place update.
  */
 @ApiModel(description = "InPlaceUpdateStrategy contains strategies for in-place update.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsPubInPlaceUpdateStrategy {
   @SerializedName("gracePeriodSeconds")
   private Integer gracePeriodSeconds = null;
@@ -52,7 +52,7 @@ public class KruiseAppsPubInPlaceUpdateStrategy {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsPubInPlaceUpdateStrategy)) {
       return false;
     }
     KruiseAppsPubInPlaceUpdateStrategy ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy = (KruiseAppsPubInPlaceUpdateStrategy) o;

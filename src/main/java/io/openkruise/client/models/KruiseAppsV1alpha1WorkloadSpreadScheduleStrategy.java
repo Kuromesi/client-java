@@ -13,8 +13,6 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -23,12 +21,14 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * ScheduleStrategy indicates the strategy the WorkloadSpread used to preform the schedule between each of subsets.
  */
 @ApiModel(description = "ScheduleStrategy indicates the strategy the WorkloadSpread used to preform the schedule between each of subsets.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1WorkloadSpreadScheduleStrategy {
   @SerializedName("adaptive")
   private KruiseAppsV1alpha1AdaptiveWorkloadSpreadStrategy adaptive = null;
@@ -44,7 +44,7 @@ public class KruiseAppsV1alpha1WorkloadSpreadScheduleStrategy {
     
     EMPTY("");
 
-    private String value;
+    private final String value;
 
     TypeEnum(String value) {
       this.value = value;
@@ -127,7 +127,7 @@ public class KruiseAppsV1alpha1WorkloadSpreadScheduleStrategy {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1WorkloadSpreadScheduleStrategy)) {
       return false;
     }
     KruiseAppsV1alpha1WorkloadSpreadScheduleStrategy ioKruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy = (KruiseAppsV1alpha1WorkloadSpreadScheduleStrategy) o;

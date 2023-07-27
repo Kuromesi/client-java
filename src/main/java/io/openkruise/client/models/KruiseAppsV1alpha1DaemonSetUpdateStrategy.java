@@ -13,17 +13,17 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * An update strategy to replace existing DaemonSet pods with new pods.
  */
 @ApiModel(description = "An update strategy to replace existing DaemonSet pods with new pods.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1DaemonSetUpdateStrategy {
   @SerializedName("rollingUpdate")
   private KruiseAppsV1alpha1RollingUpdateDaemonSet rollingUpdate = null;
@@ -73,7 +73,7 @@ public class KruiseAppsV1alpha1DaemonSetUpdateStrategy {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1DaemonSetUpdateStrategy)) {
       return false;
     }
     KruiseAppsV1alpha1DaemonSetUpdateStrategy ioKruiseAppsV1alpha1DaemonSetSpecUpdateStrategy = (KruiseAppsV1alpha1DaemonSetUpdateStrategy) o;

@@ -13,22 +13,21 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
+import io.kubernetes.client.openapi.models.V1ObjectReference;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 import org.joda.time.DateTime;
-import io.kubernetes.client.openapi.models.V1ObjectReference;
 
 /**
  * AdvancedCronJobStatus defines the observed state of AdvancedCronJob
  */
 @ApiModel(description = "AdvancedCronJobStatus defines the observed state of AdvancedCronJob")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1AdvancedCronJobStatus {
   @SerializedName("active")
   private List<V1ObjectReference> active = null;
@@ -107,7 +106,7 @@ public class KruiseAppsV1alpha1AdvancedCronJobStatus {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1AdvancedCronJobStatus)) {
       return false;
     }
     KruiseAppsV1alpha1AdvancedCronJobStatus ioKruiseAppsV1alpha1AdvancedCronJobStatus = (KruiseAppsV1alpha1AdvancedCronJobStatus) o;

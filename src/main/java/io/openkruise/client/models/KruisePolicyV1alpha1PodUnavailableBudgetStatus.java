@@ -13,21 +13,20 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
+import javax.annotation.Generated;
 import org.joda.time.DateTime;
 
 /**
  * PodUnavailableBudgetStatus defines the observed state of PodUnavailableBudget
  */
 @ApiModel(description = "PodUnavailableBudgetStatus defines the observed state of PodUnavailableBudget")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruisePolicyV1alpha1PodUnavailableBudgetStatus {
   @SerializedName("currentAvailable")
   private Integer currentAvailable = null;
@@ -198,7 +197,7 @@ public class KruisePolicyV1alpha1PodUnavailableBudgetStatus {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruisePolicyV1alpha1PodUnavailableBudgetStatus)) {
       return false;
     }
     KruisePolicyV1alpha1PodUnavailableBudgetStatus ioKruisePolicyV1alpha1PodUnavailableBudgetStatus = (KruisePolicyV1alpha1PodUnavailableBudgetStatus) o;

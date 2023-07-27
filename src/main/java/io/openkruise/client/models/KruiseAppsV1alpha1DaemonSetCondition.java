@@ -13,18 +13,18 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 import org.joda.time.DateTime;
 
 /**
  * DaemonSetCondition describes the state of a DaemonSet at a certain point.
  */
 @ApiModel(description = "DaemonSetCondition describes the state of a DaemonSet at a certain point.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1DaemonSetCondition {
   @SerializedName("lastTransitionTime")
   private DateTime lastTransitionTime = null;
@@ -137,7 +137,7 @@ public class KruiseAppsV1alpha1DaemonSetCondition {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1DaemonSetCondition)) {
       return false;
     }
     KruiseAppsV1alpha1DaemonSetCondition ioKruiseAppsV1alpha1DaemonSetStatusConditions = (KruiseAppsV1alpha1DaemonSetCondition) o;

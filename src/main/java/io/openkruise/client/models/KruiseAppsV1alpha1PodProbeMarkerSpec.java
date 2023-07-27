@@ -13,21 +13,20 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * PodProbeMarkerSpec defines the desired state of PodProbeMarker
  */
 @ApiModel(description = "PodProbeMarkerSpec defines the desired state of PodProbeMarker")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1PodProbeMarkerSpec {
   @SerializedName("probes")
   private List<KruiseAppsV1alpha1PodContainerProbe> probes = new ArrayList<KruiseAppsV1alpha1PodContainerProbe>();
@@ -82,7 +81,7 @@ public class KruiseAppsV1alpha1PodProbeMarkerSpec {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1PodProbeMarkerSpec)) {
       return false;
     }
     KruiseAppsV1alpha1PodProbeMarkerSpec ioKruiseAppsV1alpha1PodProbeMarkerSpec = (KruiseAppsV1alpha1PodProbeMarkerSpec) o;

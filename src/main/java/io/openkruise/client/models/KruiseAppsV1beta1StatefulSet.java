@@ -13,18 +13,18 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.openapi.models.V1ObjectMeta;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * StatefulSet is the Schema for the statefulsets API
  */
 @ApiModel(description = "StatefulSet is the Schema for the statefulsets API")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1beta1StatefulSet {
   @SerializedName("apiVersion")
   private String apiVersion = null;
@@ -137,7 +137,7 @@ public class KruiseAppsV1beta1StatefulSet {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1beta1StatefulSet)) {
       return false;
     }
     KruiseAppsV1beta1StatefulSet ioKruiseAppsV1beta1StatefulSet = (KruiseAppsV1beta1StatefulSet) o;

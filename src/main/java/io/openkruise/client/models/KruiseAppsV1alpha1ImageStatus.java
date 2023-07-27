@@ -13,20 +13,19 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * ImageStatus defines the pulling status of an image
  */
 @ApiModel(description = "ImageStatus defines the pulling status of an image")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1ImageStatus {
   @SerializedName("tags")
   private List<KruiseAppsV1alpha1ImageTagStatus> tags = new ArrayList<KruiseAppsV1alpha1ImageTagStatus>();
@@ -60,7 +59,7 @@ public class KruiseAppsV1alpha1ImageStatus {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1ImageStatus)) {
       return false;
     }
     KruiseAppsV1alpha1ImageStatus ioKruiseAppsV1alpha1NodeImageStatusImageStatuses = (KruiseAppsV1alpha1ImageStatus) o;

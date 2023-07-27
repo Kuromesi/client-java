@@ -13,18 +13,18 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.openapi.models.V1beta1JobTemplateSpec;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * Specifies the job that will be created when executing a CronJob.
  */
 @ApiModel(description = "Specifies the job that will be created when executing a CronJob.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1CronJobTemplate {
   @SerializedName("broadcastJobTemplate")
   private KruiseAppsV1alpha1BroadcastJobSpec broadcastJobTemplate = null;
@@ -74,7 +74,7 @@ public class KruiseAppsV1alpha1CronJobTemplate {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1CronJobTemplate)) {
       return false;
     }
     KruiseAppsV1alpha1CronJobTemplate ioKruiseAppsV1alpha1AdvancedCronJobSpecTemplate = (KruiseAppsV1alpha1CronJobTemplate) o;

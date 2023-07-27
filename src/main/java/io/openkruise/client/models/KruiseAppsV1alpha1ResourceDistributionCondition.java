@@ -13,21 +13,20 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 import org.joda.time.DateTime;
 
 /**
  * ResourceDistributionCondition allows a row to be marked with additional information.
  */
 @ApiModel(description = "ResourceDistributionCondition allows a row to be marked with additional information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1ResourceDistributionCondition {
   @SerializedName("failedNamespace")
   private List<String> failedNamespace = null;
@@ -148,7 +147,7 @@ public class KruiseAppsV1alpha1ResourceDistributionCondition {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1ResourceDistributionCondition)) {
       return false;
     }
     KruiseAppsV1alpha1ResourceDistributionCondition ioKruiseAppsV1alpha1ResourceDistributionStatusConditions = (KruiseAppsV1alpha1ResourceDistributionCondition) o;

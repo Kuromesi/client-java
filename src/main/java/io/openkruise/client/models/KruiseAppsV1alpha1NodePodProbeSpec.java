@@ -13,20 +13,19 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * NodePodProbeSpec defines the desired state of NodePodProbe
  */
 @ApiModel(description = "NodePodProbeSpec defines the desired state of NodePodProbe")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1NodePodProbeSpec {
   @SerializedName("podProbes")
   private List<KruiseAppsV1alpha1PodProbe> podProbes = null;
@@ -63,7 +62,7 @@ public class KruiseAppsV1alpha1NodePodProbeSpec {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1NodePodProbeSpec)) {
       return false;
     }
     KruiseAppsV1alpha1NodePodProbeSpec ioKruiseAppsV1alpha1NodePodProbeSpec = (KruiseAppsV1alpha1NodePodProbeSpec) o;

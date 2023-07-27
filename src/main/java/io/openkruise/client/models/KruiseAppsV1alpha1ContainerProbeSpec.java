@@ -14,12 +14,13 @@
 package io.openkruise.client.models;
 import io.kubernetes.client.openapi.models.V1Probe;
 import io.swagger.annotations.ApiModel;
+import javax.annotation.Generated;
 
 /**
  * container probe spec
  */
 @ApiModel(description = "container probe spec")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1ContainerProbeSpec extends V1Probe {
 }
 

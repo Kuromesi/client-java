@@ -13,17 +13,17 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * FailurePolicy indicates the behavior of the job, when failed pod is found.
  */
 @ApiModel(description = "FailurePolicy indicates the behavior of the job, when failed pod is found.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1FailurePolicy {
   @SerializedName("restartLimit")
   private Integer restartLimit = null;
@@ -73,7 +73,7 @@ public class KruiseAppsV1alpha1FailurePolicy {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1FailurePolicy)) {
       return false;
     }
     KruiseAppsV1alpha1FailurePolicy ioKruiseAppsV1Alpha1FailurePolicy = (KruiseAppsV1alpha1FailurePolicy) o;

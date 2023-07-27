@@ -13,21 +13,21 @@
 
 package io.openkruise.client.models;
 
-import java.util.List;
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.kubernetes.client.openapi.models.V1PersistentVolumeClaim;
 import io.kubernetes.client.openapi.models.V1PodTemplateSpec;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * CloneSetSpec defines the desired state of CloneSet
  */
 @ApiModel(description = "CloneSetSpec defines the desired state of CloneSet")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1CloneSetSpec {
   @SerializedName("lifecycle")
   private KruiseAppsPubLifecycle lifecycle = null;
@@ -224,7 +224,7 @@ public class KruiseAppsV1alpha1CloneSetSpec {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1CloneSetSpec)) {
       return false;
     }
     KruiseAppsV1alpha1CloneSetSpec ioKruiseAppsV1alpha1CloneSetSpec = (KruiseAppsV1alpha1CloneSetSpec) o;

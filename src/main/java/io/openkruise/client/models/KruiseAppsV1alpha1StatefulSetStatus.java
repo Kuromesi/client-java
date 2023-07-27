@@ -13,20 +13,19 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * StatefulSetStatus defines the observed state of StatefulSet
  */
 @ApiModel(description = "StatefulSetStatus defines the observed state of StatefulSet")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1StatefulSetStatus {
   @SerializedName("availableReplicas")
   private Integer availableReplicas = null;
@@ -273,7 +272,7 @@ public class KruiseAppsV1alpha1StatefulSetStatus {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1StatefulSetStatus)) {
       return false;
     }
     KruiseAppsV1alpha1StatefulSetStatus ioKruiseAppsV1alpha1StatefulSetStatus = (KruiseAppsV1alpha1StatefulSetStatus) o;

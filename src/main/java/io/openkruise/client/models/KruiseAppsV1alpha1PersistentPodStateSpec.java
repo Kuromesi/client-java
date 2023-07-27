@@ -13,20 +13,19 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * PersistentPodStateSpec defines the desired state of PersistentPodState
  */
 @ApiModel(description = "PersistentPodStateSpec defines the desired state of PersistentPodState")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1PersistentPodStateSpec {
   @SerializedName("persistentPodAnnotations")
   private List<KruiseAppsV1alpha1PersistentPodAnnotation> persistentPodAnnotations = null;
@@ -155,7 +154,7 @@ public class KruiseAppsV1alpha1PersistentPodStateSpec {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1PersistentPodStateSpec)) {
       return false;
     }
     KruiseAppsV1alpha1PersistentPodStateSpec ioKruiseAppsV1alpha1PersistentPodStateSpec = (KruiseAppsV1alpha1PersistentPodStateSpec) o;

@@ -13,20 +13,19 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * Priorities are the rules for calculating the priority of updating pods. Each pod to be updated, will pass through these terms and get a sum of weights.
  */
 @ApiModel(description = "Priorities are the rules for calculating the priority of updating pods. Each pod to be updated, will pass through these terms and get a sum of weights.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsPubUpdatePriorityStrategy {
   @SerializedName("orderPriority")
   private List<KruiseAppsPubUpdatePriorityOrderTerm> orderPriority = null;
@@ -92,7 +91,7 @@ public class KruiseAppsPubUpdatePriorityStrategy {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsPubUpdatePriorityStrategy)) {
       return false;
     }
     KruiseAppsPubUpdatePriorityStrategy ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy = (KruiseAppsPubUpdatePriorityStrategy) o;

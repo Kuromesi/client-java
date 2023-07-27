@@ -13,18 +13,18 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 import org.joda.time.DateTime;
 
 /**
  * UnitedDeploymentCondition describes current state of a UnitedDeployment.
  */
 @ApiModel(description = "UnitedDeploymentCondition describes current state of a UnitedDeployment.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1UnitedDeploymentCondition {
   @SerializedName("lastTransitionTime")
   private DateTime lastTransitionTime = null;
@@ -137,7 +137,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentCondition {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1UnitedDeploymentCondition)) {
       return false;
     }
     KruiseAppsV1alpha1UnitedDeploymentCondition ioKruiseAppsV1alpha1UnitedDeploymentStatusConditions = (KruiseAppsV1alpha1UnitedDeploymentCondition) o;

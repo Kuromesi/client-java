@@ -13,17 +13,17 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * PullPolicy is an optional field to set parameters of the pulling task. If not specified, the system will use the default values.
  */
 @ApiModel(description = "PullPolicy is an optional field to set parameters of the pulling task. If not specified, the system will use the default values.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1ImageTagPullPolicy {
   @SerializedName("activeDeadlineSeconds")
   private Long activeDeadlineSeconds = null;
@@ -115,7 +115,7 @@ public class KruiseAppsV1alpha1ImageTagPullPolicy {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1ImageTagPullPolicy)) {
       return false;
     }
     KruiseAppsV1alpha1ImageTagPullPolicy ioKruiseAppsV1alpha1NodeImageSpecPullPolicy = (KruiseAppsV1alpha1ImageTagPullPolicy) o;

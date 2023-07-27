@@ -13,17 +13,17 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * ReferenceObject comprises a resource name, with a mandatory namespace, rendered as \&quot;&lt;namespace&gt;/&lt;name&gt;\&quot;.
  */
 @ApiModel(description = "ReferenceObject comprises a resource name, with a mandatory namespace, rendered as \"<namespace>/<name>\".")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1ReferenceObject {
   @SerializedName("name")
   private String name = null;
@@ -73,7 +73,7 @@ public class KruiseAppsV1alpha1ReferenceObject {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1ReferenceObject)) {
       return false;
     }
     KruiseAppsV1alpha1ReferenceObject ioKruiseAppsV1alpha1NodeImageSpecPullSecrets = (KruiseAppsV1alpha1ReferenceObject) o;

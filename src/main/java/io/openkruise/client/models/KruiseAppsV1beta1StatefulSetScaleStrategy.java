@@ -13,18 +13,18 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.custom.IntOrString;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * scaleStrategy indicates the StatefulSetScaleStrategy that will be employed to scale Pods in the StatefulSet.
  */
 @ApiModel(description = "scaleStrategy indicates the StatefulSetScaleStrategy that will be employed to scale Pods in the StatefulSet.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1beta1StatefulSetScaleStrategy {
   @SerializedName("maxUnavailable")
   private IntOrString maxUnavailable = null;
@@ -53,7 +53,7 @@ public class KruiseAppsV1beta1StatefulSetScaleStrategy {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1beta1StatefulSetScaleStrategy)) {
       return false;
     }
     KruiseAppsV1beta1StatefulSetScaleStrategy ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecScaleStrategy = (KruiseAppsV1beta1StatefulSetScaleStrategy) o;

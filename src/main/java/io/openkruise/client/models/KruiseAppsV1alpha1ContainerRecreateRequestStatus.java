@@ -13,21 +13,20 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 import org.joda.time.DateTime;
 
 /**
  * ContainerRecreateRequestStatus defines the observed state of ContainerRecreateRequest
  */
 @ApiModel(description = "ContainerRecreateRequestStatus defines the observed state of ContainerRecreateRequest")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1ContainerRecreateRequestStatus {
   @SerializedName("completionTime")
   private DateTime completionTime = null;
@@ -127,7 +126,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestStatus {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1ContainerRecreateRequestStatus)) {
       return false;
     }
     KruiseAppsV1alpha1ContainerRecreateRequestStatus ioKruiseAppsV1alpha1ContainerRecreateRequestStatus = (KruiseAppsV1alpha1ContainerRecreateRequestStatus) o;

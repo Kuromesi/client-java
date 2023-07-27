@@ -13,17 +13,17 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * ResourceDistributionNamespace contains a namespace name
  */
 @ApiModel(description = "ResourceDistributionNamespace contains a namespace name")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1ResourceDistributionNamespace {
   @SerializedName("name")
   private String name = null;
@@ -52,7 +52,7 @@ public class KruiseAppsV1alpha1ResourceDistributionNamespace {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1ResourceDistributionNamespace)) {
       return false;
     }
     KruiseAppsV1alpha1ResourceDistributionNamespace ioKruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespacesList = (KruiseAppsV1alpha1ResourceDistributionNamespace) o;

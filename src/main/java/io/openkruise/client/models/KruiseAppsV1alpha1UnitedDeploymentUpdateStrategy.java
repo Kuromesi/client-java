@@ -13,17 +13,17 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * UpdateStrategy indicates the strategy the UnitedDeployment use to preform the update, when template is changed.
  */
 @ApiModel(description = "UpdateStrategy indicates the strategy the UnitedDeployment use to preform the update, when template is changed.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1UnitedDeploymentUpdateStrategy {
   @SerializedName("manualUpdate")
   private KruiseAppsV1alpha1ManualUpdate manualUpdate = null;
@@ -73,7 +73,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentUpdateStrategy {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1UnitedDeploymentUpdateStrategy)) {
       return false;
     }
     KruiseAppsV1alpha1UnitedDeploymentUpdateStrategy ioKruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategy = (KruiseAppsV1alpha1UnitedDeploymentUpdateStrategy) o;

@@ -13,20 +13,19 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * Pod rebuilt topology required for node labels for example kubernetes.io/hostname, failure-domain.beta.kubernetes.io/zone
  */
 @ApiModel(description = "Pod rebuilt topology required for node labels for example kubernetes.io/hostname, failure-domain.beta.kubernetes.io/zone")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1NodeTopologyTerm {
   @SerializedName("nodeTopologyKeys")
   private List<String> nodeTopologyKeys = new ArrayList<String>();
@@ -60,7 +59,7 @@ public class KruiseAppsV1alpha1NodeTopologyTerm {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1NodeTopologyTerm)) {
       return false;
     }
     KruiseAppsV1alpha1NodeTopologyTerm ioKruiseAppsV1alpha1PersistentPodStateSpecRequiredPersistentTopology = (KruiseAppsV1alpha1NodeTopologyTerm) o;

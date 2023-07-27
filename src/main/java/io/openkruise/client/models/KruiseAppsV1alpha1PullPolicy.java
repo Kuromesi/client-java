@@ -13,17 +13,17 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * PullPolicy is an optional field to set parameters of the pulling task. If not specified, the system will use the default values.
  */
 @ApiModel(description = "PullPolicy is an optional field to set parameters of the pulling task. If not specified, the system will use the default values.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1PullPolicy {
   @SerializedName("backoffLimit")
   private Integer backoffLimit = null;
@@ -73,7 +73,7 @@ public class KruiseAppsV1alpha1PullPolicy {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1PullPolicy)) {
       return false;
     }
     KruiseAppsV1alpha1PullPolicy ioKruiseAppsV1alpha1ImageListPullJobSpecPullPolicy = (KruiseAppsV1alpha1PullPolicy) o;

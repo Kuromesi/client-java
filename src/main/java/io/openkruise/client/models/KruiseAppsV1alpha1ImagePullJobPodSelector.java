@@ -13,23 +13,22 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.openapi.models.V1LabelSelectorRequirement;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * PodSelector is a query over pods that should pull image on nodes of these pods. Mutually exclusive with Selector.
  */
 @ApiModel(description = "PodSelector is a query over pods that should pull image on nodes of these pods. Mutually exclusive with Selector.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1ImagePullJobPodSelector {
   @SerializedName("matchExpressions")
   private List<V1LabelSelectorRequirement> matchExpressions = null;
@@ -95,7 +94,7 @@ public class KruiseAppsV1alpha1ImagePullJobPodSelector {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1ImagePullJobPodSelector)) {
       return false;
     }
     KruiseAppsV1alpha1ImagePullJobPodSelector ioKruiseAppsV1alpha1ImageListPullJobSpecPodSelector = (KruiseAppsV1alpha1ImagePullJobPodSelector) o;

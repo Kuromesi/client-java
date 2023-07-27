@@ -13,18 +13,18 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 import org.joda.time.DateTime;
 
 /**
  * JobCondition describes current state of a job.
  */
 @ApiModel(description = "JobCondition describes current state of a job.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1JobCondition {
   @SerializedName("lastProbeTime")
   private DateTime lastProbeTime = null;
@@ -158,7 +158,7 @@ public class KruiseAppsV1alpha1JobCondition {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1JobCondition)) {
       return false;
     }
     KruiseAppsV1alpha1JobCondition ioKruiseAppsV1alpha1BroadcastJobStatusConditions = (KruiseAppsV1alpha1JobCondition) o;

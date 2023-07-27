@@ -13,21 +13,20 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 import org.joda.time.DateTime;
 
 /**
  * EphemeralJobStatus defines the observed state of EphemeralJob
  */
 @ApiModel(description = "EphemeralJobStatus defines the observed state of EphemeralJob")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1EphemeralJobStatus {
   @SerializedName("completionTime")
   private DateTime completionTime = null;
@@ -232,7 +231,7 @@ public class KruiseAppsV1alpha1EphemeralJobStatus {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1EphemeralJobStatus)) {
       return false;
     }
     KruiseAppsV1alpha1EphemeralJobStatus ioKruiseAppsV1alpha1EphemeralJobStatus = (KruiseAppsV1alpha1EphemeralJobStatus) o;

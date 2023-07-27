@@ -13,19 +13,19 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.custom.IntOrString;
 import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * Rolling update config params. Present only if type &#x3D; \&quot;RollingUpdate\&quot;.
  */
 @ApiModel(description = "Rolling update config params. Present only if type = \"RollingUpdate\".")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1RollingUpdateDaemonSet {
   @SerializedName("maxSurge")
   private IntOrString maxSurge = null;
@@ -159,7 +159,7 @@ public class KruiseAppsV1alpha1RollingUpdateDaemonSet {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1RollingUpdateDaemonSet)) {
       return false;
     }
     KruiseAppsV1alpha1RollingUpdateDaemonSet ioKruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate = (KruiseAppsV1alpha1RollingUpdateDaemonSet) o;

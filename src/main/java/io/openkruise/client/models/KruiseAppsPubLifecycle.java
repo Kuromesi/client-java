@@ -13,17 +13,17 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * Lifecycle defines the lifecycle hooks for Pods pre-available(pre-normal), pre-delete, in-place update.
  */
 @ApiModel(description = "Lifecycle defines the lifecycle hooks for Pods pre-available(pre-normal), pre-delete, in-place update.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsPubLifecycle {
   @SerializedName("inPlaceUpdate")
   private KruiseAppsPubLifecycleHook inPlaceUpdate = null;
@@ -94,7 +94,7 @@ public class KruiseAppsPubLifecycle {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsPubLifecycle)) {
       return false;
     }
     KruiseAppsPubLifecycle ioKruiseAppsV1alpha1CloneSetSpecLifecycle = (KruiseAppsPubLifecycle) o;

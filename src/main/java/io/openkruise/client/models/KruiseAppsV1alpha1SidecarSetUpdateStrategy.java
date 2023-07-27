@@ -13,22 +13,21 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.custom.IntOrString;
 import io.kubernetes.client.openapi.models.V1LabelSelector;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * The sidecarset updateStrategy to use to replace existing pods with new ones.
  */
 @ApiModel(description = "The sidecarset updateStrategy to use to replace existing pods with new ones.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1SidecarSetUpdateStrategy {
   @SerializedName("maxUnavailable")
   private IntOrString maxUnavailable = null;
@@ -191,7 +190,7 @@ public class KruiseAppsV1alpha1SidecarSetUpdateStrategy {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1SidecarSetUpdateStrategy)) {
       return false;
     }
     KruiseAppsV1alpha1SidecarSetUpdateStrategy ioKruiseAppsV1alpha1SidecarSetSpecUpdateStrategy = (KruiseAppsV1alpha1SidecarSetUpdateStrategy) o;

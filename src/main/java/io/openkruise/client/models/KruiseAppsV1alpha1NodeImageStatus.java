@@ -13,20 +13,19 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * NodeImageStatus defines the observed state of NodeImage
  */
 @ApiModel(description = "NodeImageStatus defines the observed state of NodeImage")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1NodeImageStatus {
   @SerializedName("desired")
   private Integer desired = null;
@@ -168,7 +167,7 @@ public class KruiseAppsV1alpha1NodeImageStatus {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1NodeImageStatus)) {
       return false;
     }
     KruiseAppsV1alpha1NodeImageStatus ioKruiseAppsV1alpha1NodeImageStatus = (KruiseAppsV1alpha1NodeImageStatus) o;

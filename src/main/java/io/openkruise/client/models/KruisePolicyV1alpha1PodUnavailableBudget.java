@@ -13,18 +13,18 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.openapi.models.V1ObjectMeta;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * PodUnavailableBudget is the Schema for the podunavailablebudgets API
  */
 @ApiModel(description = "PodUnavailableBudget is the Schema for the podunavailablebudgets API")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruisePolicyV1alpha1PodUnavailableBudget {
   @SerializedName("apiVersion")
   private String apiVersion = null;
@@ -137,7 +137,7 @@ public class KruisePolicyV1alpha1PodUnavailableBudget {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruisePolicyV1alpha1PodUnavailableBudget)) {
       return false;
     }
     KruisePolicyV1alpha1PodUnavailableBudget ioKruisePolicyV1alpha1PodUnavailableBudget = (KruisePolicyV1alpha1PodUnavailableBudget) o;

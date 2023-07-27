@@ -13,18 +13,18 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 import org.joda.time.DateTime;
 
 /**
  * The first of all job has finished on this node. When a node is added to the cluster, we want to know the time when the node&#39;s image pulling is completed, and use it to trigger the operation of the upper system.
  */
 @ApiModel(description = "The first of all job has finished on this node. When a node is added to the cluster, we want to know the time when the node's image pulling is completed, and use it to trigger the operation of the upper system.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1SyncStatus {
   @SerializedName("message")
   private String message = null;
@@ -95,7 +95,7 @@ public class KruiseAppsV1alpha1SyncStatus {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1SyncStatus)) {
       return false;
     }
     KruiseAppsV1alpha1SyncStatus ioKruiseAppsV1alpha1NodeImageStatusFirstSyncStatus = (KruiseAppsV1alpha1SyncStatus) o;

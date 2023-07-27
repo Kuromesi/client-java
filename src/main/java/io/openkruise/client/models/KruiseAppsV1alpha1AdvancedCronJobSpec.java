@@ -13,8 +13,6 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -23,12 +21,14 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * AdvancedCronJobSpec defines the desired state of AdvancedCronJob
  */
 @ApiModel(description = "AdvancedCronJobSpec defines the desired state of AdvancedCronJob")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1AdvancedCronJobSpec {
   /**
    * Specifies how to treat concurrent executions of a Job. Valid values are: - \&quot;Allow\&quot; (default): allows CronJobs to run concurrently; - \&quot;Forbid\&quot;: forbids concurrent runs, skipping next run if previous run hasn&#39;t finished yet; - \&quot;Replace\&quot;: cancels currently running job and replaces it with a new one
@@ -41,7 +41,7 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpec {
     
     REPLACE("Replace");
 
-    private String value;
+    private final String value;
 
     ConcurrencyPolicyEnum(String value) {
       this.value = value;
@@ -253,7 +253,7 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpec {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1AdvancedCronJobSpec)) {
       return false;
     }
     KruiseAppsV1alpha1AdvancedCronJobSpec ioKruiseAppsV1alpha1AdvancedCronJobSpec = (KruiseAppsV1alpha1AdvancedCronJobSpec) o;

@@ -13,20 +13,19 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * ContainerRecreateRequestSpec defines the desired state of ContainerRecreateRequest
  */
 @ApiModel(description = "ContainerRecreateRequestSpec defines the desired state of ContainerRecreateRequest")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1ContainerRecreateRequestSpec {
   @SerializedName("activeDeadlineSeconds")
   private Long activeDeadlineSeconds = null;
@@ -144,7 +143,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpec {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1ContainerRecreateRequestSpec)) {
       return false;
     }
     KruiseAppsV1alpha1ContainerRecreateRequestSpec ioKruiseAppsV1alpha1ContainerRecreateRequestSpec = (KruiseAppsV1alpha1ContainerRecreateRequestSpec) o;

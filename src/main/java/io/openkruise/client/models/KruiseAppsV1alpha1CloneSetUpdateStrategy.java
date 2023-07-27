@@ -13,21 +13,20 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.custom.IntOrString;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * UpdateStrategy indicates the UpdateStrategy that will be employed to update Pods in the CloneSet when a revision is made to Template.
  */
 @ApiModel(description = "UpdateStrategy indicates the UpdateStrategy that will be employed to update Pods in the CloneSet when a revision is made to Template.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1CloneSetUpdateStrategy {
   @SerializedName("inPlaceUpdateStrategy")
   private KruiseAppsPubInPlaceUpdateStrategy inPlaceUpdateStrategy = null;
@@ -211,7 +210,7 @@ public class KruiseAppsV1alpha1CloneSetUpdateStrategy {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1CloneSetUpdateStrategy)) {
       return false;
     }
     KruiseAppsV1alpha1CloneSetUpdateStrategy ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategy = (KruiseAppsV1alpha1CloneSetUpdateStrategy) o;

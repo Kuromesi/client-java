@@ -13,18 +13,18 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.kubernetes.client.openapi.models.V1ObjectMeta;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * AdvancedStatefulSet template
  */
 @ApiModel(description = "AdvancedStatefulSet template")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec {
   @SerializedName("metadata")
   private V1ObjectMeta metadata = null;
@@ -74,7 +74,7 @@ public class KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec)) {
       return false;
     }
     KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplate = (KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec) o;

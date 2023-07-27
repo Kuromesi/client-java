@@ -13,8 +13,6 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -26,12 +24,15 @@ import io.openkruise.client.models.KruiseAppsV1alpha1BroadcastJobStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * BroadcastJob is the Schema for the broadcastjobs API
  */
 @ApiModel(description = "BroadcastJob is the Schema for the broadcastjobs API")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1BroadcastJob {
   @SerializedName("apiVersion")
   private String apiVersion = null;
@@ -144,7 +145,7 @@ public class KruiseAppsV1alpha1BroadcastJob {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1BroadcastJob)) {
       return false;
     }
     KruiseAppsV1alpha1BroadcastJob ioKruiseAppsV1alpha1BroadcastJob = (KruiseAppsV1alpha1BroadcastJob) o;

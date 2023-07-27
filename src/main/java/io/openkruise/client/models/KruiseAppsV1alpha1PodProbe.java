@@ -13,18 +13,17 @@
 
 package io.openkruise.client.models;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import javax.annotation.Generated;
 
 /**
  * KruiseAppsV1alpha1NodePodProbeSpecPodProbes
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
+@Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1PodProbe {
   @SerializedName("name")
   private String name = null;
@@ -124,7 +123,7 @@ public class KruiseAppsV1alpha1PodProbe {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (!(o instanceof KruiseAppsV1alpha1PodProbe)) {
       return false;
     }
     KruiseAppsV1alpha1PodProbe ioKruiseAppsV1alpha1NodePodProbeSpecPodProbes = (KruiseAppsV1alpha1PodProbe) o;
