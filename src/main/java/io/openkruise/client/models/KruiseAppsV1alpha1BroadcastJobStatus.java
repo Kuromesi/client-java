@@ -14,16 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1BroadcastJobStatusConditions;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 import org.joda.time.DateTime;
@@ -41,7 +36,7 @@ public class KruiseAppsV1alpha1BroadcastJobStatus {
   private DateTime completionTime = null;
 
   @SerializedName("conditions")
-  private List<KruiseAppsV1alpha1BroadcastJobStatusConditions> conditions = null;
+  private List<KruiseAppsV1alpha1JobCondition> conditions = null;
 
   @SerializedName("desired")
   private Integer desired = null;
@@ -94,14 +89,14 @@ public class KruiseAppsV1alpha1BroadcastJobStatus {
     this.completionTime = completionTime;
   }
 
-  public KruiseAppsV1alpha1BroadcastJobStatus conditions(List<KruiseAppsV1alpha1BroadcastJobStatusConditions> conditions) {
+  public KruiseAppsV1alpha1BroadcastJobStatus conditions(List<KruiseAppsV1alpha1JobCondition> conditions) {
     this.conditions = conditions;
     return this;
   }
 
-  public KruiseAppsV1alpha1BroadcastJobStatus addConditionsItem(KruiseAppsV1alpha1BroadcastJobStatusConditions conditionsItem) {
+  public KruiseAppsV1alpha1BroadcastJobStatus addConditionsItem(KruiseAppsV1alpha1JobCondition conditionsItem) {
     if (this.conditions == null) {
-      this.conditions = new ArrayList<KruiseAppsV1alpha1BroadcastJobStatusConditions>();
+      this.conditions = new ArrayList<KruiseAppsV1alpha1JobCondition>();
     }
     this.conditions.add(conditionsItem);
     return this;
@@ -112,11 +107,11 @@ public class KruiseAppsV1alpha1BroadcastJobStatus {
    * @return conditions
   **/
   @ApiModelProperty(value = "The latest available observations of an object's current state.")
-  public List<KruiseAppsV1alpha1BroadcastJobStatusConditions> getConditions() {
+  public List<KruiseAppsV1alpha1JobCondition> getConditions() {
     return conditions;
   }
 
-  public void setConditions(List<KruiseAppsV1alpha1BroadcastJobStatusConditions> conditions) {
+  public void setConditions(List<KruiseAppsV1alpha1JobCondition> conditions) {
     this.conditions = conditions;
   }
 

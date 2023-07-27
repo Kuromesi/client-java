@@ -48,7 +48,7 @@ public class KruiseAppsV1alpha1StatefulSetSpec {
   private V1PodTemplateSpec template = null;
 
   @SerializedName("updateStrategy")
-  private KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy updateStrategy = null;
+  private KruiseAppsV1alpha1StatefulSetUpdateStrategy updateStrategy = null;
 
   @SerializedName("volumeClaimTemplates")
   private List<V1PersistentVolumeClaim> volumeClaimTemplates = null;
@@ -161,7 +161,7 @@ public class KruiseAppsV1alpha1StatefulSetSpec {
     this.template = template;
   }
 
-  public KruiseAppsV1alpha1StatefulSetSpec updateStrategy(KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy updateStrategy) {
+  public KruiseAppsV1alpha1StatefulSetSpec updateStrategy(KruiseAppsV1alpha1StatefulSetUpdateStrategy updateStrategy) {
     this.updateStrategy = updateStrategy;
     return this;
   }
@@ -171,11 +171,11 @@ public class KruiseAppsV1alpha1StatefulSetSpec {
    * @return updateStrategy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy getUpdateStrategy() {
+  public KruiseAppsV1alpha1StatefulSetUpdateStrategy getUpdateStrategy() {
     return updateStrategy;
   }
 
-  public void setUpdateStrategy(KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy updateStrategy) {
+  public void setUpdateStrategy(KruiseAppsV1alpha1StatefulSetUpdateStrategy updateStrategy) {
     this.updateStrategy = updateStrategy;
   }
 

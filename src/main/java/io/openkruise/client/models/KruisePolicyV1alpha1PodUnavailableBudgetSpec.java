@@ -37,7 +37,7 @@ public class KruisePolicyV1alpha1PodUnavailableBudgetSpec {
   private V1LabelSelector selector = null;
 
   @SerializedName("targetRef")
-  private KruisePolicyV1alpha1PodUnavailableBudgetSpecTargetRef targetRef = null;
+  private KruiseAppsV1alpha1TargetReference targetRef = null;
 
   public KruisePolicyV1alpha1PodUnavailableBudgetSpec maxUnavailable(IntOrString maxUnavailable) {
     this.maxUnavailable = maxUnavailable;
@@ -93,7 +93,7 @@ public class KruisePolicyV1alpha1PodUnavailableBudgetSpec {
     this.selector = selector;
   }
 
-  public KruisePolicyV1alpha1PodUnavailableBudgetSpec targetRef(KruisePolicyV1alpha1PodUnavailableBudgetSpecTargetRef targetRef) {
+  public KruisePolicyV1alpha1PodUnavailableBudgetSpec targetRef(KruiseAppsV1alpha1TargetReference targetRef) {
     this.targetRef = targetRef;
     return this;
   }
@@ -103,11 +103,11 @@ public class KruisePolicyV1alpha1PodUnavailableBudgetSpec {
    * @return targetRef
   **/
   @ApiModelProperty(value = "")
-  public KruisePolicyV1alpha1PodUnavailableBudgetSpecTargetRef getTargetRef() {
+  public KruiseAppsV1alpha1TargetReference getTargetRef() {
     return targetRef;
   }
 
-  public void setTargetRef(KruisePolicyV1alpha1PodUnavailableBudgetSpecTargetRef targetRef) {
+  public void setTargetRef(KruiseAppsV1alpha1TargetReference targetRef) {
     this.targetRef = targetRef;
   }
 

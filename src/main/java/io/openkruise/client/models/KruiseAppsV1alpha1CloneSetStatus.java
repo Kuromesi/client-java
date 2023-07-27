@@ -14,16 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetStatusConditions;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,7 +35,7 @@ public class KruiseAppsV1alpha1CloneSetStatus {
   private Integer collisionCount = null;
 
   @SerializedName("conditions")
-  private List<KruiseAppsV1alpha1CloneSetStatusConditions> conditions = null;
+  private List<KruiseAppsV1alpha1CloneSetCondition> conditions = null;
 
   @SerializedName("currentRevision")
   private String currentRevision = null;
@@ -108,14 +103,14 @@ public class KruiseAppsV1alpha1CloneSetStatus {
     this.collisionCount = collisionCount;
   }
 
-  public KruiseAppsV1alpha1CloneSetStatus conditions(List<KruiseAppsV1alpha1CloneSetStatusConditions> conditions) {
+  public KruiseAppsV1alpha1CloneSetStatus conditions(List<KruiseAppsV1alpha1CloneSetCondition> conditions) {
     this.conditions = conditions;
     return this;
   }
 
-  public KruiseAppsV1alpha1CloneSetStatus addConditionsItem(KruiseAppsV1alpha1CloneSetStatusConditions conditionsItem) {
+  public KruiseAppsV1alpha1CloneSetStatus addConditionsItem(KruiseAppsV1alpha1CloneSetCondition conditionsItem) {
     if (this.conditions == null) {
-      this.conditions = new ArrayList<KruiseAppsV1alpha1CloneSetStatusConditions>();
+      this.conditions = new ArrayList<KruiseAppsV1alpha1CloneSetCondition>();
     }
     this.conditions.add(conditionsItem);
     return this;
@@ -126,11 +121,11 @@ public class KruiseAppsV1alpha1CloneSetStatus {
    * @return conditions
   **/
   @ApiModelProperty(value = "Conditions represents the latest available observations of a CloneSet's current state.")
-  public List<KruiseAppsV1alpha1CloneSetStatusConditions> getConditions() {
+  public List<KruiseAppsV1alpha1CloneSetCondition> getConditions() {
     return conditions;
   }
 
-  public void setConditions(List<KruiseAppsV1alpha1CloneSetStatusConditions> conditions) {
+  public void setConditions(List<KruiseAppsV1alpha1CloneSetCondition> conditions) {
     this.conditions = conditions;
   }
 

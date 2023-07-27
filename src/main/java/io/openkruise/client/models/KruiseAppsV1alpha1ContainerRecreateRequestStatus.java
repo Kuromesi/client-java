@@ -14,16 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 import org.joda.time.DateTime;
@@ -38,7 +33,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestStatus {
   private DateTime completionTime = null;
 
   @SerializedName("containerRecreateStates")
-  private List<KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates> containerRecreateStates = null;
+  private List<KruiseAppsV1alpha1ContainerRecreateRequestContainerRecreateState> containerRecreateStates = null;
 
   @SerializedName("message")
   private String message = null;
@@ -64,14 +59,14 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestStatus {
     this.completionTime = completionTime;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestStatus containerRecreateStates(List<KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates> containerRecreateStates) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestStatus containerRecreateStates(List<KruiseAppsV1alpha1ContainerRecreateRequestContainerRecreateState> containerRecreateStates) {
     this.containerRecreateStates = containerRecreateStates;
     return this;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestStatus addContainerRecreateStatesItem(KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates containerRecreateStatesItem) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestStatus addContainerRecreateStatesItem(KruiseAppsV1alpha1ContainerRecreateRequestContainerRecreateState containerRecreateStatesItem) {
     if (this.containerRecreateStates == null) {
-      this.containerRecreateStates = new ArrayList<KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates>();
+      this.containerRecreateStates = new ArrayList<KruiseAppsV1alpha1ContainerRecreateRequestContainerRecreateState>();
     }
     this.containerRecreateStates.add(containerRecreateStatesItem);
     return this;
@@ -82,11 +77,11 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestStatus {
    * @return containerRecreateStates
   **/
   @ApiModelProperty(value = "ContainerRecreateStates contains the recreation states of the containers.")
-  public List<KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates> getContainerRecreateStates() {
+  public List<KruiseAppsV1alpha1ContainerRecreateRequestContainerRecreateState> getContainerRecreateStates() {
     return containerRecreateStates;
   }
 
-  public void setContainerRecreateStates(List<KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates> containerRecreateStates) {
+  public void setContainerRecreateStates(List<KruiseAppsV1alpha1ContainerRecreateRequestContainerRecreateState> containerRecreateStates) {
     this.containerRecreateStates = containerRecreateStates;
   }
 

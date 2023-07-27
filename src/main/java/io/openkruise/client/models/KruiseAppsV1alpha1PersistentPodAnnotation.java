@@ -14,25 +14,19 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * KruiseAppsV1alpha1PersistentPodStateSpecPersistentPodAnnotations
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1PersistentPodStateSpecPersistentPodAnnotations {
+public class KruiseAppsV1alpha1PersistentPodAnnotation {
   @SerializedName("key")
   private String key = null;
 
-  public KruiseAppsV1alpha1PersistentPodStateSpecPersistentPodAnnotations key(String key) {
+  public KruiseAppsV1alpha1PersistentPodAnnotation key(String key) {
     this.key = key;
     return this;
   }
@@ -59,7 +53,7 @@ public class KruiseAppsV1alpha1PersistentPodStateSpecPersistentPodAnnotations {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1PersistentPodStateSpecPersistentPodAnnotations ioKruiseAppsV1alpha1PersistentPodStateSpecPersistentPodAnnotations = (KruiseAppsV1alpha1PersistentPodStateSpecPersistentPodAnnotations) o;
+    KruiseAppsV1alpha1PersistentPodAnnotation ioKruiseAppsV1alpha1PersistentPodStateSpecPersistentPodAnnotations = (KruiseAppsV1alpha1PersistentPodAnnotation) o;
     return Objects.equals(this.key, ioKruiseAppsV1alpha1PersistentPodStateSpecPersistentPodAnnotations.key);
   }
 

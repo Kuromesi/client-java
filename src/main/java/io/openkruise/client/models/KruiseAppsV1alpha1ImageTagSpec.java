@@ -29,7 +29,7 @@ import io.kubernetes.client.openapi.models.V1ObjectReference;
  */
 @ApiModel(description = "ImageTagSpec defines the pulling spec of an image tag")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1NodeImageSpecTags {
+public class KruiseAppsV1alpha1ImageTagSpec {
   @SerializedName("createdAt")
   private DateTime createdAt = null;
 
@@ -37,7 +37,7 @@ public class KruiseAppsV1alpha1NodeImageSpecTags {
   private List<V1ObjectReference> ownerReferences = null;
 
   @SerializedName("pullPolicy")
-  private KruiseAppsV1alpha1NodeImageSpecPullPolicy pullPolicy = null;
+  private KruiseAppsV1alpha1ImageTagPullPolicy pullPolicy = null;
 
   @SerializedName("tag")
   private String tag = null;
@@ -45,7 +45,7 @@ public class KruiseAppsV1alpha1NodeImageSpecTags {
   @SerializedName("version")
   private Long version = null;
 
-  public KruiseAppsV1alpha1NodeImageSpecTags createdAt(DateTime createdAt) {
+  public KruiseAppsV1alpha1ImageTagSpec createdAt(DateTime createdAt) {
     this.createdAt = createdAt;
     return this;
   }
@@ -63,12 +63,12 @@ public class KruiseAppsV1alpha1NodeImageSpecTags {
     this.createdAt = createdAt;
   }
 
-  public KruiseAppsV1alpha1NodeImageSpecTags ownerReferences(List<V1ObjectReference> ownerReferences) {
+  public KruiseAppsV1alpha1ImageTagSpec ownerReferences(List<V1ObjectReference> ownerReferences) {
     this.ownerReferences = ownerReferences;
     return this;
   }
 
-  public KruiseAppsV1alpha1NodeImageSpecTags addOwnerReferencesItem(V1ObjectReference ownerReferencesItem) {
+  public KruiseAppsV1alpha1ImageTagSpec addOwnerReferencesItem(V1ObjectReference ownerReferencesItem) {
     if (this.ownerReferences == null) {
       this.ownerReferences = new ArrayList<V1ObjectReference>();
     }
@@ -89,7 +89,7 @@ public class KruiseAppsV1alpha1NodeImageSpecTags {
     this.ownerReferences = ownerReferences;
   }
 
-  public KruiseAppsV1alpha1NodeImageSpecTags pullPolicy(KruiseAppsV1alpha1NodeImageSpecPullPolicy pullPolicy) {
+  public KruiseAppsV1alpha1ImageTagSpec pullPolicy(KruiseAppsV1alpha1ImageTagPullPolicy pullPolicy) {
     this.pullPolicy = pullPolicy;
     return this;
   }
@@ -99,15 +99,15 @@ public class KruiseAppsV1alpha1NodeImageSpecTags {
    * @return pullPolicy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1NodeImageSpecPullPolicy getPullPolicy() {
+  public KruiseAppsV1alpha1ImageTagPullPolicy getPullPolicy() {
     return pullPolicy;
   }
 
-  public void setPullPolicy(KruiseAppsV1alpha1NodeImageSpecPullPolicy pullPolicy) {
+  public void setPullPolicy(KruiseAppsV1alpha1ImageTagPullPolicy pullPolicy) {
     this.pullPolicy = pullPolicy;
   }
 
-  public KruiseAppsV1alpha1NodeImageSpecTags tag(String tag) {
+  public KruiseAppsV1alpha1ImageTagSpec tag(String tag) {
     this.tag = tag;
     return this;
   }
@@ -125,7 +125,7 @@ public class KruiseAppsV1alpha1NodeImageSpecTags {
     this.tag = tag;
   }
 
-  public KruiseAppsV1alpha1NodeImageSpecTags version(Long version) {
+  public KruiseAppsV1alpha1ImageTagSpec version(Long version) {
     this.version = version;
     return this;
   }
@@ -152,7 +152,7 @@ public class KruiseAppsV1alpha1NodeImageSpecTags {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1NodeImageSpecTags ioKruiseAppsV1alpha1NodeImageSpecTags = (KruiseAppsV1alpha1NodeImageSpecTags) o;
+    KruiseAppsV1alpha1ImageTagSpec ioKruiseAppsV1alpha1NodeImageSpecTags = (KruiseAppsV1alpha1ImageTagSpec) o;
     return Objects.equals(this.createdAt, ioKruiseAppsV1alpha1NodeImageSpecTags.createdAt) &&
         Objects.equals(this.ownerReferences, ioKruiseAppsV1alpha1NodeImageSpecTags.ownerReferences) &&
         Objects.equals(this.pullPolicy, ioKruiseAppsV1alpha1NodeImageSpecTags.pullPolicy) &&

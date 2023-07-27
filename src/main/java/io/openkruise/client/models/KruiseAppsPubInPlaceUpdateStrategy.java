@@ -14,26 +14,21 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * InPlaceUpdateStrategy contains strategies for in-place update.
  */
 @ApiModel(description = "InPlaceUpdateStrategy contains strategies for in-place update.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy {
+public class KruiseAppsPubInPlaceUpdateStrategy {
   @SerializedName("gracePeriodSeconds")
   private Integer gracePeriodSeconds = null;
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy gracePeriodSeconds(Integer gracePeriodSeconds) {
+  public KruiseAppsPubInPlaceUpdateStrategy gracePeriodSeconds(Integer gracePeriodSeconds) {
     this.gracePeriodSeconds = gracePeriodSeconds;
     return this;
   }
@@ -60,7 +55,7 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy = (KruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy) o;
+    KruiseAppsPubInPlaceUpdateStrategy ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy = (KruiseAppsPubInPlaceUpdateStrategy) o;
     return Objects.equals(this.gracePeriodSeconds, ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyInPlaceUpdateStrategy.gracePeriodSeconds);
   }
 

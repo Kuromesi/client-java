@@ -14,17 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.kubernetes.client.proto.Runtime;
-import io.openkruise.client.models.KruiseAppsV1alpha1ResourceDistributionSpecTargets;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * ResourceDistributionSpec defines the desired state of ResourceDistribution.
@@ -36,7 +30,7 @@ public class KruiseAppsV1alpha1ResourceDistributionSpec {
   private Runtime.RawExtension resource = null;
 
   @SerializedName("targets")
-  private KruiseAppsV1alpha1ResourceDistributionSpecTargets targets = null;
+  private KruiseAppsV1alpha1ResourceDistributionTargets targets = null;
 
   public KruiseAppsV1alpha1ResourceDistributionSpec resource(Runtime.RawExtension resource) {
     this.resource = resource;
@@ -56,7 +50,7 @@ public class KruiseAppsV1alpha1ResourceDistributionSpec {
     this.resource = resource;
   }
 
-  public KruiseAppsV1alpha1ResourceDistributionSpec targets(KruiseAppsV1alpha1ResourceDistributionSpecTargets targets) {
+  public KruiseAppsV1alpha1ResourceDistributionSpec targets(KruiseAppsV1alpha1ResourceDistributionTargets targets) {
     this.targets = targets;
     return this;
   }
@@ -66,11 +60,11 @@ public class KruiseAppsV1alpha1ResourceDistributionSpec {
    * @return targets
   **/
   @ApiModelProperty(required = true, value = "")
-  public KruiseAppsV1alpha1ResourceDistributionSpecTargets getTargets() {
+  public KruiseAppsV1alpha1ResourceDistributionTargets getTargets() {
     return targets;
   }
 
-  public void setTargets(KruiseAppsV1alpha1ResourceDistributionSpecTargets targets) {
+  public void setTargets(KruiseAppsV1alpha1ResourceDistributionTargets targets) {
     this.targets = targets;
   }
 

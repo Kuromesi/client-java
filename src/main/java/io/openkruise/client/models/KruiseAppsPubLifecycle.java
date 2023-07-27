@@ -29,10 +29,10 @@ public class KruiseAppsPubLifecycle {
   private KruiseAppsPubLifecycleHook inPlaceUpdate = null;
 
   @SerializedName("preDelete")
-  private KruiseAppsV1alpha1CloneSetSpecLifecyclePreDelete preDelete = null;
+  private KruiseAppsPubLifecycleHook preDelete = null;
 
   @SerializedName("preNormal")
-  private KruiseAppsV1alpha1CloneSetSpecLifecyclePreNormal preNormal = null;
+  private KruiseAppsPubLifecycleHook preNormal = null;
 
   public KruiseAppsPubLifecycle inPlaceUpdate(KruiseAppsPubLifecycleHook inPlaceUpdate) {
     this.inPlaceUpdate = inPlaceUpdate;
@@ -52,7 +52,7 @@ public class KruiseAppsPubLifecycle {
     this.inPlaceUpdate = inPlaceUpdate;
   }
 
-  public KruiseAppsPubLifecycle preDelete(KruiseAppsV1alpha1CloneSetSpecLifecyclePreDelete preDelete) {
+  public KruiseAppsPubLifecycle preDelete(KruiseAppsPubLifecycleHook preDelete) {
     this.preDelete = preDelete;
     return this;
   }
@@ -62,15 +62,15 @@ public class KruiseAppsPubLifecycle {
    * @return preDelete
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1CloneSetSpecLifecyclePreDelete getPreDelete() {
+  public KruiseAppsPubLifecycleHook getPreDelete() {
     return preDelete;
   }
 
-  public void setPreDelete(KruiseAppsV1alpha1CloneSetSpecLifecyclePreDelete preDelete) {
+  public void setPreDelete(KruiseAppsPubLifecycleHook preDelete) {
     this.preDelete = preDelete;
   }
 
-  public KruiseAppsPubLifecycle preNormal(KruiseAppsV1alpha1CloneSetSpecLifecyclePreNormal preNormal) {
+  public KruiseAppsPubLifecycle preNormal(KruiseAppsPubLifecycleHook preNormal) {
     this.preNormal = preNormal;
     return this;
   }
@@ -80,11 +80,11 @@ public class KruiseAppsPubLifecycle {
    * @return preNormal
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1CloneSetSpecLifecyclePreNormal getPreNormal() {
+  public KruiseAppsPubLifecycleHook getPreNormal() {
     return preNormal;
   }
 
-  public void setPreNormal(KruiseAppsV1alpha1CloneSetSpecLifecyclePreNormal preNormal) {
+  public void setPreNormal(KruiseAppsPubLifecycleHook preNormal) {
     this.preNormal = preNormal;
   }
 

@@ -14,16 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1StatefulSetStatusConditions;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,7 +35,7 @@ public class KruiseAppsV1beta1StatefulSetStatus {
   private Integer collisionCount = null;
 
   @SerializedName("conditions")
-  private List<KruiseAppsV1alpha1StatefulSetStatusConditions> conditions = null;
+  private List<KruiseAppsV1alpha1StatefulSetCondition> conditions = null;
 
   @SerializedName("currentReplicas")
   private Integer currentReplicas = null;
@@ -108,14 +103,14 @@ public class KruiseAppsV1beta1StatefulSetStatus {
     this.collisionCount = collisionCount;
   }
 
-  public KruiseAppsV1beta1StatefulSetStatus conditions(List<KruiseAppsV1alpha1StatefulSetStatusConditions> conditions) {
+  public KruiseAppsV1beta1StatefulSetStatus conditions(List<KruiseAppsV1alpha1StatefulSetCondition> conditions) {
     this.conditions = conditions;
     return this;
   }
 
-  public KruiseAppsV1beta1StatefulSetStatus addConditionsItem(KruiseAppsV1alpha1StatefulSetStatusConditions conditionsItem) {
+  public KruiseAppsV1beta1StatefulSetStatus addConditionsItem(KruiseAppsV1alpha1StatefulSetCondition conditionsItem) {
     if (this.conditions == null) {
-      this.conditions = new ArrayList<KruiseAppsV1alpha1StatefulSetStatusConditions>();
+      this.conditions = new ArrayList<KruiseAppsV1alpha1StatefulSetCondition>();
     }
     this.conditions.add(conditionsItem);
     return this;
@@ -126,11 +121,11 @@ public class KruiseAppsV1beta1StatefulSetStatus {
    * @return conditions
   **/
   @ApiModelProperty(value = "Represents the latest available observations of a statefulset's current state.")
-  public List<KruiseAppsV1alpha1StatefulSetStatusConditions> getConditions() {
+  public List<KruiseAppsV1alpha1StatefulSetCondition> getConditions() {
     return conditions;
   }
 
-  public void setConditions(List<KruiseAppsV1alpha1StatefulSetStatusConditions> conditions) {
+  public void setConditions(List<KruiseAppsV1alpha1StatefulSetCondition> conditions) {
     this.conditions = conditions;
   }
 

@@ -42,7 +42,7 @@ public class KruiseAppsV1alpha1EphemeralJobSpec {
   private V1LabelSelector selector = null;
 
   @SerializedName("template")
-  private KruiseAppsV1alpha1EphemeralJobSpecTemplate template = null;
+  private KruiseAppsV1alpha1EphemeralContainerTemplateSpec template = null;
 
   @SerializedName("ttlSecondsAfterFinished")
   private Integer ttlSecondsAfterFinished = null;
@@ -137,7 +137,7 @@ public class KruiseAppsV1alpha1EphemeralJobSpec {
     this.selector = selector;
   }
 
-  public KruiseAppsV1alpha1EphemeralJobSpec template(KruiseAppsV1alpha1EphemeralJobSpecTemplate template) {
+  public KruiseAppsV1alpha1EphemeralJobSpec template(KruiseAppsV1alpha1EphemeralContainerTemplateSpec template) {
     this.template = template;
     return this;
   }
@@ -147,11 +147,11 @@ public class KruiseAppsV1alpha1EphemeralJobSpec {
    * @return template
   **/
   @ApiModelProperty(required = true, value = "")
-  public KruiseAppsV1alpha1EphemeralJobSpecTemplate getTemplate() {
+  public KruiseAppsV1alpha1EphemeralContainerTemplateSpec getTemplate() {
     return template;
   }
 
-  public void setTemplate(KruiseAppsV1alpha1EphemeralJobSpecTemplate template) {
+  public void setTemplate(KruiseAppsV1alpha1EphemeralContainerTemplateSpec template) {
     this.template = template;
   }
 

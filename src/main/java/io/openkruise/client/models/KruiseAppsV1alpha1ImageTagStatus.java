@@ -14,15 +14,10 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 import org.joda.time.DateTime;
 
 /**
@@ -30,7 +25,7 @@ import org.joda.time.DateTime;
  */
 @ApiModel(description = "ImageTagStatus defines the pulling status of an image tag")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1NodeImageStatusTags {
+public class KruiseAppsV1alpha1ImageTagStatus {
   @SerializedName("completionTime")
   private DateTime completionTime = null;
 
@@ -55,7 +50,7 @@ public class KruiseAppsV1alpha1NodeImageStatusTags {
   @SerializedName("version")
   private Long version = null;
 
-  public KruiseAppsV1alpha1NodeImageStatusTags completionTime(DateTime completionTime) {
+  public KruiseAppsV1alpha1ImageTagStatus completionTime(DateTime completionTime) {
     this.completionTime = completionTime;
     return this;
   }
@@ -73,7 +68,7 @@ public class KruiseAppsV1alpha1NodeImageStatusTags {
     this.completionTime = completionTime;
   }
 
-  public KruiseAppsV1alpha1NodeImageStatusTags imageID(String imageID) {
+  public KruiseAppsV1alpha1ImageTagStatus imageID(String imageID) {
     this.imageID = imageID;
     return this;
   }
@@ -91,7 +86,7 @@ public class KruiseAppsV1alpha1NodeImageStatusTags {
     this.imageID = imageID;
   }
 
-  public KruiseAppsV1alpha1NodeImageStatusTags message(String message) {
+  public KruiseAppsV1alpha1ImageTagStatus message(String message) {
     this.message = message;
     return this;
   }
@@ -109,7 +104,7 @@ public class KruiseAppsV1alpha1NodeImageStatusTags {
     this.message = message;
   }
 
-  public KruiseAppsV1alpha1NodeImageStatusTags phase(String phase) {
+  public KruiseAppsV1alpha1ImageTagStatus phase(String phase) {
     this.phase = phase;
     return this;
   }
@@ -127,7 +122,7 @@ public class KruiseAppsV1alpha1NodeImageStatusTags {
     this.phase = phase;
   }
 
-  public KruiseAppsV1alpha1NodeImageStatusTags progress(Integer progress) {
+  public KruiseAppsV1alpha1ImageTagStatus progress(Integer progress) {
     this.progress = progress;
     return this;
   }
@@ -145,7 +140,7 @@ public class KruiseAppsV1alpha1NodeImageStatusTags {
     this.progress = progress;
   }
 
-  public KruiseAppsV1alpha1NodeImageStatusTags startTime(DateTime startTime) {
+  public KruiseAppsV1alpha1ImageTagStatus startTime(DateTime startTime) {
     this.startTime = startTime;
     return this;
   }
@@ -163,7 +158,7 @@ public class KruiseAppsV1alpha1NodeImageStatusTags {
     this.startTime = startTime;
   }
 
-  public KruiseAppsV1alpha1NodeImageStatusTags tag(String tag) {
+  public KruiseAppsV1alpha1ImageTagStatus tag(String tag) {
     this.tag = tag;
     return this;
   }
@@ -181,7 +176,7 @@ public class KruiseAppsV1alpha1NodeImageStatusTags {
     this.tag = tag;
   }
 
-  public KruiseAppsV1alpha1NodeImageStatusTags version(Long version) {
+  public KruiseAppsV1alpha1ImageTagStatus version(Long version) {
     this.version = version;
     return this;
   }
@@ -208,7 +203,7 @@ public class KruiseAppsV1alpha1NodeImageStatusTags {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1NodeImageStatusTags ioKruiseAppsV1alpha1NodeImageStatusTags = (KruiseAppsV1alpha1NodeImageStatusTags) o;
+    KruiseAppsV1alpha1ImageTagStatus ioKruiseAppsV1alpha1NodeImageStatusTags = (KruiseAppsV1alpha1ImageTagStatus) o;
     return Objects.equals(this.completionTime, ioKruiseAppsV1alpha1NodeImageStatusTags.completionTime) &&
         Objects.equals(this.imageID, ioKruiseAppsV1alpha1NodeImageStatusTags.imageID) &&
         Objects.equals(this.message, ioKruiseAppsV1alpha1NodeImageStatusTags.message) &&

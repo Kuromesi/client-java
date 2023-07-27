@@ -14,16 +14,10 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1NodePodProbeStatusProbeStates;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +25,7 @@ import java.util.List;
  * KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses {
+public class KruiseAppsV1alpha1PodProbeStatus {
   @SerializedName("name")
   private String name = null;
 
@@ -39,12 +33,12 @@ public class KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses {
   private String namespace = null;
 
   @SerializedName("probeStates")
-  private List<KruiseAppsV1alpha1NodePodProbeStatusProbeStates> probeStates = null;
+  private List<KruiseAppsV1alpha1ContainerProbeState> probeStates = null;
 
   @SerializedName("uid")
   private String uid = null;
 
-  public KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses name(String name) {
+  public KruiseAppsV1alpha1PodProbeStatus name(String name) {
     this.name = name;
     return this;
   }
@@ -62,7 +56,7 @@ public class KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses {
     this.name = name;
   }
 
-  public KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses namespace(String namespace) {
+  public KruiseAppsV1alpha1PodProbeStatus namespace(String namespace) {
     this.namespace = namespace;
     return this;
   }
@@ -80,14 +74,14 @@ public class KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses {
     this.namespace = namespace;
   }
 
-  public KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses probeStates(List<KruiseAppsV1alpha1NodePodProbeStatusProbeStates> probeStates) {
+  public KruiseAppsV1alpha1PodProbeStatus probeStates(List<KruiseAppsV1alpha1ContainerProbeState> probeStates) {
     this.probeStates = probeStates;
     return this;
   }
 
-  public KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses addProbeStatesItem(KruiseAppsV1alpha1NodePodProbeStatusProbeStates probeStatesItem) {
+  public KruiseAppsV1alpha1PodProbeStatus addProbeStatesItem(KruiseAppsV1alpha1ContainerProbeState probeStatesItem) {
     if (this.probeStates == null) {
-      this.probeStates = new ArrayList<KruiseAppsV1alpha1NodePodProbeStatusProbeStates>();
+      this.probeStates = new ArrayList<KruiseAppsV1alpha1ContainerProbeState>();
     }
     this.probeStates.add(probeStatesItem);
     return this;
@@ -98,15 +92,15 @@ public class KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses {
    * @return probeStates
   **/
   @ApiModelProperty(value = "pod probe result")
-  public List<KruiseAppsV1alpha1NodePodProbeStatusProbeStates> getProbeStates() {
+  public List<KruiseAppsV1alpha1ContainerProbeState> getProbeStates() {
     return probeStates;
   }
 
-  public void setProbeStates(List<KruiseAppsV1alpha1NodePodProbeStatusProbeStates> probeStates) {
+  public void setProbeStates(List<KruiseAppsV1alpha1ContainerProbeState> probeStates) {
     this.probeStates = probeStates;
   }
 
-  public KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses uid(String uid) {
+  public KruiseAppsV1alpha1PodProbeStatus uid(String uid) {
     this.uid = uid;
     return this;
   }
@@ -133,7 +127,7 @@ public class KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses ioKruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses = (KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses) o;
+    KruiseAppsV1alpha1PodProbeStatus ioKruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses = (KruiseAppsV1alpha1PodProbeStatus) o;
     return Objects.equals(this.name, ioKruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses.name) &&
         Objects.equals(this.namespace, ioKruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses.namespace) &&
         Objects.equals(this.probeStates, ioKruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses.probeStates) &&

@@ -14,19 +14,12 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1NodeImageStatusFirstSyncStatus;
-import io.openkruise.client.models.KruiseAppsV1alpha1NodeImageStatusImageStatuses;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -42,10 +35,10 @@ public class KruiseAppsV1alpha1NodeImageStatus {
   private Integer failed = null;
 
   @SerializedName("firstSyncStatus")
-  private KruiseAppsV1alpha1NodeImageStatusFirstSyncStatus firstSyncStatus = null;
+  private KruiseAppsV1alpha1SyncStatus firstSyncStatus = null;
 
   @SerializedName("imageStatuses")
-  private Map<String, KruiseAppsV1alpha1NodeImageStatusImageStatuses> imageStatuses = null;
+  private Map<String, KruiseAppsV1alpha1ImageStatus> imageStatuses = null;
 
   @SerializedName("pulling")
   private Integer pulling = null;
@@ -89,7 +82,7 @@ public class KruiseAppsV1alpha1NodeImageStatus {
     this.failed = failed;
   }
 
-  public KruiseAppsV1alpha1NodeImageStatus firstSyncStatus(KruiseAppsV1alpha1NodeImageStatusFirstSyncStatus firstSyncStatus) {
+  public KruiseAppsV1alpha1NodeImageStatus firstSyncStatus(KruiseAppsV1alpha1SyncStatus firstSyncStatus) {
     this.firstSyncStatus = firstSyncStatus;
     return this;
   }
@@ -99,22 +92,22 @@ public class KruiseAppsV1alpha1NodeImageStatus {
    * @return firstSyncStatus
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1NodeImageStatusFirstSyncStatus getFirstSyncStatus() {
+  public KruiseAppsV1alpha1SyncStatus getFirstSyncStatus() {
     return firstSyncStatus;
   }
 
-  public void setFirstSyncStatus(KruiseAppsV1alpha1NodeImageStatusFirstSyncStatus firstSyncStatus) {
+  public void setFirstSyncStatus(KruiseAppsV1alpha1SyncStatus firstSyncStatus) {
     this.firstSyncStatus = firstSyncStatus;
   }
 
-  public KruiseAppsV1alpha1NodeImageStatus imageStatuses(Map<String, KruiseAppsV1alpha1NodeImageStatusImageStatuses> imageStatuses) {
+  public KruiseAppsV1alpha1NodeImageStatus imageStatuses(Map<String, KruiseAppsV1alpha1ImageStatus> imageStatuses) {
     this.imageStatuses = imageStatuses;
     return this;
   }
 
-  public KruiseAppsV1alpha1NodeImageStatus putImageStatusesItem(String key, KruiseAppsV1alpha1NodeImageStatusImageStatuses imageStatusesItem) {
+  public KruiseAppsV1alpha1NodeImageStatus putImageStatusesItem(String key, KruiseAppsV1alpha1ImageStatus imageStatusesItem) {
     if (this.imageStatuses == null) {
-      this.imageStatuses = new HashMap<String, KruiseAppsV1alpha1NodeImageStatusImageStatuses>();
+      this.imageStatuses = new HashMap<String, KruiseAppsV1alpha1ImageStatus>();
     }
     this.imageStatuses.put(key, imageStatusesItem);
     return this;
@@ -125,11 +118,11 @@ public class KruiseAppsV1alpha1NodeImageStatus {
    * @return imageStatuses
   **/
   @ApiModelProperty(value = "all statuses of active image pulling tasks")
-  public Map<String, KruiseAppsV1alpha1NodeImageStatusImageStatuses> getImageStatuses() {
+  public Map<String, KruiseAppsV1alpha1ImageStatus> getImageStatuses() {
     return imageStatuses;
   }
 
-  public void setImageStatuses(Map<String, KruiseAppsV1alpha1NodeImageStatusImageStatuses> imageStatuses) {
+  public void setImageStatuses(Map<String, KruiseAppsV1alpha1ImageStatus> imageStatuses) {
     this.imageStatuses = imageStatuses;
   }
 

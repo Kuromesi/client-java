@@ -27,16 +27,16 @@ import java.util.List;
  */
 @ApiModel(description = "Topology describes the pods distribution detail between each of subsets.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1UnitedDeploymentSpecTopology {
+public class KruiseAppsV1alpha1Topology {
   @SerializedName("subsets")
   private List<KruiseAppsV1alpha1Subset> subsets = null;
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTopology subsets(List<KruiseAppsV1alpha1Subset> subsets) {
+  public KruiseAppsV1alpha1Topology subsets(List<KruiseAppsV1alpha1Subset> subsets) {
     this.subsets = subsets;
     return this;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTopology addSubsetsItem(KruiseAppsV1alpha1Subset subsetsItem) {
+  public KruiseAppsV1alpha1Topology addSubsetsItem(KruiseAppsV1alpha1Subset subsetsItem) {
     if (this.subsets == null) {
       this.subsets = new ArrayList<KruiseAppsV1alpha1Subset>();
     }
@@ -66,7 +66,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTopology {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1UnitedDeploymentSpecTopology ioKruiseAppsV1alpha1UnitedDeploymentSpecTopology = (KruiseAppsV1alpha1UnitedDeploymentSpecTopology) o;
+    KruiseAppsV1alpha1Topology ioKruiseAppsV1alpha1UnitedDeploymentSpecTopology = (KruiseAppsV1alpha1Topology) o;
     return Objects.equals(this.subsets, ioKruiseAppsV1alpha1UnitedDeploymentSpecTopology.subsets);
   }
 

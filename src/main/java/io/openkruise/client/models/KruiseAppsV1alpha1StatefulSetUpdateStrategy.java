@@ -24,14 +24,14 @@ import io.swagger.annotations.ApiModelProperty;
  */
 @ApiModel(description = "updateStrategy indicates the StatefulSetUpdateStrategy that will be employed to update Pods in the StatefulSet when a revision is made to Template.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy {
+public class KruiseAppsV1alpha1StatefulSetUpdateStrategy {
   @SerializedName("rollingUpdate")
   private KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy rollingUpdate = null;
 
   @SerializedName("type")
   private String type = null;
 
-  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy rollingUpdate(KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy rollingUpdate) {
+  public KruiseAppsV1alpha1StatefulSetUpdateStrategy rollingUpdate(KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy rollingUpdate) {
     this.rollingUpdate = rollingUpdate;
     return this;
   }
@@ -49,7 +49,7 @@ public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy {
     this.rollingUpdate = rollingUpdate;
   }
 
-  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy type(String type) {
+  public KruiseAppsV1alpha1StatefulSetUpdateStrategy type(String type) {
     this.type = type;
     return this;
   }
@@ -76,7 +76,7 @@ public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy ioKruiseAppsV1alpha1StatefulSetSpecUpdateStrategy = (KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy) o;
+    KruiseAppsV1alpha1StatefulSetUpdateStrategy ioKruiseAppsV1alpha1StatefulSetSpecUpdateStrategy = (KruiseAppsV1alpha1StatefulSetUpdateStrategy) o;
     return Objects.equals(this.rollingUpdate, ioKruiseAppsV1alpha1StatefulSetSpecUpdateStrategy.rollingUpdate) &&
         Objects.equals(this.type, ioKruiseAppsV1alpha1StatefulSetSpecUpdateStrategy.type);
   }

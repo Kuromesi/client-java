@@ -14,31 +14,26 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.kubernetes.client.openapi.models.V1DeploymentSpec;
 import io.kubernetes.client.openapi.models.V1ObjectMeta;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Deployment template
  */
 @ApiModel(description = "Deployment template")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateDeploymentTemplate {
+public class KruiseAppsV1alpha1DeploymentTemplateSpec {
   @SerializedName("metadata")
   private V1ObjectMeta metadata = null;
 
   @SerializedName("spec")
   private V1DeploymentSpec spec = null;
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateDeploymentTemplate metadata(V1ObjectMeta metadata) {
+  public KruiseAppsV1alpha1DeploymentTemplateSpec metadata(V1ObjectMeta metadata) {
     this.metadata = metadata;
     return this;
   }
@@ -56,7 +51,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateDeploymentTemplate {
     this.metadata = metadata;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateDeploymentTemplate spec(V1DeploymentSpec spec) {
+  public KruiseAppsV1alpha1DeploymentTemplateSpec spec(V1DeploymentSpec spec) {
     this.spec = spec;
     return this;
   }
@@ -83,7 +78,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateDeploymentTemplate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1UnitedDeploymentSpecTemplateDeploymentTemplate ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateDeploymentTemplate = (KruiseAppsV1alpha1UnitedDeploymentSpecTemplateDeploymentTemplate) o;
+    KruiseAppsV1alpha1DeploymentTemplateSpec ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateDeploymentTemplate = (KruiseAppsV1alpha1DeploymentTemplateSpec) o;
     return Objects.equals(this.metadata, ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateDeploymentTemplate.metadata) &&
         Objects.equals(this.spec, ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateDeploymentTemplate.spec);
   }

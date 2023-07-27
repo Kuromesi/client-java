@@ -14,29 +14,24 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * PersistentVolumeClaimRetentionPolicy describes the policy used for PVCs created from the StatefulSet VolumeClaimTemplates. This requires the StatefulSetAutoDeletePVC feature gate to be enabled, which is alpha.
  */
 @ApiModel(description = "PersistentVolumeClaimRetentionPolicy describes the policy used for PVCs created from the StatefulSet VolumeClaimTemplates. This requires the StatefulSetAutoDeletePVC feature gate to be enabled, which is alpha.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecPersistentVolumeClaimRetentionPolicy {
+public class KruiseAppsV1beta1StatefulSetPersistentVolumeClaimRetentionPolicy {
   @SerializedName("whenDeleted")
   private String whenDeleted = null;
 
   @SerializedName("whenScaled")
   private String whenScaled = null;
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecPersistentVolumeClaimRetentionPolicy whenDeleted(String whenDeleted) {
+  public KruiseAppsV1beta1StatefulSetPersistentVolumeClaimRetentionPolicy whenDeleted(String whenDeleted) {
     this.whenDeleted = whenDeleted;
     return this;
   }
@@ -54,7 +49,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTe
     this.whenDeleted = whenDeleted;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecPersistentVolumeClaimRetentionPolicy whenScaled(String whenScaled) {
+  public KruiseAppsV1beta1StatefulSetPersistentVolumeClaimRetentionPolicy whenScaled(String whenScaled) {
     this.whenScaled = whenScaled;
     return this;
   }
@@ -81,7 +76,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTe
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecPersistentVolumeClaimRetentionPolicy ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecPersistentVolumeClaimRetentionPolicy = (KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecPersistentVolumeClaimRetentionPolicy) o;
+    KruiseAppsV1beta1StatefulSetPersistentVolumeClaimRetentionPolicy ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecPersistentVolumeClaimRetentionPolicy = (KruiseAppsV1beta1StatefulSetPersistentVolumeClaimRetentionPolicy) o;
     return Objects.equals(this.whenDeleted, ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecPersistentVolumeClaimRetentionPolicy.whenDeleted) &&
         Objects.equals(this.whenScaled, ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecPersistentVolumeClaimRetentionPolicy.whenScaled);
   }

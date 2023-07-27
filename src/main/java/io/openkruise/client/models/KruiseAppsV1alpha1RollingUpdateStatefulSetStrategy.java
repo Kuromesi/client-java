@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
  */
 @ApiModel(description = "RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate {
+public class KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy {
   @SerializedName("inPlaceUpdateStrategy")
   private KruiseAppsPubInPlaceUpdateStrategy inPlaceUpdateStrategy = null;
 
@@ -45,9 +45,9 @@ public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate {
   private String podUpdatePolicy = null;
 
   @SerializedName("unorderedUpdate")
-  private KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorderedUpdate unorderedUpdate = null;
+  private KruiseAppsV1alpha1UnorderedUpdateStrategy unorderedUpdate = null;
 
-  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate inPlaceUpdateStrategy(KruiseAppsPubInPlaceUpdateStrategy inPlaceUpdateStrategy) {
+  public KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy inPlaceUpdateStrategy(KruiseAppsPubInPlaceUpdateStrategy inPlaceUpdateStrategy) {
     this.inPlaceUpdateStrategy = inPlaceUpdateStrategy;
     return this;
   }
@@ -65,7 +65,7 @@ public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate {
     this.inPlaceUpdateStrategy = inPlaceUpdateStrategy;
   }
 
-  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate maxUnavailable(IntOrString maxUnavailable) {
+  public KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy maxUnavailable(IntOrString maxUnavailable) {
     this.maxUnavailable = maxUnavailable;
     return this;
   }
@@ -83,7 +83,7 @@ public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate {
     this.maxUnavailable = maxUnavailable;
   }
 
-  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate minReadySeconds(Integer minReadySeconds) {
+  public KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy minReadySeconds(Integer minReadySeconds) {
     this.minReadySeconds = minReadySeconds;
     return this;
   }
@@ -101,7 +101,7 @@ public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate {
     this.minReadySeconds = minReadySeconds;
   }
 
-  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate partition(Integer partition) {
+  public KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy partition(Integer partition) {
     this.partition = partition;
     return this;
   }
@@ -119,7 +119,7 @@ public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate {
     this.partition = partition;
   }
 
-  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate paused(Boolean paused) {
+  public KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy paused(Boolean paused) {
     this.paused = paused;
     return this;
   }
@@ -137,7 +137,7 @@ public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate {
     this.paused = paused;
   }
 
-  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate podUpdatePolicy(String podUpdatePolicy) {
+  public KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy podUpdatePolicy(String podUpdatePolicy) {
     this.podUpdatePolicy = podUpdatePolicy;
     return this;
   }
@@ -155,7 +155,7 @@ public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate {
     this.podUpdatePolicy = podUpdatePolicy;
   }
 
-  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate unorderedUpdate(KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorderedUpdate unorderedUpdate) {
+  public KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy unorderedUpdate(KruiseAppsV1alpha1UnorderedUpdateStrategy unorderedUpdate) {
     this.unorderedUpdate = unorderedUpdate;
     return this;
   }
@@ -165,11 +165,11 @@ public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate {
    * @return unorderedUpdate
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorderedUpdate getUnorderedUpdate() {
+  public KruiseAppsV1alpha1UnorderedUpdateStrategy getUnorderedUpdate() {
     return unorderedUpdate;
   }
 
-  public void setUnorderedUpdate(KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorderedUpdate unorderedUpdate) {
+  public void setUnorderedUpdate(KruiseAppsV1alpha1UnorderedUpdateStrategy unorderedUpdate) {
     this.unorderedUpdate = unorderedUpdate;
   }
 
@@ -182,7 +182,7 @@ public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate ioKruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate = (KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate) o;
+    KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy ioKruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate = (KruiseAppsV1alpha1RollingUpdateStatefulSetStrategy) o;
     return Objects.equals(this.inPlaceUpdateStrategy, ioKruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate.inPlaceUpdateStrategy) &&
         Objects.equals(this.maxUnavailable, ioKruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate.maxUnavailable) &&
         Objects.equals(this.minReadySeconds, ioKruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdate.minReadySeconds) &&

@@ -14,22 +14,15 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1NodePodProbeSpecProbe;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * KruiseAppsV1alpha1NodePodProbeSpecProbes
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1NodePodProbeSpecProbes {
+public class KruiseAppsV1alpha1ContainerProbe {
   @SerializedName("containerName")
   private String containerName = null;
 
@@ -37,9 +30,9 @@ public class KruiseAppsV1alpha1NodePodProbeSpecProbes {
   private String name = null;
 
   @SerializedName("probe")
-  private KruiseAppsV1alpha1NodePodProbeSpecProbe probe = null;
+  private KruiseAppsV1alpha1ContainerProbeSpec probe = null;
 
-  public KruiseAppsV1alpha1NodePodProbeSpecProbes containerName(String containerName) {
+  public KruiseAppsV1alpha1ContainerProbe containerName(String containerName) {
     this.containerName = containerName;
     return this;
   }
@@ -57,7 +50,7 @@ public class KruiseAppsV1alpha1NodePodProbeSpecProbes {
     this.containerName = containerName;
   }
 
-  public KruiseAppsV1alpha1NodePodProbeSpecProbes name(String name) {
+  public KruiseAppsV1alpha1ContainerProbe name(String name) {
     this.name = name;
     return this;
   }
@@ -75,7 +68,7 @@ public class KruiseAppsV1alpha1NodePodProbeSpecProbes {
     this.name = name;
   }
 
-  public KruiseAppsV1alpha1NodePodProbeSpecProbes probe(KruiseAppsV1alpha1NodePodProbeSpecProbe probe) {
+  public KruiseAppsV1alpha1ContainerProbe probe(KruiseAppsV1alpha1ContainerProbeSpec probe) {
     this.probe = probe;
     return this;
   }
@@ -85,11 +78,11 @@ public class KruiseAppsV1alpha1NodePodProbeSpecProbes {
    * @return probe
   **/
   @ApiModelProperty(required = true, value = "")
-  public KruiseAppsV1alpha1NodePodProbeSpecProbe getProbe() {
+  public KruiseAppsV1alpha1ContainerProbeSpec getProbe() {
     return probe;
   }
 
-  public void setProbe(KruiseAppsV1alpha1NodePodProbeSpecProbe probe) {
+  public void setProbe(KruiseAppsV1alpha1ContainerProbeSpec probe) {
     this.probe = probe;
   }
 
@@ -102,7 +95,7 @@ public class KruiseAppsV1alpha1NodePodProbeSpecProbes {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1NodePodProbeSpecProbes ioKruiseAppsV1alpha1NodePodProbeSpecProbes = (KruiseAppsV1alpha1NodePodProbeSpecProbes) o;
+    KruiseAppsV1alpha1ContainerProbe ioKruiseAppsV1alpha1NodePodProbeSpecProbes = (KruiseAppsV1alpha1ContainerProbe) o;
     return Objects.equals(this.containerName, ioKruiseAppsV1alpha1NodePodProbeSpecProbes.containerName) &&
         Objects.equals(this.name, ioKruiseAppsV1alpha1NodePodProbeSpecProbes.name) &&
         Objects.equals(this.probe, ioKruiseAppsV1alpha1NodePodProbeSpecProbes.probe);

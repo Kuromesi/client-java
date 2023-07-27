@@ -30,7 +30,7 @@ import java.util.Map;
  */
 @ApiModel(description = "Selector is a query over nodes that should match the job. nil to match all nodes.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1ImageListPullJobSpecSelector {
+public class KruiseAppsV1alpha1ImagePullJobNodeSelector {
   @SerializedName("matchExpressions")
   private List<V1LabelSelectorRequirement> matchExpressions = null;
 
@@ -40,12 +40,12 @@ public class KruiseAppsV1alpha1ImageListPullJobSpecSelector {
   @SerializedName("names")
   private List<String> names = null;
 
-  public KruiseAppsV1alpha1ImageListPullJobSpecSelector matchExpressions(List<V1LabelSelectorRequirement> matchExpressions) {
+  public KruiseAppsV1alpha1ImagePullJobNodeSelector matchExpressions(List<V1LabelSelectorRequirement> matchExpressions) {
     this.matchExpressions = matchExpressions;
     return this;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobSpecSelector addMatchExpressionsItem(V1LabelSelectorRequirement matchExpressionsItem) {
+  public KruiseAppsV1alpha1ImagePullJobNodeSelector addMatchExpressionsItem(V1LabelSelectorRequirement matchExpressionsItem) {
     if (this.matchExpressions == null) {
       this.matchExpressions = new ArrayList<V1LabelSelectorRequirement>();
     }
@@ -66,12 +66,12 @@ public class KruiseAppsV1alpha1ImageListPullJobSpecSelector {
     this.matchExpressions = matchExpressions;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobSpecSelector matchLabels(Map<String, String> matchLabels) {
+  public KruiseAppsV1alpha1ImagePullJobNodeSelector matchLabels(Map<String, String> matchLabels) {
     this.matchLabels = matchLabels;
     return this;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobSpecSelector putMatchLabelsItem(String key, String matchLabelsItem) {
+  public KruiseAppsV1alpha1ImagePullJobNodeSelector putMatchLabelsItem(String key, String matchLabelsItem) {
     if (this.matchLabels == null) {
       this.matchLabels = new HashMap<String, String>();
     }
@@ -92,12 +92,12 @@ public class KruiseAppsV1alpha1ImageListPullJobSpecSelector {
     this.matchLabels = matchLabels;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobSpecSelector names(List<String> names) {
+  public KruiseAppsV1alpha1ImagePullJobNodeSelector names(List<String> names) {
     this.names = names;
     return this;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobSpecSelector addNamesItem(String namesItem) {
+  public KruiseAppsV1alpha1ImagePullJobNodeSelector addNamesItem(String namesItem) {
     if (this.names == null) {
       this.names = new ArrayList<String>();
     }
@@ -127,7 +127,7 @@ public class KruiseAppsV1alpha1ImageListPullJobSpecSelector {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1ImageListPullJobSpecSelector ioKruiseAppsV1alpha1ImageListPullJobSpecSelector = (KruiseAppsV1alpha1ImageListPullJobSpecSelector) o;
+    KruiseAppsV1alpha1ImagePullJobNodeSelector ioKruiseAppsV1alpha1ImageListPullJobSpecSelector = (KruiseAppsV1alpha1ImagePullJobNodeSelector) o;
     return Objects.equals(this.matchExpressions, ioKruiseAppsV1alpha1ImageListPullJobSpecSelector.matchExpressions) &&
         Objects.equals(this.matchLabels, ioKruiseAppsV1alpha1ImageListPullJobSpecSelector.matchLabels) &&
         Objects.equals(this.names, ioKruiseAppsV1alpha1ImageListPullJobSpecSelector.names);

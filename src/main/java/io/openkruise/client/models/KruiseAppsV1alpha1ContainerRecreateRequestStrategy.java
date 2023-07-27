@@ -14,22 +14,17 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Strategy defines strategies for containers recreation.
  */
 @ApiModel(description = "Strategy defines strategies for containers recreation.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy {
+public class KruiseAppsV1alpha1ContainerRecreateRequestStrategy {
   @SerializedName("failurePolicy")
   private String failurePolicy = null;
 
@@ -48,7 +43,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy {
   @SerializedName("unreadyGracePeriodSeconds")
   private Long unreadyGracePeriodSeconds = null;
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy failurePolicy(String failurePolicy) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestStrategy failurePolicy(String failurePolicy) {
     this.failurePolicy = failurePolicy;
     return this;
   }
@@ -66,7 +61,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy {
     this.failurePolicy = failurePolicy;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy forceRecreate(Boolean forceRecreate) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestStrategy forceRecreate(Boolean forceRecreate) {
     this.forceRecreate = forceRecreate;
     return this;
   }
@@ -84,7 +79,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy {
     this.forceRecreate = forceRecreate;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy minStartedSeconds(Integer minStartedSeconds) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestStrategy minStartedSeconds(Integer minStartedSeconds) {
     this.minStartedSeconds = minStartedSeconds;
     return this;
   }
@@ -102,7 +97,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy {
     this.minStartedSeconds = minStartedSeconds;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy orderedRecreate(Boolean orderedRecreate) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestStrategy orderedRecreate(Boolean orderedRecreate) {
     this.orderedRecreate = orderedRecreate;
     return this;
   }
@@ -120,7 +115,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy {
     this.orderedRecreate = orderedRecreate;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy terminationGracePeriodSeconds(Long terminationGracePeriodSeconds) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestStrategy terminationGracePeriodSeconds(Long terminationGracePeriodSeconds) {
     this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
     return this;
   }
@@ -138,7 +133,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy {
     this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy unreadyGracePeriodSeconds(Long unreadyGracePeriodSeconds) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestStrategy unreadyGracePeriodSeconds(Long unreadyGracePeriodSeconds) {
     this.unreadyGracePeriodSeconds = unreadyGracePeriodSeconds;
     return this;
   }
@@ -165,7 +160,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy ioKruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy = (KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy) o;
+    KruiseAppsV1alpha1ContainerRecreateRequestStrategy ioKruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy = (KruiseAppsV1alpha1ContainerRecreateRequestStrategy) o;
     return Objects.equals(this.failurePolicy, ioKruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy.failurePolicy) &&
         Objects.equals(this.forceRecreate, ioKruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy.forceRecreate) &&
         Objects.equals(this.minStartedSeconds, ioKruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy.minStartedSeconds) &&

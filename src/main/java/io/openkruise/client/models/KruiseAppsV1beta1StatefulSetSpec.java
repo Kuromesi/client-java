@@ -30,12 +30,12 @@ import java.util.List;
  */
 @ApiModel(description = "StatefulSetSpec defines the desired state of StatefulSet")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec {
+public class KruiseAppsV1beta1StatefulSetSpec {
   @SerializedName("lifecycle")
   private KruiseAppsPubLifecycle lifecycle = null;
 
   @SerializedName("persistentVolumeClaimRetentionPolicy")
-  private KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecPersistentVolumeClaimRetentionPolicy persistentVolumeClaimRetentionPolicy = null;
+  private KruiseAppsV1beta1StatefulSetPersistentVolumeClaimRetentionPolicy persistentVolumeClaimRetentionPolicy = null;
 
   @SerializedName("podManagementPolicy")
   private String podManagementPolicy = null;
@@ -62,12 +62,12 @@ public class KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec {
   private V1PodTemplateSpec template = null;
 
   @SerializedName("updateStrategy")
-  private KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy updateStrategy = null;
+  private KruiseAppsV1alpha1StatefulSetUpdateStrategy updateStrategy = null;
 
   @SerializedName("volumeClaimTemplates")
   private List<V1PersistentVolumeClaim> volumeClaimTemplates = null;
 
-  public KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec lifecycle(KruiseAppsPubLifecycle lifecycle) {
+  public KruiseAppsV1beta1StatefulSetSpec lifecycle(KruiseAppsPubLifecycle lifecycle) {
     this.lifecycle = lifecycle;
     return this;
   }
@@ -85,7 +85,7 @@ public class KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec {
     this.lifecycle = lifecycle;
   }
 
-  public KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec persistentVolumeClaimRetentionPolicy(KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecPersistentVolumeClaimRetentionPolicy persistentVolumeClaimRetentionPolicy) {
+  public KruiseAppsV1beta1StatefulSetSpec persistentVolumeClaimRetentionPolicy(KruiseAppsV1beta1StatefulSetPersistentVolumeClaimRetentionPolicy persistentVolumeClaimRetentionPolicy) {
     this.persistentVolumeClaimRetentionPolicy = persistentVolumeClaimRetentionPolicy;
     return this;
   }
@@ -95,15 +95,15 @@ public class KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec {
    * @return persistentVolumeClaimRetentionPolicy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecPersistentVolumeClaimRetentionPolicy getPersistentVolumeClaimRetentionPolicy() {
+  public KruiseAppsV1beta1StatefulSetPersistentVolumeClaimRetentionPolicy getPersistentVolumeClaimRetentionPolicy() {
     return persistentVolumeClaimRetentionPolicy;
   }
 
-  public void setPersistentVolumeClaimRetentionPolicy(KruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpecPersistentVolumeClaimRetentionPolicy persistentVolumeClaimRetentionPolicy) {
+  public void setPersistentVolumeClaimRetentionPolicy(KruiseAppsV1beta1StatefulSetPersistentVolumeClaimRetentionPolicy persistentVolumeClaimRetentionPolicy) {
     this.persistentVolumeClaimRetentionPolicy = persistentVolumeClaimRetentionPolicy;
   }
 
-  public KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec podManagementPolicy(String podManagementPolicy) {
+  public KruiseAppsV1beta1StatefulSetSpec podManagementPolicy(String podManagementPolicy) {
     this.podManagementPolicy = podManagementPolicy;
     return this;
   }
@@ -121,7 +121,7 @@ public class KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec {
     this.podManagementPolicy = podManagementPolicy;
   }
 
-  public KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec replicas(Integer replicas) {
+  public KruiseAppsV1beta1StatefulSetSpec replicas(Integer replicas) {
     this.replicas = replicas;
     return this;
   }
@@ -139,12 +139,12 @@ public class KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec {
     this.replicas = replicas;
   }
 
-  public KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec reserveOrdinals(List<Integer> reserveOrdinals) {
+  public KruiseAppsV1beta1StatefulSetSpec reserveOrdinals(List<Integer> reserveOrdinals) {
     this.reserveOrdinals = reserveOrdinals;
     return this;
   }
 
-  public KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec addReserveOrdinalsItem(Integer reserveOrdinalsItem) {
+  public KruiseAppsV1beta1StatefulSetSpec addReserveOrdinalsItem(Integer reserveOrdinalsItem) {
     if (this.reserveOrdinals == null) {
       this.reserveOrdinals = new ArrayList<Integer>();
     }
@@ -165,7 +165,7 @@ public class KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec {
     this.reserveOrdinals = reserveOrdinals;
   }
 
-  public KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec revisionHistoryLimit(Integer revisionHistoryLimit) {
+  public KruiseAppsV1beta1StatefulSetSpec revisionHistoryLimit(Integer revisionHistoryLimit) {
     this.revisionHistoryLimit = revisionHistoryLimit;
     return this;
   }
@@ -183,7 +183,7 @@ public class KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec {
     this.revisionHistoryLimit = revisionHistoryLimit;
   }
 
-  public KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec scaleStrategy(KruiseAppsV1beta1StatefulSetScaleStrategy scaleStrategy) {
+  public KruiseAppsV1beta1StatefulSetSpec scaleStrategy(KruiseAppsV1beta1StatefulSetScaleStrategy scaleStrategy) {
     this.scaleStrategy = scaleStrategy;
     return this;
   }
@@ -201,7 +201,7 @@ public class KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec {
     this.scaleStrategy = scaleStrategy;
   }
 
-  public KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec selector(V1LabelSelector selector) {
+  public KruiseAppsV1beta1StatefulSetSpec selector(V1LabelSelector selector) {
     this.selector = selector;
     return this;
   }
@@ -219,7 +219,7 @@ public class KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec {
     this.selector = selector;
   }
 
-  public KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec serviceName(String serviceName) {
+  public KruiseAppsV1beta1StatefulSetSpec serviceName(String serviceName) {
     this.serviceName = serviceName;
     return this;
   }
@@ -237,7 +237,7 @@ public class KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec {
     this.serviceName = serviceName;
   }
 
-  public KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec template(V1PodTemplateSpec template) {
+  public KruiseAppsV1beta1StatefulSetSpec template(V1PodTemplateSpec template) {
     this.template = template;
     return this;
   }
@@ -255,7 +255,7 @@ public class KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec {
     this.template = template;
   }
 
-  public KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec updateStrategy(KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy updateStrategy) {
+  public KruiseAppsV1beta1StatefulSetSpec updateStrategy(KruiseAppsV1alpha1StatefulSetUpdateStrategy updateStrategy) {
     this.updateStrategy = updateStrategy;
     return this;
   }
@@ -265,15 +265,15 @@ public class KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec {
    * @return updateStrategy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy getUpdateStrategy() {
+  public KruiseAppsV1alpha1StatefulSetUpdateStrategy getUpdateStrategy() {
     return updateStrategy;
   }
 
-  public void setUpdateStrategy(KruiseAppsV1alpha1StatefulSetSpecUpdateStrategy updateStrategy) {
+  public void setUpdateStrategy(KruiseAppsV1alpha1StatefulSetUpdateStrategy updateStrategy) {
     this.updateStrategy = updateStrategy;
   }
 
-  public KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec volumeClaimTemplates(List<V1PersistentVolumeClaim> volumeClaimTemplates) {
+  public KruiseAppsV1beta1StatefulSetSpec volumeClaimTemplates(List<V1PersistentVolumeClaim> volumeClaimTemplates) {
     this.volumeClaimTemplates = volumeClaimTemplates;
     return this;
   }
@@ -300,7 +300,7 @@ public class KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpec = (KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec) o;
+    KruiseAppsV1beta1StatefulSetSpec ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpec = (KruiseAppsV1beta1StatefulSetSpec) o;
     return Objects.equals(this.lifecycle, ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpec.lifecycle) &&
         Objects.equals(this.persistentVolumeClaimRetentionPolicy, ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpec.persistentVolumeClaimRetentionPolicy) &&
         Objects.equals(this.podManagementPolicy, ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateAdvancedStatefulSetTemplateSpec.podManagementPolicy) &&

@@ -14,16 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 import org.joda.time.DateTime;
@@ -47,7 +42,7 @@ public class KruiseAppsV1alpha1ImageListPullJobStatus {
   private Integer desired = null;
 
   @SerializedName("failedImageStatuses")
-  private List<KruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses> failedImageStatuses = null;
+  private List<KruiseAppsV1alpha1FailedImageStatus> failedImageStatuses = null;
 
   @SerializedName("startTime")
   private DateTime startTime = null;
@@ -127,14 +122,14 @@ public class KruiseAppsV1alpha1ImageListPullJobStatus {
     this.desired = desired;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobStatus failedImageStatuses(List<KruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses> failedImageStatuses) {
+  public KruiseAppsV1alpha1ImageListPullJobStatus failedImageStatuses(List<KruiseAppsV1alpha1FailedImageStatus> failedImageStatuses) {
     this.failedImageStatuses = failedImageStatuses;
     return this;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobStatus addFailedImageStatusesItem(KruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses failedImageStatusesItem) {
+  public KruiseAppsV1alpha1ImageListPullJobStatus addFailedImageStatusesItem(KruiseAppsV1alpha1FailedImageStatus failedImageStatusesItem) {
     if (this.failedImageStatuses == null) {
-      this.failedImageStatuses = new ArrayList<KruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses>();
+      this.failedImageStatuses = new ArrayList<KruiseAppsV1alpha1FailedImageStatus>();
     }
     this.failedImageStatuses.add(failedImageStatusesItem);
     return this;
@@ -145,11 +140,11 @@ public class KruiseAppsV1alpha1ImageListPullJobStatus {
    * @return failedImageStatuses
   **/
   @ApiModelProperty(value = "The status of ImagePullJob which has the failed nodes(status.Failed>0) .")
-  public List<KruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses> getFailedImageStatuses() {
+  public List<KruiseAppsV1alpha1FailedImageStatus> getFailedImageStatuses() {
     return failedImageStatuses;
   }
 
-  public void setFailedImageStatuses(List<KruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses> failedImageStatuses) {
+  public void setFailedImageStatuses(List<KruiseAppsV1alpha1FailedImageStatus> failedImageStatuses) {
     this.failedImageStatuses = failedImageStatuses;
   }
 

@@ -14,17 +14,12 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -32,16 +27,16 @@ import java.util.Map;
  */
 @ApiModel(description = "Includes all of the parameters a Manual update strategy needs.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategyManualUpdate {
+public class KruiseAppsV1alpha1ManualUpdate {
   @SerializedName("partitions")
   private Map<String, Integer> partitions = null;
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategyManualUpdate partitions(Map<String, Integer> partitions) {
+  public KruiseAppsV1alpha1ManualUpdate partitions(Map<String, Integer> partitions) {
     this.partitions = partitions;
     return this;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategyManualUpdate putPartitionsItem(String key, Integer partitionsItem) {
+  public KruiseAppsV1alpha1ManualUpdate putPartitionsItem(String key, Integer partitionsItem) {
     if (this.partitions == null) {
       this.partitions = new HashMap<String, Integer>();
     }
@@ -71,7 +66,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategyManualUpdate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategyManualUpdate ioKruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategyManualUpdate = (KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategyManualUpdate) o;
+    KruiseAppsV1alpha1ManualUpdate ioKruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategyManualUpdate = (KruiseAppsV1alpha1ManualUpdate) o;
     return Objects.equals(this.partitions, ioKruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategyManualUpdate.partitions);
   }
 

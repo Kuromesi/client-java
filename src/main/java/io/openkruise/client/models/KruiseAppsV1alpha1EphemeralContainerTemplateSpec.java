@@ -15,27 +15,22 @@ package io.openkruise.client.models;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.kubernetes.client.openapi.models.V1EphemeralContainer;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Template describes the ephemeral container that will be created.
  */
 @ApiModel(description = "Template describes the ephemeral container that will be created.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1EphemeralJobSpecTemplate {
+public class KruiseAppsV1alpha1EphemeralContainerTemplateSpec {
   @SerializedName("ephemeralContainers")
   private List<V1EphemeralContainer> ephemeralContainers = null;
 
-  public KruiseAppsV1alpha1EphemeralJobSpecTemplate ephemeralContainers(List<V1EphemeralContainer> ephemeralContainers) {
+  public KruiseAppsV1alpha1EphemeralContainerTemplateSpec ephemeralContainers(List<V1EphemeralContainer> ephemeralContainers) {
     this.ephemeralContainers = ephemeralContainers;
     return this;
   }
@@ -62,7 +57,7 @@ public class KruiseAppsV1alpha1EphemeralJobSpecTemplate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1EphemeralJobSpecTemplate ioKruiseAppsV1alpha1EphemeralJobSpecTemplate = (KruiseAppsV1alpha1EphemeralJobSpecTemplate) o;
+    KruiseAppsV1alpha1EphemeralContainerTemplateSpec ioKruiseAppsV1alpha1EphemeralJobSpecTemplate = (KruiseAppsV1alpha1EphemeralContainerTemplateSpec) o;
     return Objects.equals(this.ephemeralContainers, ioKruiseAppsV1alpha1EphemeralJobSpecTemplate.ephemeralContainers);
   }
 

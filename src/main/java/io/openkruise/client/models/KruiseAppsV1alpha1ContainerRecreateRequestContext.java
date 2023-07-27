@@ -14,29 +14,24 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * StatusContext is synced from the real Pod status during this ContainerRecreateRequest creating. Populated by the system. Read-only.
  */
 @ApiModel(description = "StatusContext is synced from the real Pod status during this ContainerRecreateRequest creating. Populated by the system. Read-only.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext {
+public class KruiseAppsV1alpha1ContainerRecreateRequestContext {
   @SerializedName("containerID")
   private String containerID = null;
 
   @SerializedName("restartCount")
   private Integer restartCount = null;
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext containerID(String containerID) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestContext containerID(String containerID) {
     this.containerID = containerID;
     return this;
   }
@@ -54,7 +49,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext {
     this.containerID = containerID;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext restartCount(Integer restartCount) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestContext restartCount(Integer restartCount) {
     this.restartCount = restartCount;
     return this;
   }
@@ -81,7 +76,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext ioKruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext = (KruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext) o;
+    KruiseAppsV1alpha1ContainerRecreateRequestContext ioKruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext = (KruiseAppsV1alpha1ContainerRecreateRequestContext) o;
     return Objects.equals(this.containerID, ioKruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext.containerID) &&
         Objects.equals(this.restartCount, ioKruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext.restartCount);
   }

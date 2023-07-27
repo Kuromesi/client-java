@@ -14,17 +14,12 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -32,19 +27,19 @@ import java.util.Map;
  */
 @ApiModel(description = "Records the information of update progress.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1UnitedDeploymentStatusUpdateStatus {
+public class KruiseAppsV1alpha1UpdateStatus {
   @SerializedName("currentPartitions")
   private Map<String, Integer> currentPartitions = null;
 
   @SerializedName("updatedRevision")
   private String updatedRevision = null;
 
-  public KruiseAppsV1alpha1UnitedDeploymentStatusUpdateStatus currentPartitions(Map<String, Integer> currentPartitions) {
+  public KruiseAppsV1alpha1UpdateStatus currentPartitions(Map<String, Integer> currentPartitions) {
     this.currentPartitions = currentPartitions;
     return this;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentStatusUpdateStatus putCurrentPartitionsItem(String key, Integer currentPartitionsItem) {
+  public KruiseAppsV1alpha1UpdateStatus putCurrentPartitionsItem(String key, Integer currentPartitionsItem) {
     if (this.currentPartitions == null) {
       this.currentPartitions = new HashMap<String, Integer>();
     }
@@ -65,7 +60,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentStatusUpdateStatus {
     this.currentPartitions = currentPartitions;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentStatusUpdateStatus updatedRevision(String updatedRevision) {
+  public KruiseAppsV1alpha1UpdateStatus updatedRevision(String updatedRevision) {
     this.updatedRevision = updatedRevision;
     return this;
   }
@@ -92,7 +87,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentStatusUpdateStatus {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1UnitedDeploymentStatusUpdateStatus ioKruiseAppsV1alpha1UnitedDeploymentStatusUpdateStatus = (KruiseAppsV1alpha1UnitedDeploymentStatusUpdateStatus) o;
+    KruiseAppsV1alpha1UpdateStatus ioKruiseAppsV1alpha1UnitedDeploymentStatusUpdateStatus = (KruiseAppsV1alpha1UpdateStatus) o;
     return Objects.equals(this.currentPartitions, ioKruiseAppsV1alpha1UnitedDeploymentStatusUpdateStatus.currentPartitions) &&
         Objects.equals(this.updatedRevision, ioKruiseAppsV1alpha1UnitedDeploymentStatusUpdateStatus.updatedRevision);
   }

@@ -14,16 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1ResourceDistributionStatusConditions;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +29,7 @@ import java.util.List;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1ResourceDistributionStatus {
   @SerializedName("conditions")
-  private List<KruiseAppsV1alpha1ResourceDistributionStatusConditions> conditions = null;
+  private List<KruiseAppsV1alpha1ResourceDistributionCondition> conditions = null;
 
   @SerializedName("desired")
   private Integer desired = null;
@@ -48,14 +43,14 @@ public class KruiseAppsV1alpha1ResourceDistributionStatus {
   @SerializedName("succeeded")
   private Integer succeeded = null;
 
-  public KruiseAppsV1alpha1ResourceDistributionStatus conditions(List<KruiseAppsV1alpha1ResourceDistributionStatusConditions> conditions) {
+  public KruiseAppsV1alpha1ResourceDistributionStatus conditions(List<KruiseAppsV1alpha1ResourceDistributionCondition> conditions) {
     this.conditions = conditions;
     return this;
   }
 
-  public KruiseAppsV1alpha1ResourceDistributionStatus addConditionsItem(KruiseAppsV1alpha1ResourceDistributionStatusConditions conditionsItem) {
+  public KruiseAppsV1alpha1ResourceDistributionStatus addConditionsItem(KruiseAppsV1alpha1ResourceDistributionCondition conditionsItem) {
     if (this.conditions == null) {
-      this.conditions = new ArrayList<KruiseAppsV1alpha1ResourceDistributionStatusConditions>();
+      this.conditions = new ArrayList<KruiseAppsV1alpha1ResourceDistributionCondition>();
     }
     this.conditions.add(conditionsItem);
     return this;
@@ -66,11 +61,11 @@ public class KruiseAppsV1alpha1ResourceDistributionStatus {
    * @return conditions
   **/
   @ApiModelProperty(value = "Conditions describe the condition when Resource creating, updating and deleting.")
-  public List<KruiseAppsV1alpha1ResourceDistributionStatusConditions> getConditions() {
+  public List<KruiseAppsV1alpha1ResourceDistributionCondition> getConditions() {
     return conditions;
   }
 
-  public void setConditions(List<KruiseAppsV1alpha1ResourceDistributionStatusConditions> conditions) {
+  public void setConditions(List<KruiseAppsV1alpha1ResourceDistributionCondition> conditions) {
     this.conditions = conditions;
   }
 

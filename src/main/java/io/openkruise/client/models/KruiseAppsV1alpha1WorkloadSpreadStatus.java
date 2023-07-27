@@ -14,16 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +32,7 @@ public class KruiseAppsV1alpha1WorkloadSpreadStatus {
   private Long observedGeneration = null;
 
   @SerializedName("subsetStatuses")
-  private List<KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses> subsetStatuses = null;
+  private List<KruiseAppsV1alpha1WorkloadSpreadSubsetStatus> subsetStatuses = null;
 
   public KruiseAppsV1alpha1WorkloadSpreadStatus observedGeneration(Long observedGeneration) {
     this.observedGeneration = observedGeneration;
@@ -57,14 +52,14 @@ public class KruiseAppsV1alpha1WorkloadSpreadStatus {
     this.observedGeneration = observedGeneration;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadStatus subsetStatuses(List<KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses> subsetStatuses) {
+  public KruiseAppsV1alpha1WorkloadSpreadStatus subsetStatuses(List<KruiseAppsV1alpha1WorkloadSpreadSubsetStatus> subsetStatuses) {
     this.subsetStatuses = subsetStatuses;
     return this;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadStatus addSubsetStatusesItem(KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses subsetStatusesItem) {
+  public KruiseAppsV1alpha1WorkloadSpreadStatus addSubsetStatusesItem(KruiseAppsV1alpha1WorkloadSpreadSubsetStatus subsetStatusesItem) {
     if (this.subsetStatuses == null) {
-      this.subsetStatuses = new ArrayList<KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses>();
+      this.subsetStatuses = new ArrayList<KruiseAppsV1alpha1WorkloadSpreadSubsetStatus>();
     }
     this.subsetStatuses.add(subsetStatusesItem);
     return this;
@@ -75,11 +70,11 @@ public class KruiseAppsV1alpha1WorkloadSpreadStatus {
    * @return subsetStatuses
   **/
   @ApiModelProperty(value = "Contains the status of each subset. Each element in this array represents one subset")
-  public List<KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses> getSubsetStatuses() {
+  public List<KruiseAppsV1alpha1WorkloadSpreadSubsetStatus> getSubsetStatuses() {
     return subsetStatuses;
   }
 
-  public void setSubsetStatuses(List<KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses> subsetStatuses) {
+  public void setSubsetStatuses(List<KruiseAppsV1alpha1WorkloadSpreadSubsetStatus> subsetStatuses) {
     this.subsetStatuses = subsetStatuses;
   }
 

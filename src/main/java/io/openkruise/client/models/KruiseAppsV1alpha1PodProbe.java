@@ -25,7 +25,7 @@ import java.util.List;
  * KruiseAppsV1alpha1NodePodProbeSpecPodProbes
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1PodProbes {
+public class KruiseAppsV1alpha1PodProbe {
   @SerializedName("name")
   private String name = null;
 
@@ -38,7 +38,7 @@ public class KruiseAppsV1alpha1PodProbes {
   @SerializedName("uid")
   private String uid = null;
 
-  public KruiseAppsV1alpha1PodProbes name(String name) {
+  public KruiseAppsV1alpha1PodProbe name(String name) {
     this.name = name;
     return this;
   }
@@ -56,7 +56,7 @@ public class KruiseAppsV1alpha1PodProbes {
     this.name = name;
   }
 
-  public KruiseAppsV1alpha1PodProbes namespace(String namespace) {
+  public KruiseAppsV1alpha1PodProbe namespace(String namespace) {
     this.namespace = namespace;
     return this;
   }
@@ -74,12 +74,12 @@ public class KruiseAppsV1alpha1PodProbes {
     this.namespace = namespace;
   }
 
-  public KruiseAppsV1alpha1PodProbes probes(List<KruiseAppsV1alpha1ContainerProbe> probes) {
+  public KruiseAppsV1alpha1PodProbe probes(List<KruiseAppsV1alpha1ContainerProbe> probes) {
     this.probes = probes;
     return this;
   }
 
-  public KruiseAppsV1alpha1PodProbes addProbesItem(KruiseAppsV1alpha1ContainerProbe probesItem) {
+  public KruiseAppsV1alpha1PodProbe addProbesItem(KruiseAppsV1alpha1ContainerProbe probesItem) {
     if (this.probes == null) {
       this.probes = new ArrayList<KruiseAppsV1alpha1ContainerProbe>();
     }
@@ -100,7 +100,7 @@ public class KruiseAppsV1alpha1PodProbes {
     this.probes = probes;
   }
 
-  public KruiseAppsV1alpha1PodProbes uid(String uid) {
+  public KruiseAppsV1alpha1PodProbe uid(String uid) {
     this.uid = uid;
     return this;
   }
@@ -127,7 +127,7 @@ public class KruiseAppsV1alpha1PodProbes {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1PodProbes ioKruiseAppsV1alpha1NodePodProbeSpecPodProbes = (KruiseAppsV1alpha1PodProbes) o;
+    KruiseAppsV1alpha1PodProbe ioKruiseAppsV1alpha1NodePodProbeSpecPodProbes = (KruiseAppsV1alpha1PodProbe) o;
     return Objects.equals(this.name, ioKruiseAppsV1alpha1NodePodProbeSpecPodProbes.name) &&
         Objects.equals(this.namespace, ioKruiseAppsV1alpha1NodePodProbeSpecPodProbes.namespace) &&
         Objects.equals(this.probes, ioKruiseAppsV1alpha1NodePodProbeSpecPodProbes.probes) &&

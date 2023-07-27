@@ -14,22 +14,17 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Revision can help users rolling update SidecarSet safely. If users set this filed, SidecarSet will try to inject specific revision according to different policies.
  */
 @ApiModel(description = "Revision can help users rolling update SidecarSet safely. If users set this filed, SidecarSet will try to inject specific revision according to different policies.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision {
+public class KruiseAppsV1alpha1SidecarSetInjectionStrategyRevision {
   @SerializedName("customVersion")
   private String customVersion = null;
 
@@ -39,7 +34,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision {
   @SerializedName("revisionName")
   private String revisionName = null;
 
-  public KruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision customVersion(String customVersion) {
+  public KruiseAppsV1alpha1SidecarSetInjectionStrategyRevision customVersion(String customVersion) {
     this.customVersion = customVersion;
     return this;
   }
@@ -57,7 +52,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision {
     this.customVersion = customVersion;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision policy(String policy) {
+  public KruiseAppsV1alpha1SidecarSetInjectionStrategyRevision policy(String policy) {
     this.policy = policy;
     return this;
   }
@@ -75,7 +70,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision {
     this.policy = policy;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision revisionName(String revisionName) {
+  public KruiseAppsV1alpha1SidecarSetInjectionStrategyRevision revisionName(String revisionName) {
     this.revisionName = revisionName;
     return this;
   }
@@ -102,7 +97,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision ioKruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision = (KruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision) o;
+    KruiseAppsV1alpha1SidecarSetInjectionStrategyRevision ioKruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision = (KruiseAppsV1alpha1SidecarSetInjectionStrategyRevision) o;
     return Objects.equals(this.customVersion, ioKruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision.customVersion) &&
         Objects.equals(this.policy, ioKruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision.policy) &&
         Objects.equals(this.revisionName, ioKruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision.revisionName);

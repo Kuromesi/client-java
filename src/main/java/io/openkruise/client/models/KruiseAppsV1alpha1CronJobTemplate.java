@@ -25,14 +25,14 @@ import io.swagger.annotations.ApiModelProperty;
  */
 @ApiModel(description = "Specifies the job that will be created when executing a CronJob.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplate {
+public class KruiseAppsV1alpha1CronJobTemplate {
   @SerializedName("broadcastJobTemplate")
   private KruiseAppsV1alpha1BroadcastJobSpec broadcastJobTemplate = null;
 
   @SerializedName("jobTemplate")
   private V1beta1JobTemplateSpec jobTemplate = null;
 
-  public KruiseAppsV1alpha1AdvancedCronJobSpecTemplate broadcastJobTemplate(KruiseAppsV1alpha1BroadcastJobSpec broadcastJobTemplate) {
+  public KruiseAppsV1alpha1CronJobTemplate broadcastJobTemplate(KruiseAppsV1alpha1BroadcastJobSpec broadcastJobTemplate) {
     this.broadcastJobTemplate = broadcastJobTemplate;
     return this;
   }
@@ -50,7 +50,7 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplate {
     this.broadcastJobTemplate = broadcastJobTemplate;
   }
 
-  public KruiseAppsV1alpha1AdvancedCronJobSpecTemplate jobTemplate(V1beta1JobTemplateSpec jobTemplate) {
+  public KruiseAppsV1alpha1CronJobTemplate jobTemplate(V1beta1JobTemplateSpec jobTemplate) {
     this.jobTemplate = jobTemplate;
     return this;
   }
@@ -77,7 +77,7 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpecTemplate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1AdvancedCronJobSpecTemplate ioKruiseAppsV1alpha1AdvancedCronJobSpecTemplate = (KruiseAppsV1alpha1AdvancedCronJobSpecTemplate) o;
+    KruiseAppsV1alpha1CronJobTemplate ioKruiseAppsV1alpha1AdvancedCronJobSpecTemplate = (KruiseAppsV1alpha1CronJobTemplate) o;
     return Objects.equals(this.broadcastJobTemplate, ioKruiseAppsV1alpha1AdvancedCronJobSpecTemplate.broadcastJobTemplate) &&
         Objects.equals(this.jobTemplate, ioKruiseAppsV1alpha1AdvancedCronJobSpecTemplate.jobTemplate);
   }

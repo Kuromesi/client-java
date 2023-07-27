@@ -30,17 +30,17 @@ import java.util.List;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1PodProbeMarkerSpec {
   @SerializedName("probes")
-  private List<KruiseAppsV1alpha1PodProbeMarkerSpecProbes> probes = new ArrayList<KruiseAppsV1alpha1PodProbeMarkerSpecProbes>();
+  private List<KruiseAppsV1alpha1PodContainerProbe> probes = new ArrayList<KruiseAppsV1alpha1PodContainerProbe>();
 
   @SerializedName("selector")
   private V1LabelSelector selector = null;
 
-  public KruiseAppsV1alpha1PodProbeMarkerSpec probes(List<KruiseAppsV1alpha1PodProbeMarkerSpecProbes> probes) {
+  public KruiseAppsV1alpha1PodProbeMarkerSpec probes(List<KruiseAppsV1alpha1PodContainerProbe> probes) {
     this.probes = probes;
     return this;
   }
 
-  public KruiseAppsV1alpha1PodProbeMarkerSpec addProbesItem(KruiseAppsV1alpha1PodProbeMarkerSpecProbes probesItem) {
+  public KruiseAppsV1alpha1PodProbeMarkerSpec addProbesItem(KruiseAppsV1alpha1PodContainerProbe probesItem) {
     this.probes.add(probesItem);
     return this;
   }
@@ -50,11 +50,11 @@ public class KruiseAppsV1alpha1PodProbeMarkerSpec {
    * @return probes
   **/
   @ApiModelProperty(required = true, value = "Custom container probe, current only support Exec(). Probe Result will record in Pod.Status.Conditions, and condition.type=probe.name. condition.status=True indicates probe success condition.status=False indicates probe fails")
-  public List<KruiseAppsV1alpha1PodProbeMarkerSpecProbes> getProbes() {
+  public List<KruiseAppsV1alpha1PodContainerProbe> getProbes() {
     return probes;
   }
 
-  public void setProbes(List<KruiseAppsV1alpha1PodProbeMarkerSpecProbes> probes) {
+  public void setProbes(List<KruiseAppsV1alpha1PodContainerProbe> probes) {
     this.probes = probes;
   }
 

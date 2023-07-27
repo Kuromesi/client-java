@@ -14,22 +14,16 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 import org.joda.time.DateTime;
 
 /**
  * KruiseAppsV1alpha1NodePodProbeStatusProbeStates
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1NodePodProbeStatusProbeStates {
+public class KruiseAppsV1alpha1ContainerProbeState {
   @SerializedName("lastProbeTime")
   private DateTime lastProbeTime = null;
 
@@ -45,7 +39,7 @@ public class KruiseAppsV1alpha1NodePodProbeStatusProbeStates {
   @SerializedName("state")
   private String state = null;
 
-  public KruiseAppsV1alpha1NodePodProbeStatusProbeStates lastProbeTime(DateTime lastProbeTime) {
+  public KruiseAppsV1alpha1ContainerProbeState lastProbeTime(DateTime lastProbeTime) {
     this.lastProbeTime = lastProbeTime;
     return this;
   }
@@ -63,7 +57,7 @@ public class KruiseAppsV1alpha1NodePodProbeStatusProbeStates {
     this.lastProbeTime = lastProbeTime;
   }
 
-  public KruiseAppsV1alpha1NodePodProbeStatusProbeStates lastTransitionTime(DateTime lastTransitionTime) {
+  public KruiseAppsV1alpha1ContainerProbeState lastTransitionTime(DateTime lastTransitionTime) {
     this.lastTransitionTime = lastTransitionTime;
     return this;
   }
@@ -81,7 +75,7 @@ public class KruiseAppsV1alpha1NodePodProbeStatusProbeStates {
     this.lastTransitionTime = lastTransitionTime;
   }
 
-  public KruiseAppsV1alpha1NodePodProbeStatusProbeStates message(String message) {
+  public KruiseAppsV1alpha1ContainerProbeState message(String message) {
     this.message = message;
     return this;
   }
@@ -99,7 +93,7 @@ public class KruiseAppsV1alpha1NodePodProbeStatusProbeStates {
     this.message = message;
   }
 
-  public KruiseAppsV1alpha1NodePodProbeStatusProbeStates name(String name) {
+  public KruiseAppsV1alpha1ContainerProbeState name(String name) {
     this.name = name;
     return this;
   }
@@ -117,7 +111,7 @@ public class KruiseAppsV1alpha1NodePodProbeStatusProbeStates {
     this.name = name;
   }
 
-  public KruiseAppsV1alpha1NodePodProbeStatusProbeStates state(String state) {
+  public KruiseAppsV1alpha1ContainerProbeState state(String state) {
     this.state = state;
     return this;
   }
@@ -144,7 +138,7 @@ public class KruiseAppsV1alpha1NodePodProbeStatusProbeStates {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1NodePodProbeStatusProbeStates ioKruiseAppsV1alpha1NodePodProbeStatusProbeStates = (KruiseAppsV1alpha1NodePodProbeStatusProbeStates) o;
+    KruiseAppsV1alpha1ContainerProbeState ioKruiseAppsV1alpha1NodePodProbeStatusProbeStates = (KruiseAppsV1alpha1ContainerProbeState) o;
     return Objects.equals(this.lastProbeTime, ioKruiseAppsV1alpha1NodePodProbeStatusProbeStates.lastProbeTime) &&
         Objects.equals(this.lastTransitionTime, ioKruiseAppsV1alpha1NodePodProbeStatusProbeStates.lastTransitionTime) &&
         Objects.equals(this.message, ioKruiseAppsV1alpha1NodePodProbeStatusProbeStates.message) &&

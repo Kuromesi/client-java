@@ -14,22 +14,17 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * PullPolicy is an optional field to set parameters of the pulling task. If not specified, the system will use the default values.
  */
 @ApiModel(description = "PullPolicy is an optional field to set parameters of the pulling task. If not specified, the system will use the default values.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1NodeImageSpecPullPolicy {
+public class KruiseAppsV1alpha1ImageTagPullPolicy {
   @SerializedName("activeDeadlineSeconds")
   private Long activeDeadlineSeconds = null;
 
@@ -42,7 +37,7 @@ public class KruiseAppsV1alpha1NodeImageSpecPullPolicy {
   @SerializedName("ttlSecondsAfterFinished")
   private Integer ttlSecondsAfterFinished = null;
 
-  public KruiseAppsV1alpha1NodeImageSpecPullPolicy activeDeadlineSeconds(Long activeDeadlineSeconds) {
+  public KruiseAppsV1alpha1ImageTagPullPolicy activeDeadlineSeconds(Long activeDeadlineSeconds) {
     this.activeDeadlineSeconds = activeDeadlineSeconds;
     return this;
   }
@@ -60,7 +55,7 @@ public class KruiseAppsV1alpha1NodeImageSpecPullPolicy {
     this.activeDeadlineSeconds = activeDeadlineSeconds;
   }
 
-  public KruiseAppsV1alpha1NodeImageSpecPullPolicy backoffLimit(Integer backoffLimit) {
+  public KruiseAppsV1alpha1ImageTagPullPolicy backoffLimit(Integer backoffLimit) {
     this.backoffLimit = backoffLimit;
     return this;
   }
@@ -78,7 +73,7 @@ public class KruiseAppsV1alpha1NodeImageSpecPullPolicy {
     this.backoffLimit = backoffLimit;
   }
 
-  public KruiseAppsV1alpha1NodeImageSpecPullPolicy timeoutSeconds(Integer timeoutSeconds) {
+  public KruiseAppsV1alpha1ImageTagPullPolicy timeoutSeconds(Integer timeoutSeconds) {
     this.timeoutSeconds = timeoutSeconds;
     return this;
   }
@@ -96,7 +91,7 @@ public class KruiseAppsV1alpha1NodeImageSpecPullPolicy {
     this.timeoutSeconds = timeoutSeconds;
   }
 
-  public KruiseAppsV1alpha1NodeImageSpecPullPolicy ttlSecondsAfterFinished(Integer ttlSecondsAfterFinished) {
+  public KruiseAppsV1alpha1ImageTagPullPolicy ttlSecondsAfterFinished(Integer ttlSecondsAfterFinished) {
     this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
     return this;
   }
@@ -123,7 +118,7 @@ public class KruiseAppsV1alpha1NodeImageSpecPullPolicy {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1NodeImageSpecPullPolicy ioKruiseAppsV1alpha1NodeImageSpecPullPolicy = (KruiseAppsV1alpha1NodeImageSpecPullPolicy) o;
+    KruiseAppsV1alpha1ImageTagPullPolicy ioKruiseAppsV1alpha1NodeImageSpecPullPolicy = (KruiseAppsV1alpha1ImageTagPullPolicy) o;
     return Objects.equals(this.activeDeadlineSeconds, ioKruiseAppsV1alpha1NodeImageSpecPullPolicy.activeDeadlineSeconds) &&
         Objects.equals(this.backoffLimit, ioKruiseAppsV1alpha1NodeImageSpecPullPolicy.backoffLimit) &&
         Objects.equals(this.timeoutSeconds, ioKruiseAppsV1alpha1NodeImageSpecPullPolicy.timeoutSeconds) &&

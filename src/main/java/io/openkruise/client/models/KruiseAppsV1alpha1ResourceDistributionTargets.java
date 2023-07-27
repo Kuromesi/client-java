@@ -25,20 +25,20 @@ import io.swagger.annotations.ApiModelProperty;
  */
 @ApiModel(description = "Targets defines the namespaces that users want to distribute to.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1ResourceDistributionSpecTargets {
+public class KruiseAppsV1alpha1ResourceDistributionTargets {
   @SerializedName("allNamespaces")
   private Boolean allNamespaces = null;
 
   @SerializedName("excludedNamespaces")
-  private KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespaces excludedNamespaces = null;
+  private KruiseAppsV1alpha1ResourceDistributionTargetNamespaces excludedNamespaces = null;
 
   @SerializedName("includedNamespaces")
-  private KruiseAppsV1alpha1ResourceDistributionSpecTargetsIncludedNamespaces includedNamespaces = null;
+  private KruiseAppsV1alpha1ResourceDistributionTargetNamespaces includedNamespaces = null;
 
   @SerializedName("namespaceLabelSelector")
   private V1LabelSelector namespaceLabelSelector = null;
 
-  public KruiseAppsV1alpha1ResourceDistributionSpecTargets allNamespaces(Boolean allNamespaces) {
+  public KruiseAppsV1alpha1ResourceDistributionTargets allNamespaces(Boolean allNamespaces) {
     this.allNamespaces = allNamespaces;
     return this;
   }
@@ -56,7 +56,7 @@ public class KruiseAppsV1alpha1ResourceDistributionSpecTargets {
     this.allNamespaces = allNamespaces;
   }
 
-  public KruiseAppsV1alpha1ResourceDistributionSpecTargets excludedNamespaces(KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespaces excludedNamespaces) {
+  public KruiseAppsV1alpha1ResourceDistributionTargets excludedNamespaces(KruiseAppsV1alpha1ResourceDistributionTargetNamespaces excludedNamespaces) {
     this.excludedNamespaces = excludedNamespaces;
     return this;
   }
@@ -66,15 +66,15 @@ public class KruiseAppsV1alpha1ResourceDistributionSpecTargets {
    * @return excludedNamespaces
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespaces getExcludedNamespaces() {
+  public KruiseAppsV1alpha1ResourceDistributionTargetNamespaces getExcludedNamespaces() {
     return excludedNamespaces;
   }
 
-  public void setExcludedNamespaces(KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespaces excludedNamespaces) {
+  public void setExcludedNamespaces(KruiseAppsV1alpha1ResourceDistributionTargetNamespaces excludedNamespaces) {
     this.excludedNamespaces = excludedNamespaces;
   }
 
-  public KruiseAppsV1alpha1ResourceDistributionSpecTargets includedNamespaces(KruiseAppsV1alpha1ResourceDistributionSpecTargetsIncludedNamespaces includedNamespaces) {
+  public KruiseAppsV1alpha1ResourceDistributionTargets includedNamespaces(KruiseAppsV1alpha1ResourceDistributionTargetNamespaces includedNamespaces) {
     this.includedNamespaces = includedNamespaces;
     return this;
   }
@@ -84,15 +84,15 @@ public class KruiseAppsV1alpha1ResourceDistributionSpecTargets {
    * @return includedNamespaces
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1ResourceDistributionSpecTargetsIncludedNamespaces getIncludedNamespaces() {
+  public KruiseAppsV1alpha1ResourceDistributionTargetNamespaces getIncludedNamespaces() {
     return includedNamespaces;
   }
 
-  public void setIncludedNamespaces(KruiseAppsV1alpha1ResourceDistributionSpecTargetsIncludedNamespaces includedNamespaces) {
+  public void setIncludedNamespaces(KruiseAppsV1alpha1ResourceDistributionTargetNamespaces includedNamespaces) {
     this.includedNamespaces = includedNamespaces;
   }
 
-  public KruiseAppsV1alpha1ResourceDistributionSpecTargets namespaceLabelSelector(V1LabelSelector namespaceLabelSelector) {
+  public KruiseAppsV1alpha1ResourceDistributionTargets namespaceLabelSelector(V1LabelSelector namespaceLabelSelector) {
     this.namespaceLabelSelector = namespaceLabelSelector;
     return this;
   }
@@ -119,7 +119,7 @@ public class KruiseAppsV1alpha1ResourceDistributionSpecTargets {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1ResourceDistributionSpecTargets ioKruiseAppsV1alpha1ResourceDistributionSpecTargets = (KruiseAppsV1alpha1ResourceDistributionSpecTargets) o;
+    KruiseAppsV1alpha1ResourceDistributionTargets ioKruiseAppsV1alpha1ResourceDistributionSpecTargets = (KruiseAppsV1alpha1ResourceDistributionTargets) o;
     return Objects.equals(this.allNamespaces, ioKruiseAppsV1alpha1ResourceDistributionSpecTargets.allNamespaces) &&
         Objects.equals(this.excludedNamespaces, ioKruiseAppsV1alpha1ResourceDistributionSpecTargets.excludedNamespaces) &&
         Objects.equals(this.includedNamespaces, ioKruiseAppsV1alpha1ResourceDistributionSpecTargets.includedNamespaces) &&

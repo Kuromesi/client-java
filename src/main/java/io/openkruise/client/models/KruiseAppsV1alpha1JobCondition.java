@@ -14,15 +14,10 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 import org.joda.time.DateTime;
 
 /**
@@ -30,7 +25,7 @@ import org.joda.time.DateTime;
  */
 @ApiModel(description = "JobCondition describes current state of a job.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1BroadcastJobStatusConditions {
+public class KruiseAppsV1alpha1JobCondition {
   @SerializedName("lastProbeTime")
   private DateTime lastProbeTime = null;
 
@@ -49,7 +44,7 @@ public class KruiseAppsV1alpha1BroadcastJobStatusConditions {
   @SerializedName("type")
   private String type = null;
 
-  public KruiseAppsV1alpha1BroadcastJobStatusConditions lastProbeTime(DateTime lastProbeTime) {
+  public KruiseAppsV1alpha1JobCondition lastProbeTime(DateTime lastProbeTime) {
     this.lastProbeTime = lastProbeTime;
     return this;
   }
@@ -67,7 +62,7 @@ public class KruiseAppsV1alpha1BroadcastJobStatusConditions {
     this.lastProbeTime = lastProbeTime;
   }
 
-  public KruiseAppsV1alpha1BroadcastJobStatusConditions lastTransitionTime(DateTime lastTransitionTime) {
+  public KruiseAppsV1alpha1JobCondition lastTransitionTime(DateTime lastTransitionTime) {
     this.lastTransitionTime = lastTransitionTime;
     return this;
   }
@@ -85,7 +80,7 @@ public class KruiseAppsV1alpha1BroadcastJobStatusConditions {
     this.lastTransitionTime = lastTransitionTime;
   }
 
-  public KruiseAppsV1alpha1BroadcastJobStatusConditions message(String message) {
+  public KruiseAppsV1alpha1JobCondition message(String message) {
     this.message = message;
     return this;
   }
@@ -103,7 +98,7 @@ public class KruiseAppsV1alpha1BroadcastJobStatusConditions {
     this.message = message;
   }
 
-  public KruiseAppsV1alpha1BroadcastJobStatusConditions reason(String reason) {
+  public KruiseAppsV1alpha1JobCondition reason(String reason) {
     this.reason = reason;
     return this;
   }
@@ -121,7 +116,7 @@ public class KruiseAppsV1alpha1BroadcastJobStatusConditions {
     this.reason = reason;
   }
 
-  public KruiseAppsV1alpha1BroadcastJobStatusConditions status(String status) {
+  public KruiseAppsV1alpha1JobCondition status(String status) {
     this.status = status;
     return this;
   }
@@ -139,7 +134,7 @@ public class KruiseAppsV1alpha1BroadcastJobStatusConditions {
     this.status = status;
   }
 
-  public KruiseAppsV1alpha1BroadcastJobStatusConditions type(String type) {
+  public KruiseAppsV1alpha1JobCondition type(String type) {
     this.type = type;
     return this;
   }
@@ -166,7 +161,7 @@ public class KruiseAppsV1alpha1BroadcastJobStatusConditions {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1BroadcastJobStatusConditions ioKruiseAppsV1alpha1BroadcastJobStatusConditions = (KruiseAppsV1alpha1BroadcastJobStatusConditions) o;
+    KruiseAppsV1alpha1JobCondition ioKruiseAppsV1alpha1BroadcastJobStatusConditions = (KruiseAppsV1alpha1JobCondition) o;
     return Objects.equals(this.lastProbeTime, ioKruiseAppsV1alpha1BroadcastJobStatusConditions.lastProbeTime) &&
         Objects.equals(this.lastTransitionTime, ioKruiseAppsV1alpha1BroadcastJobStatusConditions.lastTransitionTime) &&
         Objects.equals(this.message, ioKruiseAppsV1alpha1BroadcastJobStatusConditions.message) &&

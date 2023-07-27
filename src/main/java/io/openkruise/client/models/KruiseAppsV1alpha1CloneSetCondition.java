@@ -14,15 +14,10 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 import org.joda.time.DateTime;
 
 /**
@@ -30,7 +25,7 @@ import org.joda.time.DateTime;
  */
 @ApiModel(description = "CloneSetCondition describes the state of a CloneSet at a certain point.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1CloneSetStatusConditions {
+public class KruiseAppsV1alpha1CloneSetCondition {
   @SerializedName("lastTransitionTime")
   private DateTime lastTransitionTime = null;
 
@@ -46,7 +41,7 @@ public class KruiseAppsV1alpha1CloneSetStatusConditions {
   @SerializedName("type")
   private String type = null;
 
-  public KruiseAppsV1alpha1CloneSetStatusConditions lastTransitionTime(DateTime lastTransitionTime) {
+  public KruiseAppsV1alpha1CloneSetCondition lastTransitionTime(DateTime lastTransitionTime) {
     this.lastTransitionTime = lastTransitionTime;
     return this;
   }
@@ -64,7 +59,7 @@ public class KruiseAppsV1alpha1CloneSetStatusConditions {
     this.lastTransitionTime = lastTransitionTime;
   }
 
-  public KruiseAppsV1alpha1CloneSetStatusConditions message(String message) {
+  public KruiseAppsV1alpha1CloneSetCondition message(String message) {
     this.message = message;
     return this;
   }
@@ -82,7 +77,7 @@ public class KruiseAppsV1alpha1CloneSetStatusConditions {
     this.message = message;
   }
 
-  public KruiseAppsV1alpha1CloneSetStatusConditions reason(String reason) {
+  public KruiseAppsV1alpha1CloneSetCondition reason(String reason) {
     this.reason = reason;
     return this;
   }
@@ -100,7 +95,7 @@ public class KruiseAppsV1alpha1CloneSetStatusConditions {
     this.reason = reason;
   }
 
-  public KruiseAppsV1alpha1CloneSetStatusConditions status(String status) {
+  public KruiseAppsV1alpha1CloneSetCondition status(String status) {
     this.status = status;
     return this;
   }
@@ -118,7 +113,7 @@ public class KruiseAppsV1alpha1CloneSetStatusConditions {
     this.status = status;
   }
 
-  public KruiseAppsV1alpha1CloneSetStatusConditions type(String type) {
+  public KruiseAppsV1alpha1CloneSetCondition type(String type) {
     this.type = type;
     return this;
   }
@@ -145,7 +140,7 @@ public class KruiseAppsV1alpha1CloneSetStatusConditions {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1CloneSetStatusConditions ioKruiseAppsV1alpha1CloneSetStatusConditions = (KruiseAppsV1alpha1CloneSetStatusConditions) o;
+    KruiseAppsV1alpha1CloneSetCondition ioKruiseAppsV1alpha1CloneSetStatusConditions = (KruiseAppsV1alpha1CloneSetCondition) o;
     return Objects.equals(this.lastTransitionTime, ioKruiseAppsV1alpha1CloneSetStatusConditions.lastTransitionTime) &&
         Objects.equals(this.message, ioKruiseAppsV1alpha1CloneSetStatusConditions.message) &&
         Objects.equals(this.reason, ioKruiseAppsV1alpha1CloneSetStatusConditions.reason) &&

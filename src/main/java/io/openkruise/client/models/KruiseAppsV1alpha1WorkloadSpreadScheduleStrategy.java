@@ -14,13 +14,12 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
+
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategyAdaptive;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -30,9 +29,9 @@ import java.io.IOException;
  */
 @ApiModel(description = "ScheduleStrategy indicates the strategy the WorkloadSpread used to preform the schedule between each of subsets.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy {
+public class KruiseAppsV1alpha1WorkloadSpreadScheduleStrategy {
   @SerializedName("adaptive")
-  private KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategyAdaptive adaptive = null;
+  private KruiseAppsV1alpha1AdaptiveWorkloadSpreadStrategy adaptive = null;
 
   /**
    * Type indicates the type of the WorkloadSpreadScheduleStrategy. Default is Fixed
@@ -86,7 +85,7 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy {
   @SerializedName("type")
   private TypeEnum type = null;
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy adaptive(KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategyAdaptive adaptive) {
+  public KruiseAppsV1alpha1WorkloadSpreadScheduleStrategy adaptive(KruiseAppsV1alpha1AdaptiveWorkloadSpreadStrategy adaptive) {
     this.adaptive = adaptive;
     return this;
   }
@@ -96,15 +95,15 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy {
    * @return adaptive
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategyAdaptive getAdaptive() {
+  public KruiseAppsV1alpha1AdaptiveWorkloadSpreadStrategy getAdaptive() {
     return adaptive;
   }
 
-  public void setAdaptive(KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategyAdaptive adaptive) {
+  public void setAdaptive(KruiseAppsV1alpha1AdaptiveWorkloadSpreadStrategy adaptive) {
     this.adaptive = adaptive;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy type(TypeEnum type) {
+  public KruiseAppsV1alpha1WorkloadSpreadScheduleStrategy type(TypeEnum type) {
     this.type = type;
     return this;
   }
@@ -131,7 +130,7 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy ioKruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy = (KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy) o;
+    KruiseAppsV1alpha1WorkloadSpreadScheduleStrategy ioKruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy = (KruiseAppsV1alpha1WorkloadSpreadScheduleStrategy) o;
     return Objects.equals(this.adaptive, ioKruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy.adaptive) &&
         Objects.equals(this.type, ioKruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy.type);
   }

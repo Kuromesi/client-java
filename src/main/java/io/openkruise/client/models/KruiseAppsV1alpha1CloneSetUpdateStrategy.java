@@ -28,7 +28,7 @@ import java.util.List;
  */
 @ApiModel(description = "UpdateStrategy indicates the UpdateStrategy that will be employed to update Pods in the CloneSet when a revision is made to Template.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategy {
+public class KruiseAppsV1alpha1CloneSetUpdateStrategy {
   @SerializedName("inPlaceUpdateStrategy")
   private KruiseAppsPubInPlaceUpdateStrategy inPlaceUpdateStrategy = null;
 
@@ -48,12 +48,12 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategy {
   private KruiseAppsPubUpdatePriorityStrategy priorityStrategy = null;
 
   @SerializedName("scatterStrategy")
-  private List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy> scatterStrategy = null;
+  private List<KruiseAppsV1alpha1UpdateScatterTerm> scatterStrategy = null;
 
   @SerializedName("type")
   private String type = null;
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategy inPlaceUpdateStrategy(KruiseAppsPubInPlaceUpdateStrategy inPlaceUpdateStrategy) {
+  public KruiseAppsV1alpha1CloneSetUpdateStrategy inPlaceUpdateStrategy(KruiseAppsPubInPlaceUpdateStrategy inPlaceUpdateStrategy) {
     this.inPlaceUpdateStrategy = inPlaceUpdateStrategy;
     return this;
   }
@@ -71,7 +71,7 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategy {
     this.inPlaceUpdateStrategy = inPlaceUpdateStrategy;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategy maxSurge(IntOrString maxSurge) {
+  public KruiseAppsV1alpha1CloneSetUpdateStrategy maxSurge(IntOrString maxSurge) {
     this.maxSurge = maxSurge;
     return this;
   }
@@ -89,7 +89,7 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategy {
     this.maxSurge = maxSurge;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategy maxUnavailable(IntOrString maxUnavailable) {
+  public KruiseAppsV1alpha1CloneSetUpdateStrategy maxUnavailable(IntOrString maxUnavailable) {
     this.maxUnavailable = maxUnavailable;
     return this;
   }
@@ -107,7 +107,7 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategy {
     this.maxUnavailable = maxUnavailable;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategy partition(IntOrString partition) {
+  public KruiseAppsV1alpha1CloneSetUpdateStrategy partition(IntOrString partition) {
     this.partition = partition;
     return this;
   }
@@ -125,7 +125,7 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategy {
     this.partition = partition;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategy paused(Boolean paused) {
+  public KruiseAppsV1alpha1CloneSetUpdateStrategy paused(Boolean paused) {
     this.paused = paused;
     return this;
   }
@@ -143,7 +143,7 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategy {
     this.paused = paused;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategy priorityStrategy(KruiseAppsPubUpdatePriorityStrategy priorityStrategy) {
+  public KruiseAppsV1alpha1CloneSetUpdateStrategy priorityStrategy(KruiseAppsPubUpdatePriorityStrategy priorityStrategy) {
     this.priorityStrategy = priorityStrategy;
     return this;
   }
@@ -161,14 +161,14 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategy {
     this.priorityStrategy = priorityStrategy;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategy scatterStrategy(List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy> scatterStrategy) {
+  public KruiseAppsV1alpha1CloneSetUpdateStrategy scatterStrategy(List<KruiseAppsV1alpha1UpdateScatterTerm> scatterStrategy) {
     this.scatterStrategy = scatterStrategy;
     return this;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategy addScatterStrategyItem(KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy scatterStrategyItem) {
+  public KruiseAppsV1alpha1CloneSetUpdateStrategy addScatterStrategyItem(KruiseAppsV1alpha1UpdateScatterTerm scatterStrategyItem) {
     if (this.scatterStrategy == null) {
-      this.scatterStrategy = new ArrayList<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy>();
+      this.scatterStrategy = new ArrayList<KruiseAppsV1alpha1UpdateScatterTerm>();
     }
     this.scatterStrategy.add(scatterStrategyItem);
     return this;
@@ -179,15 +179,15 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategy {
    * @return scatterStrategy
   **/
   @ApiModelProperty(value = "ScatterStrategy defines the scatter rules to make pods been scattered when update. This will avoid pods with the same key-value to be updated in one batch. - Note that pods will be scattered after priority sort. So, although priority strategy and scatter strategy can be applied together, we suggest to use either one of them. - If scatterStrategy is used, we suggest to just use one term. Otherwise, the update order can be hard to understand.")
-  public List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy> getScatterStrategy() {
+  public List<KruiseAppsV1alpha1UpdateScatterTerm> getScatterStrategy() {
     return scatterStrategy;
   }
 
-  public void setScatterStrategy(List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy> scatterStrategy) {
+  public void setScatterStrategy(List<KruiseAppsV1alpha1UpdateScatterTerm> scatterStrategy) {
     this.scatterStrategy = scatterStrategy;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategy type(String type) {
+  public KruiseAppsV1alpha1CloneSetUpdateStrategy type(String type) {
     this.type = type;
     return this;
   }
@@ -214,7 +214,7 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategy {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1CloneSetSpecUpdateStrategy ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategy = (KruiseAppsV1alpha1CloneSetSpecUpdateStrategy) o;
+    KruiseAppsV1alpha1CloneSetUpdateStrategy ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategy = (KruiseAppsV1alpha1CloneSetUpdateStrategy) o;
     return Objects.equals(this.inPlaceUpdateStrategy, ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategy.inPlaceUpdateStrategy) &&
         Objects.equals(this.maxSurge, ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategy.maxSurge) &&
         Objects.equals(this.maxUnavailable, ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategy.maxUnavailable) &&

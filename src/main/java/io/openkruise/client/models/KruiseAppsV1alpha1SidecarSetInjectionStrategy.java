@@ -14,30 +14,24 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * InjectionStrategy describe the strategy when sidecarset is injected into pods
  */
 @ApiModel(description = "InjectionStrategy describe the strategy when sidecarset is injected into pods")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1SidecarSetSpecInjectionStrategy {
+public class KruiseAppsV1alpha1SidecarSetInjectionStrategy {
   @SerializedName("paused")
   private Boolean paused = null;
 
   @SerializedName("revision")
-  private KruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision revision = null;
+  private KruiseAppsV1alpha1SidecarSetInjectionStrategyRevision revision = null;
 
-  public KruiseAppsV1alpha1SidecarSetSpecInjectionStrategy paused(Boolean paused) {
+  public KruiseAppsV1alpha1SidecarSetInjectionStrategy paused(Boolean paused) {
     this.paused = paused;
     return this;
   }
@@ -55,7 +49,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecInjectionStrategy {
     this.paused = paused;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpecInjectionStrategy revision(KruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision revision) {
+  public KruiseAppsV1alpha1SidecarSetInjectionStrategy revision(KruiseAppsV1alpha1SidecarSetInjectionStrategyRevision revision) {
     this.revision = revision;
     return this;
   }
@@ -65,11 +59,11 @@ public class KruiseAppsV1alpha1SidecarSetSpecInjectionStrategy {
    * @return revision
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision getRevision() {
+  public KruiseAppsV1alpha1SidecarSetInjectionStrategyRevision getRevision() {
     return revision;
   }
 
-  public void setRevision(KruiseAppsV1alpha1SidecarSetSpecInjectionStrategyRevision revision) {
+  public void setRevision(KruiseAppsV1alpha1SidecarSetInjectionStrategyRevision revision) {
     this.revision = revision;
   }
 
@@ -82,7 +76,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecInjectionStrategy {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1SidecarSetSpecInjectionStrategy ioKruiseAppsV1alpha1SidecarSetSpecInjectionStrategy = (KruiseAppsV1alpha1SidecarSetSpecInjectionStrategy) o;
+    KruiseAppsV1alpha1SidecarSetInjectionStrategy ioKruiseAppsV1alpha1SidecarSetSpecInjectionStrategy = (KruiseAppsV1alpha1SidecarSetInjectionStrategy) o;
     return Objects.equals(this.paused, ioKruiseAppsV1alpha1SidecarSetSpecInjectionStrategy.paused) &&
         Objects.equals(this.revision, ioKruiseAppsV1alpha1SidecarSetSpecInjectionStrategy.revision);
   }

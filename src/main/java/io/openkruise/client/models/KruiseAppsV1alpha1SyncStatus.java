@@ -14,15 +14,10 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 import org.joda.time.DateTime;
 
 /**
@@ -30,7 +25,7 @@ import org.joda.time.DateTime;
  */
 @ApiModel(description = "The first of all job has finished on this node. When a node is added to the cluster, we want to know the time when the node's image pulling is completed, and use it to trigger the operation of the upper system.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1NodeImageStatusFirstSyncStatus {
+public class KruiseAppsV1alpha1SyncStatus {
   @SerializedName("message")
   private String message = null;
 
@@ -40,7 +35,7 @@ public class KruiseAppsV1alpha1NodeImageStatusFirstSyncStatus {
   @SerializedName("syncAt")
   private DateTime syncAt = null;
 
-  public KruiseAppsV1alpha1NodeImageStatusFirstSyncStatus message(String message) {
+  public KruiseAppsV1alpha1SyncStatus message(String message) {
     this.message = message;
     return this;
   }
@@ -58,7 +53,7 @@ public class KruiseAppsV1alpha1NodeImageStatusFirstSyncStatus {
     this.message = message;
   }
 
-  public KruiseAppsV1alpha1NodeImageStatusFirstSyncStatus status(String status) {
+  public KruiseAppsV1alpha1SyncStatus status(String status) {
     this.status = status;
     return this;
   }
@@ -76,7 +71,7 @@ public class KruiseAppsV1alpha1NodeImageStatusFirstSyncStatus {
     this.status = status;
   }
 
-  public KruiseAppsV1alpha1NodeImageStatusFirstSyncStatus syncAt(DateTime syncAt) {
+  public KruiseAppsV1alpha1SyncStatus syncAt(DateTime syncAt) {
     this.syncAt = syncAt;
     return this;
   }
@@ -103,7 +98,7 @@ public class KruiseAppsV1alpha1NodeImageStatusFirstSyncStatus {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1NodeImageStatusFirstSyncStatus ioKruiseAppsV1alpha1NodeImageStatusFirstSyncStatus = (KruiseAppsV1alpha1NodeImageStatusFirstSyncStatus) o;
+    KruiseAppsV1alpha1SyncStatus ioKruiseAppsV1alpha1NodeImageStatusFirstSyncStatus = (KruiseAppsV1alpha1SyncStatus) o;
     return Objects.equals(this.message, ioKruiseAppsV1alpha1NodeImageStatusFirstSyncStatus.message) &&
         Objects.equals(this.status, ioKruiseAppsV1alpha1NodeImageStatusFirstSyncStatus.status) &&
         Objects.equals(this.syncAt, ioKruiseAppsV1alpha1NodeImageStatusFirstSyncStatus.syncAt);

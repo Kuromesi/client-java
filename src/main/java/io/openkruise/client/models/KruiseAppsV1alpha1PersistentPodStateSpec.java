@@ -14,19 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1PersistentPodStateSpecPersistentPodAnnotations;
-import io.openkruise.client.models.KruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology;
-import io.openkruise.client.models.KruiseAppsV1alpha1PersistentPodStateSpecRequiredPersistentTopology;
-import io.openkruise.client.models.KruiseAppsV1alpha1PersistentPodStateSpecTargetRef;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,28 +29,28 @@ import java.util.List;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1PersistentPodStateSpec {
   @SerializedName("persistentPodAnnotations")
-  private List<KruiseAppsV1alpha1PersistentPodStateSpecPersistentPodAnnotations> persistentPodAnnotations = null;
+  private List<KruiseAppsV1alpha1PersistentPodAnnotation> persistentPodAnnotations = null;
 
   @SerializedName("persistentPodStateRetentionPolicy")
   private String persistentPodStateRetentionPolicy = null;
 
   @SerializedName("preferredPersistentTopology")
-  private List<KruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology> preferredPersistentTopology = null;
+  private List<KruiseAppsV1alpha1PreferredTopologyTerm> preferredPersistentTopology = null;
 
   @SerializedName("requiredPersistentTopology")
-  private KruiseAppsV1alpha1PersistentPodStateSpecRequiredPersistentTopology requiredPersistentTopology = null;
+  private KruiseAppsV1alpha1NodeTopologyTerm requiredPersistentTopology = null;
 
   @SerializedName("targetRef")
-  private KruiseAppsV1alpha1PersistentPodStateSpecTargetRef targetRef = null;
+  private KruiseAppsV1alpha1TargetReference targetRef = null;
 
-  public KruiseAppsV1alpha1PersistentPodStateSpec persistentPodAnnotations(List<KruiseAppsV1alpha1PersistentPodStateSpecPersistentPodAnnotations> persistentPodAnnotations) {
+  public KruiseAppsV1alpha1PersistentPodStateSpec persistentPodAnnotations(List<KruiseAppsV1alpha1PersistentPodAnnotation> persistentPodAnnotations) {
     this.persistentPodAnnotations = persistentPodAnnotations;
     return this;
   }
 
-  public KruiseAppsV1alpha1PersistentPodStateSpec addPersistentPodAnnotationsItem(KruiseAppsV1alpha1PersistentPodStateSpecPersistentPodAnnotations persistentPodAnnotationsItem) {
+  public KruiseAppsV1alpha1PersistentPodStateSpec addPersistentPodAnnotationsItem(KruiseAppsV1alpha1PersistentPodAnnotation persistentPodAnnotationsItem) {
     if (this.persistentPodAnnotations == null) {
-      this.persistentPodAnnotations = new ArrayList<KruiseAppsV1alpha1PersistentPodStateSpecPersistentPodAnnotations>();
+      this.persistentPodAnnotations = new ArrayList<KruiseAppsV1alpha1PersistentPodAnnotation>();
     }
     this.persistentPodAnnotations.add(persistentPodAnnotationsItem);
     return this;
@@ -69,11 +61,11 @@ public class KruiseAppsV1alpha1PersistentPodStateSpec {
    * @return persistentPodAnnotations
   **/
   @ApiModelProperty(value = "Persist the annotations information of the pods that need to be saved")
-  public List<KruiseAppsV1alpha1PersistentPodStateSpecPersistentPodAnnotations> getPersistentPodAnnotations() {
+  public List<KruiseAppsV1alpha1PersistentPodAnnotation> getPersistentPodAnnotations() {
     return persistentPodAnnotations;
   }
 
-  public void setPersistentPodAnnotations(List<KruiseAppsV1alpha1PersistentPodStateSpecPersistentPodAnnotations> persistentPodAnnotations) {
+  public void setPersistentPodAnnotations(List<KruiseAppsV1alpha1PersistentPodAnnotation> persistentPodAnnotations) {
     this.persistentPodAnnotations = persistentPodAnnotations;
   }
 
@@ -95,14 +87,14 @@ public class KruiseAppsV1alpha1PersistentPodStateSpec {
     this.persistentPodStateRetentionPolicy = persistentPodStateRetentionPolicy;
   }
 
-  public KruiseAppsV1alpha1PersistentPodStateSpec preferredPersistentTopology(List<KruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology> preferredPersistentTopology) {
+  public KruiseAppsV1alpha1PersistentPodStateSpec preferredPersistentTopology(List<KruiseAppsV1alpha1PreferredTopologyTerm> preferredPersistentTopology) {
     this.preferredPersistentTopology = preferredPersistentTopology;
     return this;
   }
 
-  public KruiseAppsV1alpha1PersistentPodStateSpec addPreferredPersistentTopologyItem(KruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology preferredPersistentTopologyItem) {
+  public KruiseAppsV1alpha1PersistentPodStateSpec addPreferredPersistentTopologyItem(KruiseAppsV1alpha1PreferredTopologyTerm preferredPersistentTopologyItem) {
     if (this.preferredPersistentTopology == null) {
-      this.preferredPersistentTopology = new ArrayList<KruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology>();
+      this.preferredPersistentTopology = new ArrayList<KruiseAppsV1alpha1PreferredTopologyTerm>();
     }
     this.preferredPersistentTopology.add(preferredPersistentTopologyItem);
     return this;
@@ -113,15 +105,15 @@ public class KruiseAppsV1alpha1PersistentPodStateSpec {
    * @return preferredPersistentTopology
   **/
   @ApiModelProperty(value = "Pod rebuilt topology preferred for node labels, with xx weight for example  kubernetes.io/hostname, failure-domain.beta.kubernetes.io/zone")
-  public List<KruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology> getPreferredPersistentTopology() {
+  public List<KruiseAppsV1alpha1PreferredTopologyTerm> getPreferredPersistentTopology() {
     return preferredPersistentTopology;
   }
 
-  public void setPreferredPersistentTopology(List<KruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology> preferredPersistentTopology) {
+  public void setPreferredPersistentTopology(List<KruiseAppsV1alpha1PreferredTopologyTerm> preferredPersistentTopology) {
     this.preferredPersistentTopology = preferredPersistentTopology;
   }
 
-  public KruiseAppsV1alpha1PersistentPodStateSpec requiredPersistentTopology(KruiseAppsV1alpha1PersistentPodStateSpecRequiredPersistentTopology requiredPersistentTopology) {
+  public KruiseAppsV1alpha1PersistentPodStateSpec requiredPersistentTopology(KruiseAppsV1alpha1NodeTopologyTerm requiredPersistentTopology) {
     this.requiredPersistentTopology = requiredPersistentTopology;
     return this;
   }
@@ -131,15 +123,15 @@ public class KruiseAppsV1alpha1PersistentPodStateSpec {
    * @return requiredPersistentTopology
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1PersistentPodStateSpecRequiredPersistentTopology getRequiredPersistentTopology() {
+  public KruiseAppsV1alpha1NodeTopologyTerm getRequiredPersistentTopology() {
     return requiredPersistentTopology;
   }
 
-  public void setRequiredPersistentTopology(KruiseAppsV1alpha1PersistentPodStateSpecRequiredPersistentTopology requiredPersistentTopology) {
+  public void setRequiredPersistentTopology(KruiseAppsV1alpha1NodeTopologyTerm requiredPersistentTopology) {
     this.requiredPersistentTopology = requiredPersistentTopology;
   }
 
-  public KruiseAppsV1alpha1PersistentPodStateSpec targetRef(KruiseAppsV1alpha1PersistentPodStateSpecTargetRef targetRef) {
+  public KruiseAppsV1alpha1PersistentPodStateSpec targetRef(KruiseAppsV1alpha1TargetReference targetRef) {
     this.targetRef = targetRef;
     return this;
   }
@@ -149,11 +141,11 @@ public class KruiseAppsV1alpha1PersistentPodStateSpec {
    * @return targetRef
   **/
   @ApiModelProperty(required = true, value = "")
-  public KruiseAppsV1alpha1PersistentPodStateSpecTargetRef getTargetRef() {
+  public KruiseAppsV1alpha1TargetReference getTargetRef() {
     return targetRef;
   }
 
-  public void setTargetRef(KruiseAppsV1alpha1PersistentPodStateSpecTargetRef targetRef) {
+  public void setTargetRef(KruiseAppsV1alpha1TargetReference targetRef) {
     this.targetRef = targetRef;
   }
 

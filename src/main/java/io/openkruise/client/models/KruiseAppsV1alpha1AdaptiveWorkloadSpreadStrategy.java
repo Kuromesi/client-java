@@ -14,29 +14,24 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Adaptive is used to communicate parameters when Type is AdaptiveWorkloadSpreadScheduleStrategyType.
  */
 @ApiModel(description = "Adaptive is used to communicate parameters when Type is AdaptiveWorkloadSpreadScheduleStrategyType.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategyAdaptive {
+public class KruiseAppsV1alpha1AdaptiveWorkloadSpreadStrategy {
   @SerializedName("disableSimulationSchedule")
   private Boolean disableSimulationSchedule = null;
 
   @SerializedName("rescheduleCriticalSeconds")
   private Integer rescheduleCriticalSeconds = null;
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategyAdaptive disableSimulationSchedule(Boolean disableSimulationSchedule) {
+  public KruiseAppsV1alpha1AdaptiveWorkloadSpreadStrategy disableSimulationSchedule(Boolean disableSimulationSchedule) {
     this.disableSimulationSchedule = disableSimulationSchedule;
     return this;
   }
@@ -54,7 +49,7 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategyAdaptive {
     this.disableSimulationSchedule = disableSimulationSchedule;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategyAdaptive rescheduleCriticalSeconds(Integer rescheduleCriticalSeconds) {
+  public KruiseAppsV1alpha1AdaptiveWorkloadSpreadStrategy rescheduleCriticalSeconds(Integer rescheduleCriticalSeconds) {
     this.rescheduleCriticalSeconds = rescheduleCriticalSeconds;
     return this;
   }
@@ -81,7 +76,7 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategyAdaptive {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategyAdaptive ioKruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategyAdaptive = (KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategyAdaptive) o;
+    KruiseAppsV1alpha1AdaptiveWorkloadSpreadStrategy ioKruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategyAdaptive = (KruiseAppsV1alpha1AdaptiveWorkloadSpreadStrategy) o;
     return Objects.equals(this.disableSimulationSchedule, ioKruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategyAdaptive.disableSimulationSchedule) &&
         Objects.equals(this.rescheduleCriticalSeconds, ioKruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategyAdaptive.rescheduleCriticalSeconds);
   }

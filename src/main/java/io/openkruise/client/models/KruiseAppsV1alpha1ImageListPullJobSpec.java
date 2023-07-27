@@ -39,19 +39,19 @@ public class KruiseAppsV1alpha1ImageListPullJobSpec {
   private IntOrString parallelism = null;
 
   @SerializedName("podSelector")
-  private KruiseAppsV1alpha1ImageListPullJobSpecPodSelector podSelector = null;
+  private KruiseAppsV1alpha1ImagePullJobPodSelector podSelector = null;
 
   @SerializedName("pullPolicy")
-  private KruiseAppsV1alpha1ImageListPullJobSpecPullPolicy pullPolicy = null;
+  private KruiseAppsV1alpha1PullPolicy pullPolicy = null;
 
   @SerializedName("pullSecrets")
   private List<String> pullSecrets = null;
 
   @SerializedName("sandboxConfig")
-  private KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig sandboxConfig = null;
+  private KruiseAppsV1alpha1SandboxConfig sandboxConfig = null;
 
   @SerializedName("selector")
-  private KruiseAppsV1alpha1ImageListPullJobSpecSelector selector = null;
+  private KruiseAppsV1alpha1ImagePullJobNodeSelector selector = null;
 
   public KruiseAppsV1alpha1ImageListPullJobSpec completionPolicy(KruiseAppsV1alpha1CompletionPolicy completionPolicy) {
     this.completionPolicy = completionPolicy;
@@ -112,7 +112,7 @@ public class KruiseAppsV1alpha1ImageListPullJobSpec {
     this.parallelism = parallelism;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobSpec podSelector(KruiseAppsV1alpha1ImageListPullJobSpecPodSelector podSelector) {
+  public KruiseAppsV1alpha1ImageListPullJobSpec podSelector(KruiseAppsV1alpha1ImagePullJobPodSelector podSelector) {
     this.podSelector = podSelector;
     return this;
   }
@@ -122,15 +122,15 @@ public class KruiseAppsV1alpha1ImageListPullJobSpec {
    * @return podSelector
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1ImageListPullJobSpecPodSelector getPodSelector() {
+  public KruiseAppsV1alpha1ImagePullJobPodSelector getPodSelector() {
     return podSelector;
   }
 
-  public void setPodSelector(KruiseAppsV1alpha1ImageListPullJobSpecPodSelector podSelector) {
+  public void setPodSelector(KruiseAppsV1alpha1ImagePullJobPodSelector podSelector) {
     this.podSelector = podSelector;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobSpec pullPolicy(KruiseAppsV1alpha1ImageListPullJobSpecPullPolicy pullPolicy) {
+  public KruiseAppsV1alpha1ImageListPullJobSpec pullPolicy(KruiseAppsV1alpha1PullPolicy pullPolicy) {
     this.pullPolicy = pullPolicy;
     return this;
   }
@@ -140,11 +140,11 @@ public class KruiseAppsV1alpha1ImageListPullJobSpec {
    * @return pullPolicy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1ImageListPullJobSpecPullPolicy getPullPolicy() {
+  public KruiseAppsV1alpha1PullPolicy getPullPolicy() {
     return pullPolicy;
   }
 
-  public void setPullPolicy(KruiseAppsV1alpha1ImageListPullJobSpecPullPolicy pullPolicy) {
+  public void setPullPolicy(KruiseAppsV1alpha1PullPolicy pullPolicy) {
     this.pullPolicy = pullPolicy;
   }
 
@@ -174,7 +174,7 @@ public class KruiseAppsV1alpha1ImageListPullJobSpec {
     this.pullSecrets = pullSecrets;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobSpec sandboxConfig(KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig sandboxConfig) {
+  public KruiseAppsV1alpha1ImageListPullJobSpec sandboxConfig(KruiseAppsV1alpha1SandboxConfig sandboxConfig) {
     this.sandboxConfig = sandboxConfig;
     return this;
   }
@@ -184,15 +184,15 @@ public class KruiseAppsV1alpha1ImageListPullJobSpec {
    * @return sandboxConfig
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig getSandboxConfig() {
+  public KruiseAppsV1alpha1SandboxConfig getSandboxConfig() {
     return sandboxConfig;
   }
 
-  public void setSandboxConfig(KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig sandboxConfig) {
+  public void setSandboxConfig(KruiseAppsV1alpha1SandboxConfig sandboxConfig) {
     this.sandboxConfig = sandboxConfig;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobSpec selector(KruiseAppsV1alpha1ImageListPullJobSpecSelector selector) {
+  public KruiseAppsV1alpha1ImageListPullJobSpec selector(KruiseAppsV1alpha1ImagePullJobNodeSelector selector) {
     this.selector = selector;
     return this;
   }
@@ -202,11 +202,11 @@ public class KruiseAppsV1alpha1ImageListPullJobSpec {
    * @return selector
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1ImageListPullJobSpecSelector getSelector() {
+  public KruiseAppsV1alpha1ImagePullJobNodeSelector getSelector() {
     return selector;
   }
 
-  public void setSelector(KruiseAppsV1alpha1ImageListPullJobSpecSelector selector) {
+  public void setSelector(KruiseAppsV1alpha1ImagePullJobNodeSelector selector) {
     this.selector = selector;
   }
 

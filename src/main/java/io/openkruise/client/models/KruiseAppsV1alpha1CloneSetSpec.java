@@ -42,7 +42,7 @@ public class KruiseAppsV1alpha1CloneSetSpec {
   private Integer revisionHistoryLimit = null;
 
   @SerializedName("scaleStrategy")
-  private KruiseAppsV1alpha1CloneSetSpecScaleStrategy scaleStrategy = null;
+  private KruiseAppsV1alpha1CloneSetScaleStrategy scaleStrategy = null;
 
   @SerializedName("selector")
   private V1LabelSelector selector = null;
@@ -51,7 +51,7 @@ public class KruiseAppsV1alpha1CloneSetSpec {
   private V1PodTemplateSpec template = null;
 
   @SerializedName("updateStrategy")
-  private KruiseAppsV1alpha1CloneSetSpecUpdateStrategy updateStrategy = null;
+  private KruiseAppsV1alpha1CloneSetUpdateStrategy updateStrategy = null;
 
   @SerializedName("volumeClaimTemplates")
   private List<V1PersistentVolumeClaim> volumeClaimTemplates = null;
@@ -128,7 +128,7 @@ public class KruiseAppsV1alpha1CloneSetSpec {
     this.revisionHistoryLimit = revisionHistoryLimit;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpec scaleStrategy(KruiseAppsV1alpha1CloneSetSpecScaleStrategy scaleStrategy) {
+  public KruiseAppsV1alpha1CloneSetSpec scaleStrategy(KruiseAppsV1alpha1CloneSetScaleStrategy scaleStrategy) {
     this.scaleStrategy = scaleStrategy;
     return this;
   }
@@ -138,11 +138,11 @@ public class KruiseAppsV1alpha1CloneSetSpec {
    * @return scaleStrategy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1CloneSetSpecScaleStrategy getScaleStrategy() {
+  public KruiseAppsV1alpha1CloneSetScaleStrategy getScaleStrategy() {
     return scaleStrategy;
   }
 
-  public void setScaleStrategy(KruiseAppsV1alpha1CloneSetSpecScaleStrategy scaleStrategy) {
+  public void setScaleStrategy(KruiseAppsV1alpha1CloneSetScaleStrategy scaleStrategy) {
     this.scaleStrategy = scaleStrategy;
   }
 
@@ -182,7 +182,7 @@ public class KruiseAppsV1alpha1CloneSetSpec {
     this.template = template;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpec updateStrategy(KruiseAppsV1alpha1CloneSetSpecUpdateStrategy updateStrategy) {
+  public KruiseAppsV1alpha1CloneSetSpec updateStrategy(KruiseAppsV1alpha1CloneSetUpdateStrategy updateStrategy) {
     this.updateStrategy = updateStrategy;
     return this;
   }
@@ -192,11 +192,11 @@ public class KruiseAppsV1alpha1CloneSetSpec {
    * @return updateStrategy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategy getUpdateStrategy() {
+  public KruiseAppsV1alpha1CloneSetUpdateStrategy getUpdateStrategy() {
     return updateStrategy;
   }
 
-  public void setUpdateStrategy(KruiseAppsV1alpha1CloneSetSpecUpdateStrategy updateStrategy) {
+  public void setUpdateStrategy(KruiseAppsV1alpha1CloneSetUpdateStrategy updateStrategy) {
     this.updateStrategy = updateStrategy;
   }
 

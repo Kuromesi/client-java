@@ -14,18 +14,12 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1NodeImageSpecImages;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -35,16 +29,16 @@ import java.util.Map;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1NodeImageSpec {
   @SerializedName("images")
-  private Map<String, KruiseAppsV1alpha1NodeImageSpecImages> images = null;
+  private Map<String, KruiseAppsV1alpha1ImageSpec> images = null;
 
-  public KruiseAppsV1alpha1NodeImageSpec images(Map<String, KruiseAppsV1alpha1NodeImageSpecImages> images) {
+  public KruiseAppsV1alpha1NodeImageSpec images(Map<String, KruiseAppsV1alpha1ImageSpec> images) {
     this.images = images;
     return this;
   }
 
-  public KruiseAppsV1alpha1NodeImageSpec putImagesItem(String key, KruiseAppsV1alpha1NodeImageSpecImages imagesItem) {
+  public KruiseAppsV1alpha1NodeImageSpec putImagesItem(String key, KruiseAppsV1alpha1ImageSpec imagesItem) {
     if (this.images == null) {
-      this.images = new HashMap<String, KruiseAppsV1alpha1NodeImageSpecImages>();
+      this.images = new HashMap<String, KruiseAppsV1alpha1ImageSpec>();
     }
     this.images.put(key, imagesItem);
     return this;
@@ -55,11 +49,11 @@ public class KruiseAppsV1alpha1NodeImageSpec {
    * @return images
   **/
   @ApiModelProperty(value = "Specifies images to be pulled on this node It can not be more than 256 for each NodeImage")
-  public Map<String, KruiseAppsV1alpha1NodeImageSpecImages> getImages() {
+  public Map<String, KruiseAppsV1alpha1ImageSpec> getImages() {
     return images;
   }
 
-  public void setImages(Map<String, KruiseAppsV1alpha1NodeImageSpecImages> images) {
+  public void setImages(Map<String, KruiseAppsV1alpha1ImageSpec> images) {
     this.images = images;
   }
 

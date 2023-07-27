@@ -14,16 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1NodePodProbeSpecPodProbes;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,16 +29,16 @@ import java.util.List;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1NodePodProbeSpec {
   @SerializedName("podProbes")
-  private List<KruiseAppsV1alpha1NodePodProbeSpecPodProbes> podProbes = null;
+  private List<KruiseAppsV1alpha1PodProbe> podProbes = null;
 
-  public KruiseAppsV1alpha1NodePodProbeSpec podProbes(List<KruiseAppsV1alpha1NodePodProbeSpecPodProbes> podProbes) {
+  public KruiseAppsV1alpha1NodePodProbeSpec podProbes(List<KruiseAppsV1alpha1PodProbe> podProbes) {
     this.podProbes = podProbes;
     return this;
   }
 
-  public KruiseAppsV1alpha1NodePodProbeSpec addPodProbesItem(KruiseAppsV1alpha1NodePodProbeSpecPodProbes podProbesItem) {
+  public KruiseAppsV1alpha1NodePodProbeSpec addPodProbesItem(KruiseAppsV1alpha1PodProbe podProbesItem) {
     if (this.podProbes == null) {
-      this.podProbes = new ArrayList<KruiseAppsV1alpha1NodePodProbeSpecPodProbes>();
+      this.podProbes = new ArrayList<KruiseAppsV1alpha1PodProbe>();
     }
     this.podProbes.add(podProbesItem);
     return this;
@@ -54,11 +49,11 @@ public class KruiseAppsV1alpha1NodePodProbeSpec {
    * @return podProbes
   **/
   @ApiModelProperty(value = "")
-  public List<KruiseAppsV1alpha1NodePodProbeSpecPodProbes> getPodProbes() {
+  public List<KruiseAppsV1alpha1PodProbe> getPodProbes() {
     return podProbes;
   }
 
-  public void setPodProbes(List<KruiseAppsV1alpha1NodePodProbeSpecPodProbes> podProbes) {
+  public void setPodProbes(List<KruiseAppsV1alpha1PodProbe> podProbes) {
     this.podProbes = podProbes;
   }
 

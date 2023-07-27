@@ -29,7 +29,7 @@ import java.util.List;
  */
 @ApiModel(description = "The sidecarset updateStrategy to use to replace existing pods with new ones.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy {
+public class KruiseAppsV1alpha1SidecarSetUpdateStrategy {
   @SerializedName("maxUnavailable")
   private IntOrString maxUnavailable = null;
 
@@ -51,7 +51,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy {
   @SerializedName("type")
   private String type = null;
 
-  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy maxUnavailable(IntOrString maxUnavailable) {
+  public KruiseAppsV1alpha1SidecarSetUpdateStrategy maxUnavailable(IntOrString maxUnavailable) {
     this.maxUnavailable = maxUnavailable;
     return this;
   }
@@ -69,7 +69,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy {
     this.maxUnavailable = maxUnavailable;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy partition(IntOrString partition) {
+  public KruiseAppsV1alpha1SidecarSetUpdateStrategy partition(IntOrString partition) {
     this.partition = partition;
     return this;
   }
@@ -87,7 +87,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy {
     this.partition = partition;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy paused(Boolean paused) {
+  public KruiseAppsV1alpha1SidecarSetUpdateStrategy paused(Boolean paused) {
     this.paused = paused;
     return this;
   }
@@ -105,7 +105,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy {
     this.paused = paused;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy priorityStrategy(KruiseAppsPubUpdatePriorityStrategy priorityStrategy) {
+  public KruiseAppsV1alpha1SidecarSetUpdateStrategy priorityStrategy(KruiseAppsPubUpdatePriorityStrategy priorityStrategy) {
     this.priorityStrategy = priorityStrategy;
     return this;
   }
@@ -123,12 +123,12 @@ public class KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy {
     this.priorityStrategy = priorityStrategy;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy scatterStrategy(List<KruiseAppsV1alpha1UpdateScatterTerm> scatterStrategy) {
+  public KruiseAppsV1alpha1SidecarSetUpdateStrategy scatterStrategy(List<KruiseAppsV1alpha1UpdateScatterTerm> scatterStrategy) {
     this.scatterStrategy = scatterStrategy;
     return this;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy addScatterStrategyItem(KruiseAppsV1alpha1UpdateScatterTerm scatterStrategyItem) {
+  public KruiseAppsV1alpha1SidecarSetUpdateStrategy addScatterStrategyItem(KruiseAppsV1alpha1UpdateScatterTerm scatterStrategyItem) {
     if (this.scatterStrategy == null) {
       this.scatterStrategy = new ArrayList<KruiseAppsV1alpha1UpdateScatterTerm>();
     }
@@ -149,7 +149,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy {
     this.scatterStrategy = scatterStrategy;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy selector(V1LabelSelector selector) {
+  public KruiseAppsV1alpha1SidecarSetUpdateStrategy selector(V1LabelSelector selector) {
     this.selector = selector;
     return this;
   }
@@ -167,7 +167,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy {
     this.selector = selector;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy type(String type) {
+  public KruiseAppsV1alpha1SidecarSetUpdateStrategy type(String type) {
     this.type = type;
     return this;
   }
@@ -194,7 +194,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy ioKruiseAppsV1alpha1SidecarSetSpecUpdateStrategy = (KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy) o;
+    KruiseAppsV1alpha1SidecarSetUpdateStrategy ioKruiseAppsV1alpha1SidecarSetSpecUpdateStrategy = (KruiseAppsV1alpha1SidecarSetUpdateStrategy) o;
     return Objects.equals(this.maxUnavailable, ioKruiseAppsV1alpha1SidecarSetSpecUpdateStrategy.maxUnavailable) &&
         Objects.equals(this.partition, ioKruiseAppsV1alpha1SidecarSetSpecUpdateStrategy.partition) &&
         Objects.equals(this.paused, ioKruiseAppsV1alpha1SidecarSetSpecUpdateStrategy.paused) &&

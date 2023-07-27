@@ -14,28 +14,22 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy {
+public class KruiseAppsV1alpha1UpdateScatterTerm {
   @SerializedName("key")
   private String key = null;
 
   @SerializedName("value")
   private String value = null;
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy key(String key) {
+  public KruiseAppsV1alpha1UpdateScatterTerm key(String key) {
     this.key = key;
     return this;
   }
@@ -53,7 +47,7 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy {
     this.key = key;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy value(String value) {
+  public KruiseAppsV1alpha1UpdateScatterTerm value(String value) {
     this.value = value;
     return this;
   }
@@ -80,7 +74,7 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy = (KruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy) o;
+    KruiseAppsV1alpha1UpdateScatterTerm ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy = (KruiseAppsV1alpha1UpdateScatterTerm) o;
     return Objects.equals(this.key, ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy.key) &&
         Objects.equals(this.value, ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyScatterStrategy.value);
   }

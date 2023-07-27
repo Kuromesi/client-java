@@ -14,22 +14,17 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * TargetReference contains enough information to let you identify an workload for PersistentPodState Selector and TargetReference are mutually exclusive, TargetReference is priority to take effect current only support StatefulSet
  */
 @ApiModel(description = "TargetReference contains enough information to let you identify an workload for PersistentPodState Selector and TargetReference are mutually exclusive, TargetReference is priority to take effect current only support StatefulSet")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1PersistentPodStateSpecTargetRef {
+public class KruiseAppsV1alpha1TargetReference {
   @SerializedName("apiVersion")
   private String apiVersion = null;
 
@@ -39,7 +34,7 @@ public class KruiseAppsV1alpha1PersistentPodStateSpecTargetRef {
   @SerializedName("name")
   private String name = null;
 
-  public KruiseAppsV1alpha1PersistentPodStateSpecTargetRef apiVersion(String apiVersion) {
+  public KruiseAppsV1alpha1TargetReference apiVersion(String apiVersion) {
     this.apiVersion = apiVersion;
     return this;
   }
@@ -57,7 +52,7 @@ public class KruiseAppsV1alpha1PersistentPodStateSpecTargetRef {
     this.apiVersion = apiVersion;
   }
 
-  public KruiseAppsV1alpha1PersistentPodStateSpecTargetRef kind(String kind) {
+  public KruiseAppsV1alpha1TargetReference kind(String kind) {
     this.kind = kind;
     return this;
   }
@@ -75,7 +70,7 @@ public class KruiseAppsV1alpha1PersistentPodStateSpecTargetRef {
     this.kind = kind;
   }
 
-  public KruiseAppsV1alpha1PersistentPodStateSpecTargetRef name(String name) {
+  public KruiseAppsV1alpha1TargetReference name(String name) {
     this.name = name;
     return this;
   }
@@ -102,7 +97,7 @@ public class KruiseAppsV1alpha1PersistentPodStateSpecTargetRef {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1PersistentPodStateSpecTargetRef ioKruiseAppsV1alpha1PersistentPodStateSpecTargetRef = (KruiseAppsV1alpha1PersistentPodStateSpecTargetRef) o;
+    KruiseAppsV1alpha1TargetReference ioKruiseAppsV1alpha1PersistentPodStateSpecTargetRef = (KruiseAppsV1alpha1TargetReference) o;
     return Objects.equals(this.apiVersion, ioKruiseAppsV1alpha1PersistentPodStateSpecTargetRef.apiVersion) &&
         Objects.equals(this.kind, ioKruiseAppsV1alpha1PersistentPodStateSpecTargetRef.kind) &&
         Objects.equals(this.name, ioKruiseAppsV1alpha1PersistentPodStateSpecTargetRef.name);

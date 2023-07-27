@@ -26,7 +26,7 @@ import io.swagger.annotations.ApiModelProperty;
  */
 @ApiModel(description = "Rolling update config params. Present only if type = \"RollingUpdate\".")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate {
+public class KruiseAppsV1alpha1RollingUpdateDaemonSet {
   @SerializedName("maxSurge")
   private IntOrString maxSurge = null;
 
@@ -45,7 +45,7 @@ public class KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate {
   @SerializedName("selector")
   private V1LabelSelector selector = null;
 
-  public KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate maxSurge(IntOrString maxSurge) {
+  public KruiseAppsV1alpha1RollingUpdateDaemonSet maxSurge(IntOrString maxSurge) {
     this.maxSurge = maxSurge;
     return this;
   }
@@ -63,7 +63,7 @@ public class KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate {
     this.maxSurge = maxSurge;
   }
 
-  public KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate maxUnavailable(IntOrString maxUnavailable) {
+  public KruiseAppsV1alpha1RollingUpdateDaemonSet maxUnavailable(IntOrString maxUnavailable) {
     this.maxUnavailable = maxUnavailable;
     return this;
   }
@@ -81,7 +81,7 @@ public class KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate {
     this.maxUnavailable = maxUnavailable;
   }
 
-  public KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate partition(Integer partition) {
+  public KruiseAppsV1alpha1RollingUpdateDaemonSet partition(Integer partition) {
     this.partition = partition;
     return this;
   }
@@ -99,7 +99,7 @@ public class KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate {
     this.partition = partition;
   }
 
-  public KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate paused(Boolean paused) {
+  public KruiseAppsV1alpha1RollingUpdateDaemonSet paused(Boolean paused) {
     this.paused = paused;
     return this;
   }
@@ -117,7 +117,7 @@ public class KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate {
     this.paused = paused;
   }
 
-  public KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate rollingUpdateType(String rollingUpdateType) {
+  public KruiseAppsV1alpha1RollingUpdateDaemonSet rollingUpdateType(String rollingUpdateType) {
     this.rollingUpdateType = rollingUpdateType;
     return this;
   }
@@ -135,7 +135,7 @@ public class KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate {
     this.rollingUpdateType = rollingUpdateType;
   }
 
-  public KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate selector(V1LabelSelector selector) {
+  public KruiseAppsV1alpha1RollingUpdateDaemonSet selector(V1LabelSelector selector) {
     this.selector = selector;
     return this;
   }
@@ -162,7 +162,7 @@ public class KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate ioKruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate = (KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate) o;
+    KruiseAppsV1alpha1RollingUpdateDaemonSet ioKruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate = (KruiseAppsV1alpha1RollingUpdateDaemonSet) o;
     return Objects.equals(this.maxSurge, ioKruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate.maxSurge) &&
         Objects.equals(this.maxUnavailable, ioKruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate.maxUnavailable) &&
         Objects.equals(this.partition, ioKruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate.partition) &&

@@ -14,18 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy;
-import io.openkruise.client.models.KruiseAppsV1alpha1WorkloadSpreadSpecSubsets;
-import io.openkruise.client.models.KruiseAppsV1alpha1WorkloadSpreadSpecTargetRef;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,15 +29,15 @@ import java.util.List;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1WorkloadSpreadSpec {
   @SerializedName("scheduleStrategy")
-  private KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy scheduleStrategy = null;
+  private KruiseAppsV1alpha1WorkloadSpreadScheduleStrategy scheduleStrategy = null;
 
   @SerializedName("subsets")
-  private List<KruiseAppsV1alpha1WorkloadSpreadSpecSubsets> subsets = new ArrayList<KruiseAppsV1alpha1WorkloadSpreadSpecSubsets>();
+  private List<KruiseAppsV1alpha1WorkloadSpreadSubset> subsets = new ArrayList<KruiseAppsV1alpha1WorkloadSpreadSubset>();
 
   @SerializedName("targetRef")
-  private KruiseAppsV1alpha1WorkloadSpreadSpecTargetRef targetRef = null;
+  private KruiseAppsV1alpha1TargetReference targetRef = null;
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpec scheduleStrategy(KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy scheduleStrategy) {
+  public KruiseAppsV1alpha1WorkloadSpreadSpec scheduleStrategy(KruiseAppsV1alpha1WorkloadSpreadScheduleStrategy scheduleStrategy) {
     this.scheduleStrategy = scheduleStrategy;
     return this;
   }
@@ -54,20 +47,20 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpec {
    * @return scheduleStrategy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy getScheduleStrategy() {
+  public KruiseAppsV1alpha1WorkloadSpreadScheduleStrategy getScheduleStrategy() {
     return scheduleStrategy;
   }
 
-  public void setScheduleStrategy(KruiseAppsV1alpha1WorkloadSpreadSpecScheduleStrategy scheduleStrategy) {
+  public void setScheduleStrategy(KruiseAppsV1alpha1WorkloadSpreadScheduleStrategy scheduleStrategy) {
     this.scheduleStrategy = scheduleStrategy;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpec subsets(List<KruiseAppsV1alpha1WorkloadSpreadSpecSubsets> subsets) {
+  public KruiseAppsV1alpha1WorkloadSpreadSpec subsets(List<KruiseAppsV1alpha1WorkloadSpreadSubset> subsets) {
     this.subsets = subsets;
     return this;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpec addSubsetsItem(KruiseAppsV1alpha1WorkloadSpreadSpecSubsets subsetsItem) {
+  public KruiseAppsV1alpha1WorkloadSpreadSpec addSubsetsItem(KruiseAppsV1alpha1WorkloadSpreadSubset subsetsItem) {
     this.subsets.add(subsetsItem);
     return this;
   }
@@ -77,15 +70,15 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpec {
    * @return subsets
   **/
   @ApiModelProperty(required = true, value = "Subsets describes the pods distribution details between each of subsets.")
-  public List<KruiseAppsV1alpha1WorkloadSpreadSpecSubsets> getSubsets() {
+  public List<KruiseAppsV1alpha1WorkloadSpreadSubset> getSubsets() {
     return subsets;
   }
 
-  public void setSubsets(List<KruiseAppsV1alpha1WorkloadSpreadSpecSubsets> subsets) {
+  public void setSubsets(List<KruiseAppsV1alpha1WorkloadSpreadSubset> subsets) {
     this.subsets = subsets;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpec targetRef(KruiseAppsV1alpha1WorkloadSpreadSpecTargetRef targetRef) {
+  public KruiseAppsV1alpha1WorkloadSpreadSpec targetRef(KruiseAppsV1alpha1TargetReference targetRef) {
     this.targetRef = targetRef;
     return this;
   }
@@ -95,11 +88,11 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpec {
    * @return targetRef
   **/
   @ApiModelProperty(required = true, value = "")
-  public KruiseAppsV1alpha1WorkloadSpreadSpecTargetRef getTargetRef() {
+  public KruiseAppsV1alpha1TargetReference getTargetRef() {
     return targetRef;
   }
 
-  public void setTargetRef(KruiseAppsV1alpha1WorkloadSpreadSpecTargetRef targetRef) {
+  public void setTargetRef(KruiseAppsV1alpha1TargetReference targetRef) {
     this.targetRef = targetRef;
   }
 

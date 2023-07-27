@@ -25,14 +25,14 @@ import io.kubernetes.client.openapi.models.V1LabelSelector;
  */
 @ApiModel(description = "UpdatePriorityWeightTerm defines weight priority.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority {
+public class KruiseAppsPubUpdatePriorityWeightTerm {
   @SerializedName("matchSelector")
   private V1LabelSelector matchSelector = null;
 
   @SerializedName("weight")
   private Integer weight = null;
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority matchSelector(V1LabelSelector matchSelector) {
+  public KruiseAppsPubUpdatePriorityWeightTerm matchSelector(V1LabelSelector matchSelector) {
     this.matchSelector = matchSelector;
     return this;
   }
@@ -50,7 +50,7 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightP
     this.matchSelector = matchSelector;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority weight(Integer weight) {
+  public KruiseAppsPubUpdatePriorityWeightTerm weight(Integer weight) {
     this.weight = weight;
     return this;
   }
@@ -77,7 +77,7 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightP
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority = (KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority) o;
+    KruiseAppsPubUpdatePriorityWeightTerm ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority = (KruiseAppsPubUpdatePriorityWeightTerm) o;
     return Objects.equals(this.matchSelector, ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority.matchSelector) &&
         Objects.equals(this.weight, ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority.weight);
   }

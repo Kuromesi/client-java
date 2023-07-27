@@ -14,29 +14,22 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1PersistentPodStateSpecPreference;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * KruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology {
+public class KruiseAppsV1alpha1PreferredTopologyTerm {
   @SerializedName("preference")
-  private KruiseAppsV1alpha1PersistentPodStateSpecPreference preference = null;
+  private KruiseAppsV1alpha1NodeTopologyTerm preference = null;
 
   @SerializedName("weight")
   private Integer weight = null;
 
-  public KruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology preference(KruiseAppsV1alpha1PersistentPodStateSpecPreference preference) {
+  public KruiseAppsV1alpha1PreferredTopologyTerm preference(KruiseAppsV1alpha1NodeTopologyTerm preference) {
     this.preference = preference;
     return this;
   }
@@ -46,15 +39,15 @@ public class KruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology
    * @return preference
   **/
   @ApiModelProperty(required = true, value = "")
-  public KruiseAppsV1alpha1PersistentPodStateSpecPreference getPreference() {
+  public KruiseAppsV1alpha1NodeTopologyTerm getPreference() {
     return preference;
   }
 
-  public void setPreference(KruiseAppsV1alpha1PersistentPodStateSpecPreference preference) {
+  public void setPreference(KruiseAppsV1alpha1NodeTopologyTerm preference) {
     this.preference = preference;
   }
 
-  public KruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology weight(Integer weight) {
+  public KruiseAppsV1alpha1PreferredTopologyTerm weight(Integer weight) {
     this.weight = weight;
     return this;
   }
@@ -81,7 +74,7 @@ public class KruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology ioKruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology = (KruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology) o;
+    KruiseAppsV1alpha1PreferredTopologyTerm ioKruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology = (KruiseAppsV1alpha1PreferredTopologyTerm) o;
     return Objects.equals(this.preference, ioKruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology.preference) &&
         Objects.equals(this.weight, ioKruiseAppsV1alpha1PersistentPodStateSpecPreferredPersistentTopology.weight);
   }

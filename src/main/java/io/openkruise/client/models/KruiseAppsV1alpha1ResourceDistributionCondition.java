@@ -14,15 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 import org.joda.time.DateTime;
@@ -32,7 +28,7 @@ import org.joda.time.DateTime;
  */
 @ApiModel(description = "ResourceDistributionCondition allows a row to be marked with additional information.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1ResourceDistributionStatusConditions {
+public class KruiseAppsV1alpha1ResourceDistributionCondition {
   @SerializedName("failedNamespace")
   private List<String> failedNamespace = null;
 
@@ -48,12 +44,12 @@ public class KruiseAppsV1alpha1ResourceDistributionStatusConditions {
   @SerializedName("type")
   private String type = null;
 
-  public KruiseAppsV1alpha1ResourceDistributionStatusConditions failedNamespace(List<String> failedNamespace) {
+  public KruiseAppsV1alpha1ResourceDistributionCondition failedNamespace(List<String> failedNamespace) {
     this.failedNamespace = failedNamespace;
     return this;
   }
 
-  public KruiseAppsV1alpha1ResourceDistributionStatusConditions addFailedNamespaceItem(String failedNamespaceItem) {
+  public KruiseAppsV1alpha1ResourceDistributionCondition addFailedNamespaceItem(String failedNamespaceItem) {
     if (this.failedNamespace == null) {
       this.failedNamespace = new ArrayList<String>();
     }
@@ -74,7 +70,7 @@ public class KruiseAppsV1alpha1ResourceDistributionStatusConditions {
     this.failedNamespace = failedNamespace;
   }
 
-  public KruiseAppsV1alpha1ResourceDistributionStatusConditions lastTransitionTime(DateTime lastTransitionTime) {
+  public KruiseAppsV1alpha1ResourceDistributionCondition lastTransitionTime(DateTime lastTransitionTime) {
     this.lastTransitionTime = lastTransitionTime;
     return this;
   }
@@ -92,7 +88,7 @@ public class KruiseAppsV1alpha1ResourceDistributionStatusConditions {
     this.lastTransitionTime = lastTransitionTime;
   }
 
-  public KruiseAppsV1alpha1ResourceDistributionStatusConditions reason(String reason) {
+  public KruiseAppsV1alpha1ResourceDistributionCondition reason(String reason) {
     this.reason = reason;
     return this;
   }
@@ -110,7 +106,7 @@ public class KruiseAppsV1alpha1ResourceDistributionStatusConditions {
     this.reason = reason;
   }
 
-  public KruiseAppsV1alpha1ResourceDistributionStatusConditions status(String status) {
+  public KruiseAppsV1alpha1ResourceDistributionCondition status(String status) {
     this.status = status;
     return this;
   }
@@ -128,7 +124,7 @@ public class KruiseAppsV1alpha1ResourceDistributionStatusConditions {
     this.status = status;
   }
 
-  public KruiseAppsV1alpha1ResourceDistributionStatusConditions type(String type) {
+  public KruiseAppsV1alpha1ResourceDistributionCondition type(String type) {
     this.type = type;
     return this;
   }
@@ -155,7 +151,7 @@ public class KruiseAppsV1alpha1ResourceDistributionStatusConditions {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1ResourceDistributionStatusConditions ioKruiseAppsV1alpha1ResourceDistributionStatusConditions = (KruiseAppsV1alpha1ResourceDistributionStatusConditions) o;
+    KruiseAppsV1alpha1ResourceDistributionCondition ioKruiseAppsV1alpha1ResourceDistributionStatusConditions = (KruiseAppsV1alpha1ResourceDistributionCondition) o;
     return Objects.equals(this.failedNamespace, ioKruiseAppsV1alpha1ResourceDistributionStatusConditions.failedNamespace) &&
         Objects.equals(this.lastTransitionTime, ioKruiseAppsV1alpha1ResourceDistributionStatusConditions.lastTransitionTime) &&
         Objects.equals(this.reason, ioKruiseAppsV1alpha1ResourceDistributionStatusConditions.reason) &&

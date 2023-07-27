@@ -14,30 +14,24 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * An update strategy to replace existing DaemonSet pods with new pods.
  */
 @ApiModel(description = "An update strategy to replace existing DaemonSet pods with new pods.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1DaemonSetSpecUpdateStrategy {
+public class KruiseAppsV1alpha1DaemonSetUpdateStrategy {
   @SerializedName("rollingUpdate")
-  private KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate rollingUpdate = null;
+  private KruiseAppsV1alpha1RollingUpdateDaemonSet rollingUpdate = null;
 
   @SerializedName("type")
   private String type = null;
 
-  public KruiseAppsV1alpha1DaemonSetSpecUpdateStrategy rollingUpdate(KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate rollingUpdate) {
+  public KruiseAppsV1alpha1DaemonSetUpdateStrategy rollingUpdate(KruiseAppsV1alpha1RollingUpdateDaemonSet rollingUpdate) {
     this.rollingUpdate = rollingUpdate;
     return this;
   }
@@ -47,15 +41,15 @@ public class KruiseAppsV1alpha1DaemonSetSpecUpdateStrategy {
    * @return rollingUpdate
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate getRollingUpdate() {
+  public KruiseAppsV1alpha1RollingUpdateDaemonSet getRollingUpdate() {
     return rollingUpdate;
   }
 
-  public void setRollingUpdate(KruiseAppsV1alpha1DaemonSetSpecUpdateStrategyRollingUpdate rollingUpdate) {
+  public void setRollingUpdate(KruiseAppsV1alpha1RollingUpdateDaemonSet rollingUpdate) {
     this.rollingUpdate = rollingUpdate;
   }
 
-  public KruiseAppsV1alpha1DaemonSetSpecUpdateStrategy type(String type) {
+  public KruiseAppsV1alpha1DaemonSetUpdateStrategy type(String type) {
     this.type = type;
     return this;
   }
@@ -82,7 +76,7 @@ public class KruiseAppsV1alpha1DaemonSetSpecUpdateStrategy {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1DaemonSetSpecUpdateStrategy ioKruiseAppsV1alpha1DaemonSetSpecUpdateStrategy = (KruiseAppsV1alpha1DaemonSetSpecUpdateStrategy) o;
+    KruiseAppsV1alpha1DaemonSetUpdateStrategy ioKruiseAppsV1alpha1DaemonSetSpecUpdateStrategy = (KruiseAppsV1alpha1DaemonSetUpdateStrategy) o;
     return Objects.equals(this.rollingUpdate, ioKruiseAppsV1alpha1DaemonSetSpecUpdateStrategy.rollingUpdate) &&
         Objects.equals(this.type, ioKruiseAppsV1alpha1DaemonSetSpecUpdateStrategy.type);
   }

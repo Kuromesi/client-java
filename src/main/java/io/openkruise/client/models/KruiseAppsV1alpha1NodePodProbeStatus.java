@@ -14,16 +14,10 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,16 +27,16 @@ import java.util.List;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
 public class KruiseAppsV1alpha1NodePodProbeStatus {
   @SerializedName("podProbeStatuses")
-  private List<KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses> podProbeStatuses = null;
+  private List<KruiseAppsV1alpha1PodProbeStatus> podProbeStatuses = null;
 
-  public KruiseAppsV1alpha1NodePodProbeStatus podProbeStatuses(List<KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses> podProbeStatuses) {
+  public KruiseAppsV1alpha1NodePodProbeStatus podProbeStatuses(List<KruiseAppsV1alpha1PodProbeStatus> podProbeStatuses) {
     this.podProbeStatuses = podProbeStatuses;
     return this;
   }
 
-  public KruiseAppsV1alpha1NodePodProbeStatus addPodProbeStatusesItem(KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses podProbeStatusesItem) {
+  public KruiseAppsV1alpha1NodePodProbeStatus addPodProbeStatusesItem(KruiseAppsV1alpha1PodProbeStatus podProbeStatusesItem) {
     if (this.podProbeStatuses == null) {
-      this.podProbeStatuses = new ArrayList<KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses>();
+      this.podProbeStatuses = new ArrayList<KruiseAppsV1alpha1PodProbeStatus>();
     }
     this.podProbeStatuses.add(podProbeStatusesItem);
     return this;
@@ -53,11 +47,11 @@ public class KruiseAppsV1alpha1NodePodProbeStatus {
    * @return podProbeStatuses
   **/
   @ApiModelProperty(value = "pod probe results")
-  public List<KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses> getPodProbeStatuses() {
+  public List<KruiseAppsV1alpha1PodProbeStatus> getPodProbeStatuses() {
     return podProbeStatuses;
   }
 
-  public void setPodProbeStatuses(List<KruiseAppsV1alpha1NodePodProbeStatusPodProbeStatuses> podProbeStatuses) {
+  public void setPodProbeStatuses(List<KruiseAppsV1alpha1PodProbeStatus> podProbeStatuses) {
     this.podProbeStatuses = podProbeStatuses;
   }
 

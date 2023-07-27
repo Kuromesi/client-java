@@ -14,36 +14,30 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
  * KruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata {
+public class KruiseAppsV1alpha1SidecarSetPatchPodMetadata {
   @SerializedName("annotations")
   private Map<String, String> annotations = null;
 
   @SerializedName("patchPolicy")
   private String patchPolicy = null;
 
-  public KruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata annotations(Map<String, String> annotations) {
+  public KruiseAppsV1alpha1SidecarSetPatchPodMetadata annotations(Map<String, String> annotations) {
     this.annotations = annotations;
     return this;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata putAnnotationsItem(String key, String annotationsItem) {
+  public KruiseAppsV1alpha1SidecarSetPatchPodMetadata putAnnotationsItem(String key, String annotationsItem) {
     if (this.annotations == null) {
       this.annotations = new HashMap<String, String>();
     }
@@ -64,7 +58,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata {
     this.annotations = annotations;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata patchPolicy(String patchPolicy) {
+  public KruiseAppsV1alpha1SidecarSetPatchPodMetadata patchPolicy(String patchPolicy) {
     this.patchPolicy = patchPolicy;
     return this;
   }
@@ -91,7 +85,7 @@ public class KruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata ioKruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata = (KruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata) o;
+    KruiseAppsV1alpha1SidecarSetPatchPodMetadata ioKruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata = (KruiseAppsV1alpha1SidecarSetPatchPodMetadata) o;
     return Objects.equals(this.annotations, ioKruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata.annotations) &&
         Objects.equals(this.patchPolicy, ioKruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata.patchPolicy);
   }

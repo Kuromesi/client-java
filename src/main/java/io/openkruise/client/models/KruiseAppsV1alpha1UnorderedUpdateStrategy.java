@@ -24,11 +24,11 @@ import io.swagger.annotations.ApiModelProperty;
  */
 @ApiModel(description = "UnorderedUpdate contains strategies for non-ordered update. If it is not nil, pods will be updated with non-ordered sequence. Noted that UnorderedUpdate can only be allowed to work with Parallel podManagementPolicy")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorderedUpdate {
+public class KruiseAppsV1alpha1UnorderedUpdateStrategy {
   @SerializedName("priorityStrategy")
   private KruiseAppsPubUpdatePriorityStrategy priorityStrategy = null;
 
-  public KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorderedUpdate priorityStrategy(KruiseAppsPubUpdatePriorityStrategy priorityStrategy) {
+  public KruiseAppsV1alpha1UnorderedUpdateStrategy priorityStrategy(KruiseAppsPubUpdatePriorityStrategy priorityStrategy) {
     this.priorityStrategy = priorityStrategy;
     return this;
   }
@@ -55,7 +55,7 @@ public class KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorder
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorderedUpdate ioKruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorderedUpdate = (KruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorderedUpdate) o;
+    KruiseAppsV1alpha1UnorderedUpdateStrategy ioKruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorderedUpdate = (KruiseAppsV1alpha1UnorderedUpdateStrategy) o;
     return Objects.equals(this.priorityStrategy, ioKruiseAppsV1alpha1StatefulSetSpecUpdateStrategyRollingUpdateUnorderedUpdate.priorityStrategy);
   }
 

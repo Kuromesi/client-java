@@ -14,13 +14,12 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
+
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1AdvancedCronJobSpecTemplate;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -99,7 +98,7 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpec {
   private Integer successfulJobsHistoryLimit = null;
 
   @SerializedName("template")
-  private KruiseAppsV1alpha1AdvancedCronJobSpecTemplate template = null;
+  private KruiseAppsV1alpha1CronJobTemplate template = null;
 
   @SerializedName("timeZone")
   private String timeZone = null;
@@ -212,7 +211,7 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpec {
     this.successfulJobsHistoryLimit = successfulJobsHistoryLimit;
   }
 
-  public KruiseAppsV1alpha1AdvancedCronJobSpec template(KruiseAppsV1alpha1AdvancedCronJobSpecTemplate template) {
+  public KruiseAppsV1alpha1AdvancedCronJobSpec template(KruiseAppsV1alpha1CronJobTemplate template) {
     this.template = template;
     return this;
   }
@@ -222,11 +221,11 @@ public class KruiseAppsV1alpha1AdvancedCronJobSpec {
    * @return template
   **/
   @ApiModelProperty(required = true, value = "")
-  public KruiseAppsV1alpha1AdvancedCronJobSpecTemplate getTemplate() {
+  public KruiseAppsV1alpha1CronJobTemplate getTemplate() {
     return template;
   }
 
-  public void setTemplate(KruiseAppsV1alpha1AdvancedCronJobSpecTemplate template) {
+  public void setTemplate(KruiseAppsV1alpha1CronJobTemplate template) {
     this.template = template;
   }
 

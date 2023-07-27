@@ -14,17 +14,12 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -32,19 +27,19 @@ import java.util.Map;
  */
 @ApiModel(description = "SandboxConfig support attach metadata in PullImage CRI interface during ImagePulljobs")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig {
+public class KruiseAppsV1alpha1SandboxConfig {
   @SerializedName("annotations")
   private Map<String, String> annotations = null;
 
   @SerializedName("labels")
   private Map<String, String> labels = null;
 
-  public KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig annotations(Map<String, String> annotations) {
+  public KruiseAppsV1alpha1SandboxConfig annotations(Map<String, String> annotations) {
     this.annotations = annotations;
     return this;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig putAnnotationsItem(String key, String annotationsItem) {
+  public KruiseAppsV1alpha1SandboxConfig putAnnotationsItem(String key, String annotationsItem) {
     if (this.annotations == null) {
       this.annotations = new HashMap<String, String>();
     }
@@ -65,12 +60,12 @@ public class KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig {
     this.annotations = annotations;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig labels(Map<String, String> labels) {
+  public KruiseAppsV1alpha1SandboxConfig labels(Map<String, String> labels) {
     this.labels = labels;
     return this;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig putLabelsItem(String key, String labelsItem) {
+  public KruiseAppsV1alpha1SandboxConfig putLabelsItem(String key, String labelsItem) {
     if (this.labels == null) {
       this.labels = new HashMap<String, String>();
     }
@@ -100,7 +95,7 @@ public class KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig ioKruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig = (KruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig) o;
+    KruiseAppsV1alpha1SandboxConfig ioKruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig = (KruiseAppsV1alpha1SandboxConfig) o;
     return Objects.equals(this.annotations, ioKruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig.annotations) &&
         Objects.equals(this.labels, ioKruiseAppsV1alpha1ImageListPullJobSpecSandboxConfig.labels);
   }

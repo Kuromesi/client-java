@@ -14,22 +14,17 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * FailedImageStatus the state of ImagePullJob which has the failed nodes(status.Failed&gt;0)
  */
 @ApiModel(description = "FailedImageStatus the state of ImagePullJob which has the failed nodes(status.Failed>0)")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses {
+public class KruiseAppsV1alpha1FailedImageStatus {
   @SerializedName("imagePullJob")
   private String imagePullJob = null;
 
@@ -39,7 +34,7 @@ public class KruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses {
   @SerializedName("name")
   private String name = null;
 
-  public KruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses imagePullJob(String imagePullJob) {
+  public KruiseAppsV1alpha1FailedImageStatus imagePullJob(String imagePullJob) {
     this.imagePullJob = imagePullJob;
     return this;
   }
@@ -57,7 +52,7 @@ public class KruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses {
     this.imagePullJob = imagePullJob;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses message(String message) {
+  public KruiseAppsV1alpha1FailedImageStatus message(String message) {
     this.message = message;
     return this;
   }
@@ -75,7 +70,7 @@ public class KruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses {
     this.message = message;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses name(String name) {
+  public KruiseAppsV1alpha1FailedImageStatus name(String name) {
     this.name = name;
     return this;
   }
@@ -102,7 +97,7 @@ public class KruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses ioKruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses = (KruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses) o;
+    KruiseAppsV1alpha1FailedImageStatus ioKruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses = (KruiseAppsV1alpha1FailedImageStatus) o;
     return Objects.equals(this.imagePullJob, ioKruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses.imagePullJob) &&
         Objects.equals(this.message, ioKruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses.message) &&
         Objects.equals(this.name, ioKruiseAppsV1alpha1ImageListPullJobStatusFailedImageStatuses.name);

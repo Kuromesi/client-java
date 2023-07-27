@@ -24,20 +24,20 @@ import io.swagger.annotations.ApiModelProperty;
  */
 @ApiModel(description = "Template describes the subset that will be created.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplate {
+public class KruiseAppsV1alpha1SubsetTemplate {
   @SerializedName("advancedStatefulSetTemplate")
-  private KruiseAppsV1alpha1AdvancedStatefulSetTemplate advancedStatefulSetTemplate = null;
+  private KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec advancedStatefulSetTemplate = null;
 
   @SerializedName("cloneSetTemplate")
-  private KruiseAppsV1alpha1UnitedDeploymentSpecTemplateCloneSetTemplate cloneSetTemplate = null;
+  private KruiseAppsV1alpha1CloneSetTemplateSpec cloneSetTemplate = null;
 
   @SerializedName("deploymentTemplate")
-  private KruiseAppsV1alpha1UnitedDeploymentSpecTemplateDeploymentTemplate deploymentTemplate = null;
+  private KruiseAppsV1alpha1DeploymentTemplateSpec deploymentTemplate = null;
 
   @SerializedName("statefulSetTemplate")
-  private KruiseAppsV1alpha1UnitedDeploymentSpecTemplateStatefulSetTemplate statefulSetTemplate = null;
+  private KruiseAppsV1alpha1StatefulSetTemplateSpec statefulSetTemplate = null;
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplate advancedStatefulSetTemplate(KruiseAppsV1alpha1AdvancedStatefulSetTemplate advancedStatefulSetTemplate) {
+  public KruiseAppsV1alpha1SubsetTemplate advancedStatefulSetTemplate(KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec advancedStatefulSetTemplate) {
     this.advancedStatefulSetTemplate = advancedStatefulSetTemplate;
     return this;
   }
@@ -47,15 +47,15 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplate {
    * @return advancedStatefulSetTemplate
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1AdvancedStatefulSetTemplate getAdvancedStatefulSetTemplate() {
+  public KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec getAdvancedStatefulSetTemplate() {
     return advancedStatefulSetTemplate;
   }
 
-  public void setAdvancedStatefulSetTemplate(KruiseAppsV1alpha1AdvancedStatefulSetTemplate advancedStatefulSetTemplate) {
+  public void setAdvancedStatefulSetTemplate(KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec advancedStatefulSetTemplate) {
     this.advancedStatefulSetTemplate = advancedStatefulSetTemplate;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplate cloneSetTemplate(KruiseAppsV1alpha1UnitedDeploymentSpecTemplateCloneSetTemplate cloneSetTemplate) {
+  public KruiseAppsV1alpha1SubsetTemplate cloneSetTemplate(KruiseAppsV1alpha1CloneSetTemplateSpec cloneSetTemplate) {
     this.cloneSetTemplate = cloneSetTemplate;
     return this;
   }
@@ -65,15 +65,15 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplate {
    * @return cloneSetTemplate
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateCloneSetTemplate getCloneSetTemplate() {
+  public KruiseAppsV1alpha1CloneSetTemplateSpec getCloneSetTemplate() {
     return cloneSetTemplate;
   }
 
-  public void setCloneSetTemplate(KruiseAppsV1alpha1UnitedDeploymentSpecTemplateCloneSetTemplate cloneSetTemplate) {
+  public void setCloneSetTemplate(KruiseAppsV1alpha1CloneSetTemplateSpec cloneSetTemplate) {
     this.cloneSetTemplate = cloneSetTemplate;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplate deploymentTemplate(KruiseAppsV1alpha1UnitedDeploymentSpecTemplateDeploymentTemplate deploymentTemplate) {
+  public KruiseAppsV1alpha1SubsetTemplate deploymentTemplate(KruiseAppsV1alpha1DeploymentTemplateSpec deploymentTemplate) {
     this.deploymentTemplate = deploymentTemplate;
     return this;
   }
@@ -83,15 +83,15 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplate {
    * @return deploymentTemplate
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateDeploymentTemplate getDeploymentTemplate() {
+  public KruiseAppsV1alpha1DeploymentTemplateSpec getDeploymentTemplate() {
     return deploymentTemplate;
   }
 
-  public void setDeploymentTemplate(KruiseAppsV1alpha1UnitedDeploymentSpecTemplateDeploymentTemplate deploymentTemplate) {
+  public void setDeploymentTemplate(KruiseAppsV1alpha1DeploymentTemplateSpec deploymentTemplate) {
     this.deploymentTemplate = deploymentTemplate;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplate statefulSetTemplate(KruiseAppsV1alpha1UnitedDeploymentSpecTemplateStatefulSetTemplate statefulSetTemplate) {
+  public KruiseAppsV1alpha1SubsetTemplate statefulSetTemplate(KruiseAppsV1alpha1StatefulSetTemplateSpec statefulSetTemplate) {
     this.statefulSetTemplate = statefulSetTemplate;
     return this;
   }
@@ -101,11 +101,11 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplate {
    * @return statefulSetTemplate
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateStatefulSetTemplate getStatefulSetTemplate() {
+  public KruiseAppsV1alpha1StatefulSetTemplateSpec getStatefulSetTemplate() {
     return statefulSetTemplate;
   }
 
-  public void setStatefulSetTemplate(KruiseAppsV1alpha1UnitedDeploymentSpecTemplateStatefulSetTemplate statefulSetTemplate) {
+  public void setStatefulSetTemplate(KruiseAppsV1alpha1StatefulSetTemplateSpec statefulSetTemplate) {
     this.statefulSetTemplate = statefulSetTemplate;
   }
 
@@ -118,7 +118,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1UnitedDeploymentSpecTemplate ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplate = (KruiseAppsV1alpha1UnitedDeploymentSpecTemplate) o;
+    KruiseAppsV1alpha1SubsetTemplate ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplate = (KruiseAppsV1alpha1SubsetTemplate) o;
     return Objects.equals(this.advancedStatefulSetTemplate, ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplate.advancedStatefulSetTemplate) &&
         Objects.equals(this.cloneSetTemplate, ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplate.cloneSetTemplate) &&
         Objects.equals(this.deploymentTemplate, ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplate.deploymentTemplate) &&

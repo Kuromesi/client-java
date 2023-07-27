@@ -14,17 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers;
-import io.openkruise.client.models.KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,13 +32,13 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpec {
   private Long activeDeadlineSeconds = null;
 
   @SerializedName("containers")
-  private List<KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers> containers = new ArrayList<KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers>();
+  private List<KruiseAppsV1alpha1ContainerRecreateRequestContainer> containers = new ArrayList<KruiseAppsV1alpha1ContainerRecreateRequestContainer>();
 
   @SerializedName("podName")
   private String podName = null;
 
   @SerializedName("strategy")
-  private KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy strategy = null;
+  private KruiseAppsV1alpha1ContainerRecreateRequestStrategy strategy = null;
 
   @SerializedName("ttlSecondsAfterFinished")
   private Integer ttlSecondsAfterFinished = null;
@@ -67,12 +61,12 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpec {
     this.activeDeadlineSeconds = activeDeadlineSeconds;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpec containers(List<KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers> containers) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestSpec containers(List<KruiseAppsV1alpha1ContainerRecreateRequestContainer> containers) {
     this.containers = containers;
     return this;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpec addContainersItem(KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers containersItem) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestSpec addContainersItem(KruiseAppsV1alpha1ContainerRecreateRequestContainer containersItem) {
     this.containers.add(containersItem);
     return this;
   }
@@ -82,11 +76,11 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpec {
    * @return containers
   **/
   @ApiModelProperty(required = true, value = "Containers contains the containers that need to recreate in the Pod.")
-  public List<KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers> getContainers() {
+  public List<KruiseAppsV1alpha1ContainerRecreateRequestContainer> getContainers() {
     return containers;
   }
 
-  public void setContainers(List<KruiseAppsV1alpha1ContainerRecreateRequestSpecContainers> containers) {
+  public void setContainers(List<KruiseAppsV1alpha1ContainerRecreateRequestContainer> containers) {
     this.containers = containers;
   }
 
@@ -108,7 +102,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpec {
     this.podName = podName;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpec strategy(KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy strategy) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestSpec strategy(KruiseAppsV1alpha1ContainerRecreateRequestStrategy strategy) {
     this.strategy = strategy;
     return this;
   }
@@ -118,11 +112,11 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestSpec {
    * @return strategy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy getStrategy() {
+  public KruiseAppsV1alpha1ContainerRecreateRequestStrategy getStrategy() {
     return strategy;
   }
 
-  public void setStrategy(KruiseAppsV1alpha1ContainerRecreateRequestSpecStrategy strategy) {
+  public void setStrategy(KruiseAppsV1alpha1ContainerRecreateRequestStrategy strategy) {
     this.strategy = strategy;
   }
 

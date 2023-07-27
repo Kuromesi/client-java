@@ -32,7 +32,7 @@ import java.util.List;
  */
 @ApiModel(description = "WorkloadSpreadSubset defines the details of a subset.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1WorkloadSpreadSpecSubsets {
+public class KruiseAppsV1alpha1WorkloadSpreadSubset {
   @SerializedName("maxReplicas")
   private IntOrString maxReplicas = null;
 
@@ -51,7 +51,7 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpecSubsets {
   @SerializedName("tolerations")
   private List<V1Toleration> tolerations = null;
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets maxReplicas(IntOrString maxReplicas) {
+  public KruiseAppsV1alpha1WorkloadSpreadSubset maxReplicas(IntOrString maxReplicas) {
     this.maxReplicas = maxReplicas;
     return this;
   }
@@ -69,7 +69,7 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpecSubsets {
     this.maxReplicas = maxReplicas;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets name(String name) {
+  public KruiseAppsV1alpha1WorkloadSpreadSubset name(String name) {
     this.name = name;
     return this;
   }
@@ -87,7 +87,7 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpecSubsets {
     this.name = name;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets patch(Runtime.RawExtension patch) {
+  public KruiseAppsV1alpha1WorkloadSpreadSubset patch(Runtime.RawExtension patch) {
     this.patch = patch;
     return this;
   }
@@ -105,12 +105,12 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpecSubsets {
     this.patch = patch;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets preferredNodeSelectorTerms(List<V1PreferredSchedulingTerm> preferredNodeSelectorTerms) {
+  public KruiseAppsV1alpha1WorkloadSpreadSubset preferredNodeSelectorTerms(List<V1PreferredSchedulingTerm> preferredNodeSelectorTerms) {
     this.preferredNodeSelectorTerms = preferredNodeSelectorTerms;
     return this;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets addPreferredNodeSelectorTermsItem(V1PreferredSchedulingTerm preferredNodeSelectorTermsItem) {
+  public KruiseAppsV1alpha1WorkloadSpreadSubset addPreferredNodeSelectorTermsItem(V1PreferredSchedulingTerm preferredNodeSelectorTermsItem) {
     if (this.preferredNodeSelectorTerms == null) {
       this.preferredNodeSelectorTerms = new ArrayList<V1PreferredSchedulingTerm>();
     }
@@ -131,7 +131,7 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpecSubsets {
     this.preferredNodeSelectorTerms = preferredNodeSelectorTerms;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets requiredNodeSelectorTerm(V1NodeSelectorTerm requiredNodeSelectorTerm) {
+  public KruiseAppsV1alpha1WorkloadSpreadSubset requiredNodeSelectorTerm(V1NodeSelectorTerm requiredNodeSelectorTerm) {
     this.requiredNodeSelectorTerm = requiredNodeSelectorTerm;
     return this;
   }
@@ -149,12 +149,12 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpecSubsets {
     this.requiredNodeSelectorTerm = requiredNodeSelectorTerm;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets tolerations(List<V1Toleration> tolerations) {
+  public KruiseAppsV1alpha1WorkloadSpreadSubset tolerations(List<V1Toleration> tolerations) {
     this.tolerations = tolerations;
     return this;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadSpecSubsets addTolerationsItem(V1Toleration tolerationsItem) {
+  public KruiseAppsV1alpha1WorkloadSpreadSubset addTolerationsItem(V1Toleration tolerationsItem) {
     if (this.tolerations == null) {
       this.tolerations = new ArrayList<V1Toleration>();
     }
@@ -184,7 +184,7 @@ public class KruiseAppsV1alpha1WorkloadSpreadSpecSubsets {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1WorkloadSpreadSpecSubsets ioKruiseAppsV1alpha1WorkloadSpreadSpecSubsets = (KruiseAppsV1alpha1WorkloadSpreadSpecSubsets) o;
+    KruiseAppsV1alpha1WorkloadSpreadSubset ioKruiseAppsV1alpha1WorkloadSpreadSpecSubsets = (KruiseAppsV1alpha1WorkloadSpreadSubset) o;
     return Objects.equals(this.maxReplicas, ioKruiseAppsV1alpha1WorkloadSpreadSpecSubsets.maxReplicas) &&
         Objects.equals(this.name, ioKruiseAppsV1alpha1WorkloadSpreadSpecSubsets.name) &&
         Objects.equals(this.patch, ioKruiseAppsV1alpha1WorkloadSpreadSpecSubsets.patch) &&

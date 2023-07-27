@@ -47,7 +47,7 @@ public class KruiseAppsV1alpha1DaemonSetSpec {
   private V1PodTemplateSpec template = null;
 
   @SerializedName("updateStrategy")
-  private KruiseAppsV1alpha1DaemonSetSpecUpdateStrategy updateStrategy = null;
+  private KruiseAppsV1alpha1DaemonSetUpdateStrategy updateStrategy = null;
 
   public KruiseAppsV1alpha1DaemonSetSpec burstReplicas(IntOrString burstReplicas) {
     this.burstReplicas = burstReplicas;
@@ -157,7 +157,7 @@ public class KruiseAppsV1alpha1DaemonSetSpec {
     this.template = template;
   }
 
-  public KruiseAppsV1alpha1DaemonSetSpec updateStrategy(KruiseAppsV1alpha1DaemonSetSpecUpdateStrategy updateStrategy) {
+  public KruiseAppsV1alpha1DaemonSetSpec updateStrategy(KruiseAppsV1alpha1DaemonSetUpdateStrategy updateStrategy) {
     this.updateStrategy = updateStrategy;
     return this;
   }
@@ -167,11 +167,11 @@ public class KruiseAppsV1alpha1DaemonSetSpec {
    * @return updateStrategy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1DaemonSetSpecUpdateStrategy getUpdateStrategy() {
+  public KruiseAppsV1alpha1DaemonSetUpdateStrategy getUpdateStrategy() {
     return updateStrategy;
   }
 
-  public void setUpdateStrategy(KruiseAppsV1alpha1DaemonSetSpecUpdateStrategy updateStrategy) {
+  public void setUpdateStrategy(KruiseAppsV1alpha1DaemonSetUpdateStrategy updateStrategy) {
     this.updateStrategy = updateStrategy;
   }
 

@@ -14,16 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1DaemonSetStatusConditions;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +32,7 @@ public class KruiseAppsV1alpha1DaemonSetStatus {
   private Integer collisionCount = null;
 
   @SerializedName("conditions")
-  private List<KruiseAppsV1alpha1DaemonSetStatusConditions> conditions = null;
+  private List<KruiseAppsV1alpha1DaemonSetCondition> conditions = null;
 
   @SerializedName("currentNumberScheduled")
   private Integer currentNumberScheduled = null;
@@ -84,14 +79,14 @@ public class KruiseAppsV1alpha1DaemonSetStatus {
     this.collisionCount = collisionCount;
   }
 
-  public KruiseAppsV1alpha1DaemonSetStatus conditions(List<KruiseAppsV1alpha1DaemonSetStatusConditions> conditions) {
+  public KruiseAppsV1alpha1DaemonSetStatus conditions(List<KruiseAppsV1alpha1DaemonSetCondition> conditions) {
     this.conditions = conditions;
     return this;
   }
 
-  public KruiseAppsV1alpha1DaemonSetStatus addConditionsItem(KruiseAppsV1alpha1DaemonSetStatusConditions conditionsItem) {
+  public KruiseAppsV1alpha1DaemonSetStatus addConditionsItem(KruiseAppsV1alpha1DaemonSetCondition conditionsItem) {
     if (this.conditions == null) {
-      this.conditions = new ArrayList<KruiseAppsV1alpha1DaemonSetStatusConditions>();
+      this.conditions = new ArrayList<KruiseAppsV1alpha1DaemonSetCondition>();
     }
     this.conditions.add(conditionsItem);
     return this;
@@ -102,11 +97,11 @@ public class KruiseAppsV1alpha1DaemonSetStatus {
    * @return conditions
   **/
   @ApiModelProperty(value = "Represents the latest available observations of a DaemonSet's current state.")
-  public List<KruiseAppsV1alpha1DaemonSetStatusConditions> getConditions() {
+  public List<KruiseAppsV1alpha1DaemonSetCondition> getConditions() {
     return conditions;
   }
 
-  public void setConditions(List<KruiseAppsV1alpha1DaemonSetStatusConditions> conditions) {
+  public void setConditions(List<KruiseAppsV1alpha1DaemonSetCondition> conditions) {
     this.conditions = conditions;
   }
 

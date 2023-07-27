@@ -14,30 +14,24 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategyManualUpdate;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * UpdateStrategy indicates the strategy the UnitedDeployment use to preform the update, when template is changed.
  */
 @ApiModel(description = "UpdateStrategy indicates the strategy the UnitedDeployment use to preform the update, when template is changed.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategy {
+public class KruiseAppsV1alpha1UnitedDeploymentUpdateStrategy {
   @SerializedName("manualUpdate")
-  private KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategyManualUpdate manualUpdate = null;
+  private KruiseAppsV1alpha1ManualUpdate manualUpdate = null;
 
   @SerializedName("type")
   private String type = null;
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategy manualUpdate(KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategyManualUpdate manualUpdate) {
+  public KruiseAppsV1alpha1UnitedDeploymentUpdateStrategy manualUpdate(KruiseAppsV1alpha1ManualUpdate manualUpdate) {
     this.manualUpdate = manualUpdate;
     return this;
   }
@@ -47,15 +41,15 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategy {
    * @return manualUpdate
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategyManualUpdate getManualUpdate() {
+  public KruiseAppsV1alpha1ManualUpdate getManualUpdate() {
     return manualUpdate;
   }
 
-  public void setManualUpdate(KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategyManualUpdate manualUpdate) {
+  public void setManualUpdate(KruiseAppsV1alpha1ManualUpdate manualUpdate) {
     this.manualUpdate = manualUpdate;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategy type(String type) {
+  public KruiseAppsV1alpha1UnitedDeploymentUpdateStrategy type(String type) {
     this.type = type;
     return this;
   }
@@ -82,7 +76,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategy {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategy ioKruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategy = (KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategy) o;
+    KruiseAppsV1alpha1UnitedDeploymentUpdateStrategy ioKruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategy = (KruiseAppsV1alpha1UnitedDeploymentUpdateStrategy) o;
     return Objects.equals(this.manualUpdate, ioKruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategy.manualUpdate) &&
         Objects.equals(this.type, ioKruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategy.type);
   }

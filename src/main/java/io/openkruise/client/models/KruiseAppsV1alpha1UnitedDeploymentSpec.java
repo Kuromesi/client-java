@@ -36,13 +36,13 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpec {
   private V1LabelSelector selector = null;
 
   @SerializedName("template")
-  private KruiseAppsV1alpha1UnitedDeploymentSpecTemplate template = null;
+  private KruiseAppsV1alpha1SubsetTemplate template = null;
 
   @SerializedName("topology")
-  private KruiseAppsV1alpha1UnitedDeploymentSpecTopology topology = null;
+  private KruiseAppsV1alpha1Topology topology = null;
 
   @SerializedName("updateStrategy")
-  private KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategy updateStrategy = null;
+  private KruiseAppsV1alpha1UnitedDeploymentUpdateStrategy updateStrategy = null;
 
   public KruiseAppsV1alpha1UnitedDeploymentSpec replicas(Integer replicas) {
     this.replicas = replicas;
@@ -98,7 +98,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpec {
     this.selector = selector;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpec template(KruiseAppsV1alpha1UnitedDeploymentSpecTemplate template) {
+  public KruiseAppsV1alpha1UnitedDeploymentSpec template(KruiseAppsV1alpha1SubsetTemplate template) {
     this.template = template;
     return this;
   }
@@ -108,15 +108,15 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpec {
    * @return template
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplate getTemplate() {
+  public KruiseAppsV1alpha1SubsetTemplate getTemplate() {
     return template;
   }
 
-  public void setTemplate(KruiseAppsV1alpha1UnitedDeploymentSpecTemplate template) {
+  public void setTemplate(KruiseAppsV1alpha1SubsetTemplate template) {
     this.template = template;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpec topology(KruiseAppsV1alpha1UnitedDeploymentSpecTopology topology) {
+  public KruiseAppsV1alpha1UnitedDeploymentSpec topology(KruiseAppsV1alpha1Topology topology) {
     this.topology = topology;
     return this;
   }
@@ -126,15 +126,15 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpec {
    * @return topology
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTopology getTopology() {
+  public KruiseAppsV1alpha1Topology getTopology() {
     return topology;
   }
 
-  public void setTopology(KruiseAppsV1alpha1UnitedDeploymentSpecTopology topology) {
+  public void setTopology(KruiseAppsV1alpha1Topology topology) {
     this.topology = topology;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpec updateStrategy(KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategy updateStrategy) {
+  public KruiseAppsV1alpha1UnitedDeploymentSpec updateStrategy(KruiseAppsV1alpha1UnitedDeploymentUpdateStrategy updateStrategy) {
     this.updateStrategy = updateStrategy;
     return this;
   }
@@ -144,11 +144,11 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpec {
    * @return updateStrategy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategy getUpdateStrategy() {
+  public KruiseAppsV1alpha1UnitedDeploymentUpdateStrategy getUpdateStrategy() {
     return updateStrategy;
   }
 
-  public void setUpdateStrategy(KruiseAppsV1alpha1UnitedDeploymentSpecUpdateStrategy updateStrategy) {
+  public void setUpdateStrategy(KruiseAppsV1alpha1UnitedDeploymentUpdateStrategy updateStrategy) {
     this.updateStrategy = updateStrategy;
   }
 

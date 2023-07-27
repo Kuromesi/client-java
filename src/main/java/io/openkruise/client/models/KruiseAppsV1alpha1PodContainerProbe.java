@@ -25,7 +25,7 @@ import java.util.List;
  * KruiseAppsV1alpha1PodProbeMarkerSpecProbes
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1PodProbeMarkerSpecProbes {
+public class KruiseAppsV1alpha1PodContainerProbe {
   @SerializedName("containerName")
   private String containerName = null;
 
@@ -41,7 +41,7 @@ public class KruiseAppsV1alpha1PodProbeMarkerSpecProbes {
   @SerializedName("probe")
   private KruiseAppsV1alpha1ContainerProbeSpec probe = null;
 
-  public KruiseAppsV1alpha1PodProbeMarkerSpecProbes containerName(String containerName) {
+  public KruiseAppsV1alpha1PodContainerProbe containerName(String containerName) {
     this.containerName = containerName;
     return this;
   }
@@ -59,12 +59,12 @@ public class KruiseAppsV1alpha1PodProbeMarkerSpecProbes {
     this.containerName = containerName;
   }
 
-  public KruiseAppsV1alpha1PodProbeMarkerSpecProbes markerPolicy(List<KruiseAppsV1alpha1ProbeMarkerPolicy> markerPolicy) {
+  public KruiseAppsV1alpha1PodContainerProbe markerPolicy(List<KruiseAppsV1alpha1ProbeMarkerPolicy> markerPolicy) {
     this.markerPolicy = markerPolicy;
     return this;
   }
 
-  public KruiseAppsV1alpha1PodProbeMarkerSpecProbes addMarkerPolicyItem(KruiseAppsV1alpha1ProbeMarkerPolicy markerPolicyItem) {
+  public KruiseAppsV1alpha1PodContainerProbe addMarkerPolicyItem(KruiseAppsV1alpha1ProbeMarkerPolicy markerPolicyItem) {
     if (this.markerPolicy == null) {
       this.markerPolicy = new ArrayList<KruiseAppsV1alpha1ProbeMarkerPolicy>();
     }
@@ -85,7 +85,7 @@ public class KruiseAppsV1alpha1PodProbeMarkerSpecProbes {
     this.markerPolicy = markerPolicy;
   }
 
-  public KruiseAppsV1alpha1PodProbeMarkerSpecProbes name(String name) {
+  public KruiseAppsV1alpha1PodContainerProbe name(String name) {
     this.name = name;
     return this;
   }
@@ -103,7 +103,7 @@ public class KruiseAppsV1alpha1PodProbeMarkerSpecProbes {
     this.name = name;
   }
 
-  public KruiseAppsV1alpha1PodProbeMarkerSpecProbes podConditionType(String podConditionType) {
+  public KruiseAppsV1alpha1PodContainerProbe podConditionType(String podConditionType) {
     this.podConditionType = podConditionType;
     return this;
   }
@@ -121,7 +121,7 @@ public class KruiseAppsV1alpha1PodProbeMarkerSpecProbes {
     this.podConditionType = podConditionType;
   }
 
-  public KruiseAppsV1alpha1PodProbeMarkerSpecProbes probe(KruiseAppsV1alpha1ContainerProbeSpec probe) {
+  public KruiseAppsV1alpha1PodContainerProbe probe(KruiseAppsV1alpha1ContainerProbeSpec probe) {
     this.probe = probe;
     return this;
   }
@@ -148,7 +148,7 @@ public class KruiseAppsV1alpha1PodProbeMarkerSpecProbes {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1PodProbeMarkerSpecProbes ioKruiseAppsV1alpha1PodProbeMarkerSpecProbes = (KruiseAppsV1alpha1PodProbeMarkerSpecProbes) o;
+    KruiseAppsV1alpha1PodContainerProbe ioKruiseAppsV1alpha1PodProbeMarkerSpecProbes = (KruiseAppsV1alpha1PodContainerProbe) o;
     return Objects.equals(this.containerName, ioKruiseAppsV1alpha1PodProbeMarkerSpecProbes.containerName) &&
         Objects.equals(this.markerPolicy, ioKruiseAppsV1alpha1PodProbeMarkerSpecProbes.markerPolicy) &&
         Objects.equals(this.name, ioKruiseAppsV1alpha1PodProbeMarkerSpecProbes.name) &&

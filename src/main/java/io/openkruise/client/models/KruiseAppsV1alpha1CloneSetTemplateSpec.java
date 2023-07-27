@@ -14,31 +14,25 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.kubernetes.client.openapi.models.V1ObjectMeta;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpec;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * CloneSet template
  */
 @ApiModel(description = "CloneSet template")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateCloneSetTemplate {
+public class KruiseAppsV1alpha1CloneSetTemplateSpec {
   @SerializedName("metadata")
   private V1ObjectMeta metadata = null;
 
   @SerializedName("spec")
   private KruiseAppsV1alpha1CloneSetSpec spec = null;
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateCloneSetTemplate metadata(V1ObjectMeta metadata) {
+  public KruiseAppsV1alpha1CloneSetTemplateSpec metadata(V1ObjectMeta metadata) {
     this.metadata = metadata;
     return this;
   }
@@ -56,7 +50,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateCloneSetTemplate {
     this.metadata = metadata;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentSpecTemplateCloneSetTemplate spec(KruiseAppsV1alpha1CloneSetSpec spec) {
+  public KruiseAppsV1alpha1CloneSetTemplateSpec spec(KruiseAppsV1alpha1CloneSetSpec spec) {
     this.spec = spec;
     return this;
   }
@@ -83,7 +77,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentSpecTemplateCloneSetTemplate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1UnitedDeploymentSpecTemplateCloneSetTemplate ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateCloneSetTemplate = (KruiseAppsV1alpha1UnitedDeploymentSpecTemplateCloneSetTemplate) o;
+    KruiseAppsV1alpha1CloneSetTemplateSpec ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateCloneSetTemplate = (KruiseAppsV1alpha1CloneSetTemplateSpec) o;
     return Objects.equals(this.metadata, ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateCloneSetTemplate.metadata) &&
         Objects.equals(this.spec, ioKruiseAppsV1alpha1UnitedDeploymentSpecTemplateCloneSetTemplate.spec);
   }

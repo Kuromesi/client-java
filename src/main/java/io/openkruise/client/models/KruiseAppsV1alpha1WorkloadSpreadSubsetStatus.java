@@ -30,7 +30,7 @@ import org.joda.time.DateTime;
  */
 @ApiModel(description = "WorkloadSpreadSubsetStatus defines the observed state of subset")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses {
+public class KruiseAppsV1alpha1WorkloadSpreadSubsetStatus {
   @SerializedName("conditions")
   private List<KruiseAppsV1alpha1WorkloadSpreadCondition> conditions = null;
 
@@ -49,12 +49,12 @@ public class KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses {
   @SerializedName("replicas")
   private Integer replicas = null;
 
-  public KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses conditions(List<KruiseAppsV1alpha1WorkloadSpreadCondition> conditions) {
+  public KruiseAppsV1alpha1WorkloadSpreadSubsetStatus conditions(List<KruiseAppsV1alpha1WorkloadSpreadCondition> conditions) {
     this.conditions = conditions;
     return this;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses addConditionsItem(KruiseAppsV1alpha1WorkloadSpreadCondition conditionsItem) {
+  public KruiseAppsV1alpha1WorkloadSpreadSubsetStatus addConditionsItem(KruiseAppsV1alpha1WorkloadSpreadCondition conditionsItem) {
     if (this.conditions == null) {
       this.conditions = new ArrayList<KruiseAppsV1alpha1WorkloadSpreadCondition>();
     }
@@ -75,12 +75,12 @@ public class KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses {
     this.conditions = conditions;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses creatingPods(Map<String, DateTime> creatingPods) {
+  public KruiseAppsV1alpha1WorkloadSpreadSubsetStatus creatingPods(Map<String, DateTime> creatingPods) {
     this.creatingPods = creatingPods;
     return this;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses putCreatingPodsItem(String key, DateTime creatingPodsItem) {
+  public KruiseAppsV1alpha1WorkloadSpreadSubsetStatus putCreatingPodsItem(String key, DateTime creatingPodsItem) {
     if (this.creatingPods == null) {
       this.creatingPods = new HashMap<String, DateTime>();
     }
@@ -101,12 +101,12 @@ public class KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses {
     this.creatingPods = creatingPods;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses deletingPods(Map<String, DateTime> deletingPods) {
+  public KruiseAppsV1alpha1WorkloadSpreadSubsetStatus deletingPods(Map<String, DateTime> deletingPods) {
     this.deletingPods = deletingPods;
     return this;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses putDeletingPodsItem(String key, DateTime deletingPodsItem) {
+  public KruiseAppsV1alpha1WorkloadSpreadSubsetStatus putDeletingPodsItem(String key, DateTime deletingPodsItem) {
     if (this.deletingPods == null) {
       this.deletingPods = new HashMap<String, DateTime>();
     }
@@ -127,7 +127,7 @@ public class KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses {
     this.deletingPods = deletingPods;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses missingReplicas(Integer missingReplicas) {
+  public KruiseAppsV1alpha1WorkloadSpreadSubsetStatus missingReplicas(Integer missingReplicas) {
     this.missingReplicas = missingReplicas;
     return this;
   }
@@ -145,7 +145,7 @@ public class KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses {
     this.missingReplicas = missingReplicas;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses name(String name) {
+  public KruiseAppsV1alpha1WorkloadSpreadSubsetStatus name(String name) {
     this.name = name;
     return this;
   }
@@ -163,7 +163,7 @@ public class KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses {
     this.name = name;
   }
 
-  public KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses replicas(Integer replicas) {
+  public KruiseAppsV1alpha1WorkloadSpreadSubsetStatus replicas(Integer replicas) {
     this.replicas = replicas;
     return this;
   }
@@ -190,7 +190,7 @@ public class KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses ioKruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses = (KruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses) o;
+    KruiseAppsV1alpha1WorkloadSpreadSubsetStatus ioKruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses = (KruiseAppsV1alpha1WorkloadSpreadSubsetStatus) o;
     return Objects.equals(this.conditions, ioKruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses.conditions) &&
         Objects.equals(this.creatingPods, ioKruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses.creatingPods) &&
         Objects.equals(this.deletingPods, ioKruiseAppsV1alpha1WorkloadSpreadStatusSubsetStatuses.deletingPods) &&

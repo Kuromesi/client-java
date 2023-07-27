@@ -14,16 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1NodeImageStatusTags;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,16 +27,16 @@ import java.util.List;
  */
 @ApiModel(description = "ImageStatus defines the pulling status of an image")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1NodeImageStatusImageStatuses {
+public class KruiseAppsV1alpha1ImageStatus {
   @SerializedName("tags")
-  private List<KruiseAppsV1alpha1NodeImageStatusTags> tags = new ArrayList<KruiseAppsV1alpha1NodeImageStatusTags>();
+  private List<KruiseAppsV1alpha1ImageTagStatus> tags = new ArrayList<KruiseAppsV1alpha1ImageTagStatus>();
 
-  public KruiseAppsV1alpha1NodeImageStatusImageStatuses tags(List<KruiseAppsV1alpha1NodeImageStatusTags> tags) {
+  public KruiseAppsV1alpha1ImageStatus tags(List<KruiseAppsV1alpha1ImageTagStatus> tags) {
     this.tags = tags;
     return this;
   }
 
-  public KruiseAppsV1alpha1NodeImageStatusImageStatuses addTagsItem(KruiseAppsV1alpha1NodeImageStatusTags tagsItem) {
+  public KruiseAppsV1alpha1ImageStatus addTagsItem(KruiseAppsV1alpha1ImageTagStatus tagsItem) {
     this.tags.add(tagsItem);
     return this;
   }
@@ -51,11 +46,11 @@ public class KruiseAppsV1alpha1NodeImageStatusImageStatuses {
    * @return tags
   **/
   @ApiModelProperty(required = true, value = "Represents statuses of pulling tasks on this node")
-  public List<KruiseAppsV1alpha1NodeImageStatusTags> getTags() {
+  public List<KruiseAppsV1alpha1ImageTagStatus> getTags() {
     return tags;
   }
 
-  public void setTags(List<KruiseAppsV1alpha1NodeImageStatusTags> tags) {
+  public void setTags(List<KruiseAppsV1alpha1ImageTagStatus> tags) {
     this.tags = tags;
   }
 
@@ -68,7 +63,7 @@ public class KruiseAppsV1alpha1NodeImageStatusImageStatuses {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1NodeImageStatusImageStatuses ioKruiseAppsV1alpha1NodeImageStatusImageStatuses = (KruiseAppsV1alpha1NodeImageStatusImageStatuses) o;
+    KruiseAppsV1alpha1ImageStatus ioKruiseAppsV1alpha1NodeImageStatusImageStatuses = (KruiseAppsV1alpha1ImageStatus) o;
     return Objects.equals(this.tags, ioKruiseAppsV1alpha1NodeImageStatusImageStatuses.tags);
   }
 

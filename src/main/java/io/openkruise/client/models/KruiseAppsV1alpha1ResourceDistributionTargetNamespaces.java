@@ -14,16 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespacesList;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,18 +27,18 @@ import java.util.List;
  */
 @ApiModel(description = "If ExcludedNamespaces is not empty, Resource will never be distributed to the listed namespaces. ExcludedNamespaces has the highest priority.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespaces {
+public class KruiseAppsV1alpha1ResourceDistributionTargetNamespaces {
   @SerializedName("list")
-  private List<KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespacesList> _list = null;
+  private List<KruiseAppsV1alpha1ResourceDistributionNamespace> _list = null;
 
-  public KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespaces _list(List<KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespacesList> _list) {
+  public KruiseAppsV1alpha1ResourceDistributionTargetNamespaces _list(List<KruiseAppsV1alpha1ResourceDistributionNamespace> _list) {
     this._list = _list;
     return this;
   }
 
-  public KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespaces addListItem(KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespacesList _listItem) {
+  public KruiseAppsV1alpha1ResourceDistributionTargetNamespaces addListItem(KruiseAppsV1alpha1ResourceDistributionNamespace _listItem) {
     if (this._list == null) {
-      this._list = new ArrayList<KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespacesList>();
+      this._list = new ArrayList<KruiseAppsV1alpha1ResourceDistributionNamespace>();
     }
     this._list.add(_listItem);
     return this;
@@ -54,11 +49,11 @@ public class KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespaces
    * @return _list
   **/
   @ApiModelProperty(value = "")
-  public List<KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespacesList> getList() {
+  public List<KruiseAppsV1alpha1ResourceDistributionNamespace> getList() {
     return _list;
   }
 
-  public void setList(List<KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespacesList> _list) {
+  public void setList(List<KruiseAppsV1alpha1ResourceDistributionNamespace> _list) {
     this._list = _list;
   }
 
@@ -71,7 +66,7 @@ public class KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespaces
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespaces ioKruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespaces = (KruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespaces) o;
+    KruiseAppsV1alpha1ResourceDistributionTargetNamespaces ioKruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespaces = (KruiseAppsV1alpha1ResourceDistributionTargetNamespaces) o;
     return Objects.equals(this._list, ioKruiseAppsV1alpha1ResourceDistributionSpecTargetsExcludedNamespaces._list);
   }
 

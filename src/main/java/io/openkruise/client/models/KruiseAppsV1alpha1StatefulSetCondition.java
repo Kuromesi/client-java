@@ -14,15 +14,10 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 import org.joda.time.DateTime;
 
 /**
@@ -30,7 +25,7 @@ import org.joda.time.DateTime;
  */
 @ApiModel(description = "StatefulSetCondition describes the state of a statefulset at a certain point.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1StatefulSetStatusConditions {
+public class KruiseAppsV1alpha1StatefulSetCondition {
   @SerializedName("lastTransitionTime")
   private DateTime lastTransitionTime = null;
 
@@ -46,7 +41,7 @@ public class KruiseAppsV1alpha1StatefulSetStatusConditions {
   @SerializedName("type")
   private String type = null;
 
-  public KruiseAppsV1alpha1StatefulSetStatusConditions lastTransitionTime(DateTime lastTransitionTime) {
+  public KruiseAppsV1alpha1StatefulSetCondition lastTransitionTime(DateTime lastTransitionTime) {
     this.lastTransitionTime = lastTransitionTime;
     return this;
   }
@@ -64,7 +59,7 @@ public class KruiseAppsV1alpha1StatefulSetStatusConditions {
     this.lastTransitionTime = lastTransitionTime;
   }
 
-  public KruiseAppsV1alpha1StatefulSetStatusConditions message(String message) {
+  public KruiseAppsV1alpha1StatefulSetCondition message(String message) {
     this.message = message;
     return this;
   }
@@ -82,7 +77,7 @@ public class KruiseAppsV1alpha1StatefulSetStatusConditions {
     this.message = message;
   }
 
-  public KruiseAppsV1alpha1StatefulSetStatusConditions reason(String reason) {
+  public KruiseAppsV1alpha1StatefulSetCondition reason(String reason) {
     this.reason = reason;
     return this;
   }
@@ -100,7 +95,7 @@ public class KruiseAppsV1alpha1StatefulSetStatusConditions {
     this.reason = reason;
   }
 
-  public KruiseAppsV1alpha1StatefulSetStatusConditions status(String status) {
+  public KruiseAppsV1alpha1StatefulSetCondition status(String status) {
     this.status = status;
     return this;
   }
@@ -118,7 +113,7 @@ public class KruiseAppsV1alpha1StatefulSetStatusConditions {
     this.status = status;
   }
 
-  public KruiseAppsV1alpha1StatefulSetStatusConditions type(String type) {
+  public KruiseAppsV1alpha1StatefulSetCondition type(String type) {
     this.type = type;
     return this;
   }
@@ -145,7 +140,7 @@ public class KruiseAppsV1alpha1StatefulSetStatusConditions {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1StatefulSetStatusConditions ioKruiseAppsV1alpha1StatefulSetStatusConditions = (KruiseAppsV1alpha1StatefulSetStatusConditions) o;
+    KruiseAppsV1alpha1StatefulSetCondition ioKruiseAppsV1alpha1StatefulSetStatusConditions = (KruiseAppsV1alpha1StatefulSetCondition) o;
     return Objects.equals(this.lastTransitionTime, ioKruiseAppsV1alpha1StatefulSetStatusConditions.lastTransitionTime) &&
         Objects.equals(this.message, ioKruiseAppsV1alpha1StatefulSetStatusConditions.message) &&
         Objects.equals(this.reason, ioKruiseAppsV1alpha1StatefulSetStatusConditions.reason) &&

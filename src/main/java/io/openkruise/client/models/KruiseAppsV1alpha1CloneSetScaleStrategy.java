@@ -14,16 +14,12 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.kubernetes.client.custom.IntOrString;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +28,7 @@ import java.util.List;
  */
 @ApiModel(description = "ScaleStrategy indicates the ScaleStrategy that will be employed to create and delete Pods in the CloneSet.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1CloneSetSpecScaleStrategy {
+public class KruiseAppsV1alpha1CloneSetScaleStrategy {
   @SerializedName("disablePVCReuse")
   private Boolean disablePVCReuse = null;
 
@@ -42,7 +38,7 @@ public class KruiseAppsV1alpha1CloneSetSpecScaleStrategy {
   @SerializedName("podsToDelete")
   private List<String> podsToDelete = null;
 
-  public KruiseAppsV1alpha1CloneSetSpecScaleStrategy disablePVCReuse(Boolean disablePVCReuse) {
+  public KruiseAppsV1alpha1CloneSetScaleStrategy disablePVCReuse(Boolean disablePVCReuse) {
     this.disablePVCReuse = disablePVCReuse;
     return this;
   }
@@ -60,7 +56,7 @@ public class KruiseAppsV1alpha1CloneSetSpecScaleStrategy {
     this.disablePVCReuse = disablePVCReuse;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecScaleStrategy maxUnavailable(IntOrString maxUnavailable) {
+  public KruiseAppsV1alpha1CloneSetScaleStrategy maxUnavailable(IntOrString maxUnavailable) {
     this.maxUnavailable = maxUnavailable;
     return this;
   }
@@ -78,12 +74,12 @@ public class KruiseAppsV1alpha1CloneSetSpecScaleStrategy {
     this.maxUnavailable = maxUnavailable;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecScaleStrategy podsToDelete(List<String> podsToDelete) {
+  public KruiseAppsV1alpha1CloneSetScaleStrategy podsToDelete(List<String> podsToDelete) {
     this.podsToDelete = podsToDelete;
     return this;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecScaleStrategy addPodsToDeleteItem(String podsToDeleteItem) {
+  public KruiseAppsV1alpha1CloneSetScaleStrategy addPodsToDeleteItem(String podsToDeleteItem) {
     if (this.podsToDelete == null) {
       this.podsToDelete = new ArrayList<String>();
     }
@@ -113,7 +109,7 @@ public class KruiseAppsV1alpha1CloneSetSpecScaleStrategy {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1CloneSetSpecScaleStrategy ioKruiseAppsV1alpha1CloneSetSpecScaleStrategy = (KruiseAppsV1alpha1CloneSetSpecScaleStrategy) o;
+    KruiseAppsV1alpha1CloneSetScaleStrategy ioKruiseAppsV1alpha1CloneSetSpecScaleStrategy = (KruiseAppsV1alpha1CloneSetScaleStrategy) o;
     return Objects.equals(this.disablePVCReuse, ioKruiseAppsV1alpha1CloneSetSpecScaleStrategy.disablePVCReuse) &&
         Objects.equals(this.maxUnavailable, ioKruiseAppsV1alpha1CloneSetSpecScaleStrategy.maxUnavailable) &&
         Objects.equals(this.podsToDelete, ioKruiseAppsV1alpha1CloneSetSpecScaleStrategy.podsToDelete);

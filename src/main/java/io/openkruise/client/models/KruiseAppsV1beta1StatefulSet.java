@@ -36,7 +36,7 @@ public class KruiseAppsV1beta1StatefulSet {
   private V1ObjectMeta metadata = null;
 
   @SerializedName("spec")
-  private KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec spec = null;
+  private KruiseAppsV1beta1StatefulSetSpec spec = null;
 
   @SerializedName("status")
   private KruiseAppsV1beta1StatefulSetStatus status = null;
@@ -95,7 +95,7 @@ public class KruiseAppsV1beta1StatefulSet {
     this.metadata = metadata;
   }
 
-  public KruiseAppsV1beta1StatefulSet spec(KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec spec) {
+  public KruiseAppsV1beta1StatefulSet spec(KruiseAppsV1beta1StatefulSetSpec spec) {
     this.spec = spec;
     return this;
   }
@@ -105,11 +105,11 @@ public class KruiseAppsV1beta1StatefulSet {
    * @return spec
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec getSpec() {
+  public KruiseAppsV1beta1StatefulSetSpec getSpec() {
     return spec;
   }
 
-  public void setSpec(KruiseAppsV1alpha1AdvancedStatefulSetTemplateSpec spec) {
+  public void setSpec(KruiseAppsV1beta1StatefulSetSpec spec) {
     this.spec = spec;
   }
 

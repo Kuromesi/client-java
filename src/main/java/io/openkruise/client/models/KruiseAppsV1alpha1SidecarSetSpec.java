@@ -34,13 +34,13 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
   private List<Object> containers = null;
 
   @SerializedName("imagePullSecrets")
-  private List<KruiseAppsV1alpha1SidecarSetSpecImagePullSecrets> imagePullSecrets = null;
+  private List<KruiseAppsV1alpha1ReferenceObject> imagePullSecrets = null;
 
   @SerializedName("initContainers")
   private List<Object> initContainers = null;
 
   @SerializedName("injectionStrategy")
-  private KruiseAppsV1alpha1SidecarSetSpecInjectionStrategy injectionStrategy = null;
+  private KruiseAppsV1alpha1SidecarSetInjectionStrategy injectionStrategy = null;
 
   @SerializedName("namespace")
   private String namespace = null;
@@ -49,7 +49,7 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
   private V1LabelSelector namespaceSelector = null;
 
   @SerializedName("patchPodMetadata")
-  private List<KruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata> patchPodMetadata = null;
+  private List<KruiseAppsV1alpha1SidecarSetPatchPodMetadata> patchPodMetadata = null;
 
   @SerializedName("revisionHistoryLimit")
   private Integer revisionHistoryLimit = null;
@@ -58,7 +58,7 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
   private V1LabelSelector selector = null;
 
   @SerializedName("updateStrategy")
-  private KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy updateStrategy = null;
+  private KruiseAppsV1alpha1SidecarSetUpdateStrategy updateStrategy = null;
 
   @SerializedName("volumes")
   private List<V1Volume> volumes = null;
@@ -89,14 +89,14 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
     this.containers = containers;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpec imagePullSecrets(List<KruiseAppsV1alpha1SidecarSetSpecImagePullSecrets> imagePullSecrets) {
+  public KruiseAppsV1alpha1SidecarSetSpec imagePullSecrets(List<KruiseAppsV1alpha1ReferenceObject> imagePullSecrets) {
     this.imagePullSecrets = imagePullSecrets;
     return this;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpec addImagePullSecretsItem(KruiseAppsV1alpha1SidecarSetSpecImagePullSecrets imagePullSecretsItem) {
+  public KruiseAppsV1alpha1SidecarSetSpec addImagePullSecretsItem(KruiseAppsV1alpha1ReferenceObject imagePullSecretsItem) {
     if (this.imagePullSecrets == null) {
-      this.imagePullSecrets = new ArrayList<KruiseAppsV1alpha1SidecarSetSpecImagePullSecrets>();
+      this.imagePullSecrets = new ArrayList<KruiseAppsV1alpha1ReferenceObject>();
     }
     this.imagePullSecrets.add(imagePullSecretsItem);
     return this;
@@ -107,11 +107,11 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
    * @return imagePullSecrets
   **/
   @ApiModelProperty(value = "List of the names of secrets required by pulling sidecar container images")
-  public List<KruiseAppsV1alpha1SidecarSetSpecImagePullSecrets> getImagePullSecrets() {
+  public List<KruiseAppsV1alpha1ReferenceObject> getImagePullSecrets() {
     return imagePullSecrets;
   }
 
-  public void setImagePullSecrets(List<KruiseAppsV1alpha1SidecarSetSpecImagePullSecrets> imagePullSecrets) {
+  public void setImagePullSecrets(List<KruiseAppsV1alpha1ReferenceObject> imagePullSecrets) {
     this.imagePullSecrets = imagePullSecrets;
   }
 
@@ -141,7 +141,7 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
     this.initContainers = initContainers;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpec injectionStrategy(KruiseAppsV1alpha1SidecarSetSpecInjectionStrategy injectionStrategy) {
+  public KruiseAppsV1alpha1SidecarSetSpec injectionStrategy(KruiseAppsV1alpha1SidecarSetInjectionStrategy injectionStrategy) {
     this.injectionStrategy = injectionStrategy;
     return this;
   }
@@ -151,11 +151,11 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
    * @return injectionStrategy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1SidecarSetSpecInjectionStrategy getInjectionStrategy() {
+  public KruiseAppsV1alpha1SidecarSetInjectionStrategy getInjectionStrategy() {
     return injectionStrategy;
   }
 
-  public void setInjectionStrategy(KruiseAppsV1alpha1SidecarSetSpecInjectionStrategy injectionStrategy) {
+  public void setInjectionStrategy(KruiseAppsV1alpha1SidecarSetInjectionStrategy injectionStrategy) {
     this.injectionStrategy = injectionStrategy;
   }
 
@@ -195,14 +195,14 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
     this.namespaceSelector = namespaceSelector;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpec patchPodMetadata(List<KruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata> patchPodMetadata) {
+  public KruiseAppsV1alpha1SidecarSetSpec patchPodMetadata(List<KruiseAppsV1alpha1SidecarSetPatchPodMetadata> patchPodMetadata) {
     this.patchPodMetadata = patchPodMetadata;
     return this;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpec addPatchPodMetadataItem(KruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata patchPodMetadataItem) {
+  public KruiseAppsV1alpha1SidecarSetSpec addPatchPodMetadataItem(KruiseAppsV1alpha1SidecarSetPatchPodMetadata patchPodMetadataItem) {
     if (this.patchPodMetadata == null) {
-      this.patchPodMetadata = new ArrayList<KruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata>();
+      this.patchPodMetadata = new ArrayList<KruiseAppsV1alpha1SidecarSetPatchPodMetadata>();
     }
     this.patchPodMetadata.add(patchPodMetadataItem);
     return this;
@@ -213,11 +213,11 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
    * @return patchPodMetadata
   **/
   @ApiModelProperty(value = "SidecarSet support to inject & in-place update metadata in pod.")
-  public List<KruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata> getPatchPodMetadata() {
+  public List<KruiseAppsV1alpha1SidecarSetPatchPodMetadata> getPatchPodMetadata() {
     return patchPodMetadata;
   }
 
-  public void setPatchPodMetadata(List<KruiseAppsV1alpha1SidecarSetSpecPatchPodMetadata> patchPodMetadata) {
+  public void setPatchPodMetadata(List<KruiseAppsV1alpha1SidecarSetPatchPodMetadata> patchPodMetadata) {
     this.patchPodMetadata = patchPodMetadata;
   }
 
@@ -257,7 +257,7 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
     this.selector = selector;
   }
 
-  public KruiseAppsV1alpha1SidecarSetSpec updateStrategy(KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy updateStrategy) {
+  public KruiseAppsV1alpha1SidecarSetSpec updateStrategy(KruiseAppsV1alpha1SidecarSetUpdateStrategy updateStrategy) {
     this.updateStrategy = updateStrategy;
     return this;
   }
@@ -267,11 +267,11 @@ public class KruiseAppsV1alpha1SidecarSetSpec {
    * @return updateStrategy
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy getUpdateStrategy() {
+  public KruiseAppsV1alpha1SidecarSetUpdateStrategy getUpdateStrategy() {
     return updateStrategy;
   }
 
-  public void setUpdateStrategy(KruiseAppsV1alpha1SidecarSetSpecUpdateStrategy updateStrategy) {
+  public void setUpdateStrategy(KruiseAppsV1alpha1SidecarSetUpdateStrategy updateStrategy) {
     this.updateStrategy = updateStrategy;
   }
 

@@ -29,20 +29,20 @@ import io.kubernetes.client.openapi.models.V1Handler;
  */
 @ApiModel(description = "ContainerRecreateRequestContainer defines the container that need to recreate.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1ContainerRecreateRequestContainers {
+public class KruiseAppsV1alpha1ContainerRecreateRequestContainer {
   @SerializedName("name")
   private String name = null;
 
   @SerializedName("ports")
-  private List<KruiseAppsV1alpha1ContainerRecreateRequestSpecPorts> ports = null;
+  private List<V1ContainerPort> ports = null;
 
   @SerializedName("preStop")
-  private KruiseAppsV1alpha1ContainerRecreateRequestSpecPreStop preStop = null;
+  private V1Handler preStop = null;
 
   @SerializedName("statusContext")
-  private KruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext statusContext = null;
+  private KruiseAppsV1alpha1ContainerRecreateRequestContext statusContext = null;
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestContainers name(String name) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestContainer name(String name) {
     this.name = name;
     return this;
   }
@@ -60,14 +60,14 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestContainers {
     this.name = name;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestContainers ports(List<KruiseAppsV1alpha1ContainerRecreateRequestSpecPorts> ports) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestContainer ports(List<V1ContainerPort> ports) {
     this.ports = ports;
     return this;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestContainers addPortsItem(KruiseAppsV1alpha1ContainerRecreateRequestSpecPorts portsItem) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestContainer addPortsItem(V1ContainerPort portsItem) {
     if (this.ports == null) {
-      this.ports = new ArrayList<KruiseAppsV1alpha1ContainerRecreateRequestSpecPorts>();
+      this.ports = new ArrayList<V1ContainerPort>();
     }
     this.ports.add(portsItem);
     return this;
@@ -78,15 +78,15 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestContainers {
    * @return ports
   **/
   @ApiModelProperty(value = "Ports is synced from the real container in Pod spec during this ContainerRecreateRequest creating. Populated by the system. Read-only.")
-  public List<KruiseAppsV1alpha1ContainerRecreateRequestSpecPorts> getPorts() {
+  public List<V1ContainerPort> getPorts() {
     return ports;
   }
 
-  public void setPorts(List<KruiseAppsV1alpha1ContainerRecreateRequestSpecPorts> ports) {
+  public void setPorts(List<V1ContainerPort> ports) {
     this.ports = ports;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestContainers preStop(KruiseAppsV1alpha1ContainerRecreateRequestSpecPreStop preStop) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestContainer preStop(V1Handler preStop) {
     this.preStop = preStop;
     return this;
   }
@@ -96,15 +96,15 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestContainers {
    * @return preStop
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpecPreStop getPreStop() {
+  public V1Handler getPreStop() {
     return preStop;
   }
 
-  public void setPreStop(KruiseAppsV1alpha1ContainerRecreateRequestSpecPreStop preStop) {
+  public void setPreStop(V1Handler preStop) {
     this.preStop = preStop;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestContainers statusContext(KruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext statusContext) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestContainer statusContext(KruiseAppsV1alpha1ContainerRecreateRequestContext statusContext) {
     this.statusContext = statusContext;
     return this;
   }
@@ -114,11 +114,11 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestContainers {
    * @return statusContext
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext getStatusContext() {
+  public KruiseAppsV1alpha1ContainerRecreateRequestContext getStatusContext() {
     return statusContext;
   }
 
-  public void setStatusContext(KruiseAppsV1alpha1ContainerRecreateRequestSpecStatusContext statusContext) {
+  public void setStatusContext(KruiseAppsV1alpha1ContainerRecreateRequestContext statusContext) {
     this.statusContext = statusContext;
   }
 
@@ -131,7 +131,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestContainers {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1ContainerRecreateRequestContainers ioKruiseAppsV1alpha1ContainerRecreateRequestSpecContainers = (KruiseAppsV1alpha1ContainerRecreateRequestContainers) o;
+    KruiseAppsV1alpha1ContainerRecreateRequestContainer ioKruiseAppsV1alpha1ContainerRecreateRequestSpecContainers = (KruiseAppsV1alpha1ContainerRecreateRequestContainer) o;
     return Objects.equals(this.name, ioKruiseAppsV1alpha1ContainerRecreateRequestSpecContainers.name) &&
         Objects.equals(this.ports, ioKruiseAppsV1alpha1ContainerRecreateRequestSpecContainers.ports) &&
         Objects.equals(this.preStop, ioKruiseAppsV1alpha1ContainerRecreateRequestSpecContainers.preStop) &&

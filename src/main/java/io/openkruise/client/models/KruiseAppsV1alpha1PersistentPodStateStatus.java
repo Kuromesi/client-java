@@ -14,18 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1PersistentPodStateStatusPodStates;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -37,7 +30,7 @@ public class KruiseAppsV1alpha1PersistentPodStateStatus {
   private Long observedGeneration = null;
 
   @SerializedName("podStates")
-  private Map<String, KruiseAppsV1alpha1PersistentPodStateStatusPodStates> podStates = null;
+  private Map<String, KruiseAppsV1alpha1PodState> podStates = null;
 
   public KruiseAppsV1alpha1PersistentPodStateStatus observedGeneration(Long observedGeneration) {
     this.observedGeneration = observedGeneration;
@@ -57,14 +50,14 @@ public class KruiseAppsV1alpha1PersistentPodStateStatus {
     this.observedGeneration = observedGeneration;
   }
 
-  public KruiseAppsV1alpha1PersistentPodStateStatus podStates(Map<String, KruiseAppsV1alpha1PersistentPodStateStatusPodStates> podStates) {
+  public KruiseAppsV1alpha1PersistentPodStateStatus podStates(Map<String, KruiseAppsV1alpha1PodState> podStates) {
     this.podStates = podStates;
     return this;
   }
 
-  public KruiseAppsV1alpha1PersistentPodStateStatus putPodStatesItem(String key, KruiseAppsV1alpha1PersistentPodStateStatusPodStates podStatesItem) {
+  public KruiseAppsV1alpha1PersistentPodStateStatus putPodStatesItem(String key, KruiseAppsV1alpha1PodState podStatesItem) {
     if (this.podStates == null) {
-      this.podStates = new HashMap<String, KruiseAppsV1alpha1PersistentPodStateStatusPodStates>();
+      this.podStates = new HashMap<String, KruiseAppsV1alpha1PodState>();
     }
     this.podStates.put(key, podStatesItem);
     return this;
@@ -75,11 +68,11 @@ public class KruiseAppsV1alpha1PersistentPodStateStatus {
    * @return podStates
   **/
   @ApiModelProperty(value = "When the pod is ready, record some status information of the pod, such as: labels, annotations, topologies, etc. map[string]PodState -> map[Pod.Name]PodState")
-  public Map<String, KruiseAppsV1alpha1PersistentPodStateStatusPodStates> getPodStates() {
+  public Map<String, KruiseAppsV1alpha1PodState> getPodStates() {
     return podStates;
   }
 
-  public void setPodStates(Map<String, KruiseAppsV1alpha1PersistentPodStateStatusPodStates> podStates) {
+  public void setPodStates(Map<String, KruiseAppsV1alpha1PodState> podStates) {
     this.podStates = podStates;
   }
 

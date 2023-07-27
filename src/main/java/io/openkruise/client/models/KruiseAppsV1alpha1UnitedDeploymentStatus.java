@@ -14,17 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentStatusConditions;
-import io.openkruise.client.models.KruiseAppsV1alpha1UnitedDeploymentStatusUpdateStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -40,7 +34,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentStatus {
   private Integer collisionCount = null;
 
   @SerializedName("conditions")
-  private List<KruiseAppsV1alpha1UnitedDeploymentStatusConditions> conditions = null;
+  private List<KruiseAppsV1alpha1UnitedDeploymentCondition> conditions = null;
 
   @SerializedName("currentRevision")
   private String currentRevision = null;
@@ -61,7 +55,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentStatus {
   private Map<String, Integer> subsetReplicas = null;
 
   @SerializedName("updateStatus")
-  private KruiseAppsV1alpha1UnitedDeploymentStatusUpdateStatus updateStatus = null;
+  private KruiseAppsV1alpha1UpdateStatus updateStatus = null;
 
   @SerializedName("updatedReadyReplicas")
   private Integer updatedReadyReplicas = null;
@@ -87,14 +81,14 @@ public class KruiseAppsV1alpha1UnitedDeploymentStatus {
     this.collisionCount = collisionCount;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentStatus conditions(List<KruiseAppsV1alpha1UnitedDeploymentStatusConditions> conditions) {
+  public KruiseAppsV1alpha1UnitedDeploymentStatus conditions(List<KruiseAppsV1alpha1UnitedDeploymentCondition> conditions) {
     this.conditions = conditions;
     return this;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentStatus addConditionsItem(KruiseAppsV1alpha1UnitedDeploymentStatusConditions conditionsItem) {
+  public KruiseAppsV1alpha1UnitedDeploymentStatus addConditionsItem(KruiseAppsV1alpha1UnitedDeploymentCondition conditionsItem) {
     if (this.conditions == null) {
-      this.conditions = new ArrayList<KruiseAppsV1alpha1UnitedDeploymentStatusConditions>();
+      this.conditions = new ArrayList<KruiseAppsV1alpha1UnitedDeploymentCondition>();
     }
     this.conditions.add(conditionsItem);
     return this;
@@ -105,11 +99,11 @@ public class KruiseAppsV1alpha1UnitedDeploymentStatus {
    * @return conditions
   **/
   @ApiModelProperty(value = "Represents the latest available observations of a UnitedDeployment's current state.")
-  public List<KruiseAppsV1alpha1UnitedDeploymentStatusConditions> getConditions() {
+  public List<KruiseAppsV1alpha1UnitedDeploymentCondition> getConditions() {
     return conditions;
   }
 
-  public void setConditions(List<KruiseAppsV1alpha1UnitedDeploymentStatusConditions> conditions) {
+  public void setConditions(List<KruiseAppsV1alpha1UnitedDeploymentCondition> conditions) {
     this.conditions = conditions;
   }
 
@@ -229,7 +223,7 @@ public class KruiseAppsV1alpha1UnitedDeploymentStatus {
     this.subsetReplicas = subsetReplicas;
   }
 
-  public KruiseAppsV1alpha1UnitedDeploymentStatus updateStatus(KruiseAppsV1alpha1UnitedDeploymentStatusUpdateStatus updateStatus) {
+  public KruiseAppsV1alpha1UnitedDeploymentStatus updateStatus(KruiseAppsV1alpha1UpdateStatus updateStatus) {
     this.updateStatus = updateStatus;
     return this;
   }
@@ -239,11 +233,11 @@ public class KruiseAppsV1alpha1UnitedDeploymentStatus {
    * @return updateStatus
   **/
   @ApiModelProperty(value = "")
-  public KruiseAppsV1alpha1UnitedDeploymentStatusUpdateStatus getUpdateStatus() {
+  public KruiseAppsV1alpha1UpdateStatus getUpdateStatus() {
     return updateStatus;
   }
 
-  public void setUpdateStatus(KruiseAppsV1alpha1UnitedDeploymentStatusUpdateStatus updateStatus) {
+  public void setUpdateStatus(KruiseAppsV1alpha1UpdateStatus updateStatus) {
     this.updateStatus = updateStatus;
   }
 

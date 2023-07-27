@@ -30,19 +30,19 @@ import java.util.Map;
  */
 @ApiModel(description = "PodSelector is a query over pods that should pull image on nodes of these pods. Mutually exclusive with Selector.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1ImageListPullJobSpecPodSelector {
+public class KruiseAppsV1alpha1ImagePullJobPodSelector {
   @SerializedName("matchExpressions")
   private List<V1LabelSelectorRequirement> matchExpressions = null;
 
   @SerializedName("matchLabels")
   private Map<String, String> matchLabels = null;
 
-  public KruiseAppsV1alpha1ImageListPullJobSpecPodSelector matchExpressions(List<V1LabelSelectorRequirement> matchExpressions) {
+  public KruiseAppsV1alpha1ImagePullJobPodSelector matchExpressions(List<V1LabelSelectorRequirement> matchExpressions) {
     this.matchExpressions = matchExpressions;
     return this;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobSpecPodSelector addMatchExpressionsItem(V1LabelSelectorRequirement matchExpressionsItem) {
+  public KruiseAppsV1alpha1ImagePullJobPodSelector addMatchExpressionsItem(V1LabelSelectorRequirement matchExpressionsItem) {
     if (this.matchExpressions == null) {
       this.matchExpressions = new ArrayList<V1LabelSelectorRequirement>();
     }
@@ -63,12 +63,12 @@ public class KruiseAppsV1alpha1ImageListPullJobSpecPodSelector {
     this.matchExpressions = matchExpressions;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobSpecPodSelector matchLabels(Map<String, String> matchLabels) {
+  public KruiseAppsV1alpha1ImagePullJobPodSelector matchLabels(Map<String, String> matchLabels) {
     this.matchLabels = matchLabels;
     return this;
   }
 
-  public KruiseAppsV1alpha1ImageListPullJobSpecPodSelector putMatchLabelsItem(String key, String matchLabelsItem) {
+  public KruiseAppsV1alpha1ImagePullJobPodSelector putMatchLabelsItem(String key, String matchLabelsItem) {
     if (this.matchLabels == null) {
       this.matchLabels = new HashMap<String, String>();
     }
@@ -98,7 +98,7 @@ public class KruiseAppsV1alpha1ImageListPullJobSpecPodSelector {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1ImageListPullJobSpecPodSelector ioKruiseAppsV1alpha1ImageListPullJobSpecPodSelector = (KruiseAppsV1alpha1ImageListPullJobSpecPodSelector) o;
+    KruiseAppsV1alpha1ImagePullJobPodSelector ioKruiseAppsV1alpha1ImageListPullJobSpecPodSelector = (KruiseAppsV1alpha1ImagePullJobPodSelector) o;
     return Objects.equals(this.matchExpressions, ioKruiseAppsV1alpha1ImageListPullJobSpecPodSelector.matchExpressions) &&
         Objects.equals(this.matchLabels, ioKruiseAppsV1alpha1ImageListPullJobSpecPodSelector.matchLabels);
   }

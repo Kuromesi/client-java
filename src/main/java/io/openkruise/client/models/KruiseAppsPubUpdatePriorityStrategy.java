@@ -14,17 +14,11 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyOrderPriority;
-import io.openkruise.client.models.KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,21 +27,21 @@ import java.util.List;
  */
 @ApiModel(description = "Priorities are the rules for calculating the priority of updating pods. Each pod to be updated, will pass through these terms and get a sum of weights.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy {
+public class KruiseAppsPubUpdatePriorityStrategy {
   @SerializedName("orderPriority")
-  private List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyOrderPriority> orderPriority = null;
+  private List<KruiseAppsPubUpdatePriorityOrderTerm> orderPriority = null;
 
   @SerializedName("weightPriority")
-  private List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority> weightPriority = null;
+  private List<KruiseAppsPubUpdatePriorityWeightTerm> weightPriority = null;
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy orderPriority(List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyOrderPriority> orderPriority) {
+  public KruiseAppsPubUpdatePriorityStrategy orderPriority(List<KruiseAppsPubUpdatePriorityOrderTerm> orderPriority) {
     this.orderPriority = orderPriority;
     return this;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy addOrderPriorityItem(KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyOrderPriority orderPriorityItem) {
+  public KruiseAppsPubUpdatePriorityStrategy addOrderPriorityItem(KruiseAppsPubUpdatePriorityOrderTerm orderPriorityItem) {
     if (this.orderPriority == null) {
-      this.orderPriority = new ArrayList<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyOrderPriority>();
+      this.orderPriority = new ArrayList<KruiseAppsPubUpdatePriorityOrderTerm>();
     }
     this.orderPriority.add(orderPriorityItem);
     return this;
@@ -58,22 +52,22 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy {
    * @return orderPriority
   **/
   @ApiModelProperty(value = "Order priority terms, pods will be sorted by the value of orderedKey. For example: ``` orderPriority: - orderedKey: key1 - orderedKey: key2 ``` First, all pods which have key1 in labels will be sorted by the value of key1. Then, the left pods which have no key1 but have key2 in labels will be sorted by the value of key2 and put behind those pods have key1.")
-  public List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyOrderPriority> getOrderPriority() {
+  public List<KruiseAppsPubUpdatePriorityOrderTerm> getOrderPriority() {
     return orderPriority;
   }
 
-  public void setOrderPriority(List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyOrderPriority> orderPriority) {
+  public void setOrderPriority(List<KruiseAppsPubUpdatePriorityOrderTerm> orderPriority) {
     this.orderPriority = orderPriority;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy weightPriority(List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority> weightPriority) {
+  public KruiseAppsPubUpdatePriorityStrategy weightPriority(List<KruiseAppsPubUpdatePriorityWeightTerm> weightPriority) {
     this.weightPriority = weightPriority;
     return this;
   }
 
-  public KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy addWeightPriorityItem(KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority weightPriorityItem) {
+  public KruiseAppsPubUpdatePriorityStrategy addWeightPriorityItem(KruiseAppsPubUpdatePriorityWeightTerm weightPriorityItem) {
     if (this.weightPriority == null) {
-      this.weightPriority = new ArrayList<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority>();
+      this.weightPriority = new ArrayList<KruiseAppsPubUpdatePriorityWeightTerm>();
     }
     this.weightPriority.add(weightPriorityItem);
     return this;
@@ -84,11 +78,11 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy {
    * @return weightPriority
   **/
   @ApiModelProperty(value = "Weight priority terms, pods will be sorted by the sum of all terms weight.")
-  public List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority> getWeightPriority() {
+  public List<KruiseAppsPubUpdatePriorityWeightTerm> getWeightPriority() {
     return weightPriority;
   }
 
-  public void setWeightPriority(List<KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategyWeightPriority> weightPriority) {
+  public void setWeightPriority(List<KruiseAppsPubUpdatePriorityWeightTerm> weightPriority) {
     this.weightPriority = weightPriority;
   }
 
@@ -101,7 +95,7 @@ public class KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy = (KruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy) o;
+    KruiseAppsPubUpdatePriorityStrategy ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy = (KruiseAppsPubUpdatePriorityStrategy) o;
     return Objects.equals(this.orderPriority, ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy.orderPriority) &&
         Objects.equals(this.weightPriority, ioKruiseAppsV1alpha1CloneSetSpecUpdateStrategyPriorityStrategy.weightPriority);
   }

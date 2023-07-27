@@ -14,22 +14,17 @@
 package io.openkruise.client.models;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * ContainerRecreateRequestContainerRecreateState contains the recreation state of the container.
  */
 @ApiModel(description = "ContainerRecreateRequestContainerRecreateState contains the recreation state of the container.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-21T15:55:09.049+08:00")
-public class KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates {
+public class KruiseAppsV1alpha1ContainerRecreateRequestContainerRecreateState {
   @SerializedName("isKilled")
   private Boolean isKilled = null;
 
@@ -42,7 +37,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateSt
   @SerializedName("phase")
   private String phase = null;
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates isKilled(Boolean isKilled) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestContainerRecreateState isKilled(Boolean isKilled) {
     this.isKilled = isKilled;
     return this;
   }
@@ -60,7 +55,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateSt
     this.isKilled = isKilled;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates message(String message) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestContainerRecreateState message(String message) {
     this.message = message;
     return this;
   }
@@ -78,7 +73,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateSt
     this.message = message;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates name(String name) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestContainerRecreateState name(String name) {
     this.name = name;
     return this;
   }
@@ -96,7 +91,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateSt
     this.name = name;
   }
 
-  public KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates phase(String phase) {
+  public KruiseAppsV1alpha1ContainerRecreateRequestContainerRecreateState phase(String phase) {
     this.phase = phase;
     return this;
   }
@@ -123,7 +118,7 @@ public class KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateSt
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates ioKruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates = (KruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates) o;
+    KruiseAppsV1alpha1ContainerRecreateRequestContainerRecreateState ioKruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates = (KruiseAppsV1alpha1ContainerRecreateRequestContainerRecreateState) o;
     return Objects.equals(this.isKilled, ioKruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates.isKilled) &&
         Objects.equals(this.message, ioKruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates.message) &&
         Objects.equals(this.name, ioKruiseAppsV1alpha1ContainerRecreateRequestStatusContainerRecreateStates.name) &&
